@@ -1,0 +1,2 @@
+import{NextResponse}from"next/server";import{playerName}from"../../../../lib/leaderboard";import{allQuestions}from"../../../../lib/exams";
+export async function GET(request:Request){if(!await playerName())return NextResponse.json({error:"נדרשת כניסה"},{status:401});const excluded=new URL(request.url).searchParams.get("exclude");const pool=allQuestions.filter(q=>q.id!==excluded);const q=pool[Math.floor(Math.random()*pool.length)];return NextResponse.json({id:q.id,question:q.question,topic:q.topic,options:q.options,timeLimit:30})}
