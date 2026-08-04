@@ -1,0 +1,36 @@
+.dashboard-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.35rem);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem) !important;
+  text-align: center;
+}
+
+.dashboard-hero h1 {
+  margin: 0;
+  color: #a90f19;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3.6vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.dashboard-hero .motivation-card {
+  width: 100%;
+  max-width: 46rem;
+  margin-top: 0 !important;
+  text-align: right;
+}
+
+.dashboard-hero + .dashboard-grid { margin-top: 0; }
+
+@media (max-width: 600px) {
+  .dashboard-page { padding-top: clamp(1.25rem, 5vw, 1.75rem); }
+  .dashboard-hero h1 {
+    font-size: clamp(1.85rem, 9vw, 2.45rem);
+    letter-spacing: -0.025em;
+  }
+}
