@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root { --ink:#152b25; --green:#1d795b; --deep:#0d4f3c; --pale:#edf8f3; --line:#e4ebe7; }
+.full-summary-card{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:clamp(.8rem,2vw,1.5rem);max-width:1180px;min-height:130px;margin:0 auto 18px;border:1px solid #d8b5b8;border-radius:16px;background:linear-gradient(110deg,#fff,#fff5f6);padding:clamp(1rem,2.5vw,1.8rem);box-shadow:0 8px 28px rgba(92,22,28,.07);transition:.2s}.full-summary-card:hover{transform:translateY(-2px);border-color:#bd686e;box-shadow:0 12px 32px rgba(92,22,28,.1)}.full-summary-card>span{display:grid;width:clamp(64px,9vw,86px);aspect-ratio:1;place-items:center;border-radius:14px;background:#b8141f;padding:.6rem;color:#fff;text-align:center;font-size:clamp(.7rem,1.5vw,.8rem);font-weight:900}.full-summary-card h2{font-size:clamp(1.15rem,2vw,1.65rem)}.full-summary-card p{margin-top:.25rem;color:#68736f;font-size:clamp(.88rem,1.5vw,1rem)}.full-summary-card>b{grid-column:1/-1;color:#aa111b}.full-summary-page>header,.full-summary-page>nav,.full-summary-content{width:100%;max-width:980px;margin-inline:auto}.full-summary-content{display:grid;gap:1.25rem}
 .streak-game h2,.streak-game button span{direction:rtl;unicode-bidi:plaintext;text-align:right}.source-content figure{scroll-margin-top:1rem}
 * { box-sizing:border-box; }
 html { background:#f7faf8; }
