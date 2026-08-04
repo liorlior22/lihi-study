@@ -27,10 +27,36 @@
 
 .dashboard-hero + .dashboard-grid { margin-top: 0; }
 
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-block: clamp(1.5rem, 3vw, 2.75rem);
+}
+
+.dashboard-page .dashboard-grid {
+  flex: 0 0 auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .dashboard-page .dashboard-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (max-width: 600px) {
   .dashboard-page { padding-top: clamp(1.25rem, 5vw, 1.75rem); }
   .dashboard-hero h1 {
     font-size: clamp(1.85rem, 9vw, 2.45rem);
     letter-spacing: -0.025em;
   }
+  .dashboard-page .dashboard-grid { grid-template-columns: 1fr; }
+}
+
+.leader-heading h1 {
+  font-size: 0;
+}
+
+.leader-heading h1::after {
+  content: "מצטיין כיתתי";
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
 }
