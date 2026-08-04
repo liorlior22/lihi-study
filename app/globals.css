@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root { --ink:#152b25; --green:#1d795b; --deep:#0d4f3c; --pale:#edf8f3; --line:#e4ebe7; }
+.streak-game h2,.streak-game button span{direction:rtl;unicode-bidi:plaintext;text-align:right}.source-content figure{scroll-margin-top:1rem}
 * { box-sizing:border-box; }
 html { background:#f7faf8; }
 body { margin:0; color:var(--ink); background:radial-gradient(circle at 70% -10%,#e4f6ec 0,transparent 28%),#f7faf8; font-family:"Heebo","Arial Hebrew",Arial,sans-serif; }
