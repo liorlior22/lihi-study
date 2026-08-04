@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Lihi Last Test — הדרך שלך להצליח",
-  description: "סביבת הלמידה והמבחנים האישית של ליהי",
+  title: "Lihi Study — מערכת לימוד והכנה לבחינות",
+  description: "סביבת לימוד אישית בעברית: חומרי מקור, תרגול, מבחנים ומעקב התקדמות.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -1,2 +1,2 @@
-import data from "../../data/content.json";import {Shell} from "../../components/shell";import {PageHead} from "../../components/ui";import {Flashcards} from "../../components/flashcards";
-export default function Page(){return <Shell><PageHead eyebrow="שינון חכם" title="כרטיסיות" description="תרגול קצר וממוקד שעוזר להעביר את הידע לזיכרון לטווח ארוך."/><div className="mx-auto max-w-3xl"><Flashcards cards={data.flashcards}/></div></Shell>}
+import data from "../../data/content.json";import {RedHeader} from "../../components/red-header";import {PageHead} from "../../components/ui";import {Flashcards} from "../../components/flashcards";
+export default function Page(){return <><RedHeader/><main className="professional-content"><PageHead eyebrow="שינון חכם" title="כרטיסיות" description="תרגול קצר וממוקד שעוזר להעביר את הידע לזיכרון לטווח ארוך."/><div className="mx-auto max-w-3xl"><Flashcards cards={data.flashcards}/></div></main></>}
