@@ -1,19 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
-import { RedHeader } from "../components/red-header";
-
-export default function Home() {
-  return <><RedHeader/><main className="red-home">
-    <section className="red-hero">
-      <h1>Welcome to the Lihi Last Test!!!</h1>
-      <div className="star-separator"><i/>★ <b>★</b> ★<i/></div>
-      <p>הדרך שלך להצליח בבחינת הצמ״ר</p>
-      <Link href="/study" className="red-cta"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 1 4 17.5zM20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5a2.5 2.5 0 0 1 2.5 2.5z"/></svg>התחל ללמוד</Link>
-    </section>
-    <section className="image-cards" aria-label="גלריית ליהי">
-      <article><Image src="/assets/china-white-stars.svg" alt="דגל סין עם כוכבים לבנים" fill sizes="(max-width: 800px) 92vw, 31vw"/></article>
-      <article className="logo-card"><Image src="/assets/hapoel-tel-aviv.png" alt="סמל הפועל תל אביב" fill sizes="(max-width: 800px) 92vw, 31vw"/></article>
-      <article><Image src="/assets/lihi-sunglasses.png" alt="ליהי עם משקפי שמש" fill sizes="(max-width: 800px) 92vw, 31vw"/></article>
-    </section>
-  </main></>
-}
+import Link from"next/link";import{RedHeader}from"../components/red-header";import{MotivationQuoteCard}from"../components/motivation-quote-card";
+const cards=[
+ {href:"/study",icon:"📚",title:"קטעי לימוד",text:"כל חומר הלימוד מסודר לפי נושאים"},
+ {href:"/exams",icon:"📝",title:"מבחנים",text:"בחינות, תרגול ותוצאות"},
+ {href:"/flashcards",icon:"🃏",title:"כרטיסיות",text:"שינון ממוקד בקצב שלך"},
+ {href:"/progress",icon:"📈",title:"ההתקדמות שלי",text:"ציונים, זמן למידה ומגמות"},
+ {href:"/exams/run?mode=mistakes",icon:"❌",title:"טעויות אחרונות",text:"חזרה על שאלות שדורשות חיזוק"},
+ {href:"/progress",icon:"🏆",title:"מבחן אחרון",text:"צפייה בתוצאה ובפירוט האחרון"}
+];
+export default function Home(){return <><RedHeader/><main className="dashboard-page"><section className="dashboard-welcome"><div><span>מרכז הלמידה שלך</span><h1>ברוכה הבאה ליהי ❤️</h1><p>עוד צעד אחד בדרך להסמכה.</p></div><Link href="/exams">המשך למבחנים ←</Link></section><section className="dashboard-grid">{cards.map(card=><Link href={card.href} key={card.title}><span>{card.icon}</span><div><h2>{card.title}</h2><p>{card.text}</p></div><i>←</i></Link>)}</section><MotivationQuoteCard/></main></>}
