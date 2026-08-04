@@ -5,7 +5,7 @@ import type { AnswerId, ExamQuestion, ExamSession, SavedAttempt } from "../types
 import { studyIdForExamTopic } from "../lib/study";
 
 const CORRECT = "תשובה נכונה, אבל ליהי גרוסמן אנגלצ׳ין פתרה את זה מהר יותר!!!";
-const WRONG = "לוזר/ית, אפילו דני אנגלצ׳ין כבר יודעת מה התשובה";
+const WRONG = "לא נכון, הלוואי שתטעו בזה גם במבחן וליהי תענה נכון !";
 const NOTICE = "שימו לב: בכל שאלה ניתן לבדוק את התשובה מיד או לעבור לשאלה הבאה ולקבל את כל התשובות בסוף המבחן.";
 const SESSION = "lihi-exam-session";
 const MISTAKES = "lihi-exam-mistakes";
