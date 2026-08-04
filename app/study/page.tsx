@@ -1,0 +1,2 @@
+import {RedPage} from "../../components/red-header";
+export default function Study(){return <RedPage title="קטעי לימוד וסיכומים" subtitle="חומרי לימוד קצרים, ברורים ומסודרים לפי נושאים"><article><span>א</span><h2>מתמטיקה</h2><p>נוסחאות, הסברים ותרגול</p><button>לכל הסיכומים</button></article><article><span>ב</span><h2>עברית</h2><p>לשון, תחביר והבנת הנקרא</p><button>לכל הסיכומים</button></article><article><span>C</span><h2>אנגלית</h2><p>Vocabulary, grammar &amp; reading</p><button>לכל הסיכומים</button></article></RedPage>}
