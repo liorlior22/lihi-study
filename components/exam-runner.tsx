@@ -12,6 +12,32 @@ const MISTAKES = "lihi-exam-mistakes";
 const HISTORY = "lihi-exam-history";
 
 function mix<T>(items: T[]) { return [...items].sort(() => Math.random() - .5); }
+function cleanExamText(value: string) {
+  const fixes: Array<[RegExp, string]> = [
+    [/\s+([,.:;?!])/g, "$1"],
+    [/([,;:])(?=\S)/g, "$1 "],
+    [/\(\s+/g, "("],
+    [/\s+\)/g, ")"],
+    [/\s+־\s+/g, "־"],
+    [/\bב יותר\b/g, "ביותר"],
+    [/\bל שימוש\b/g, "לשימוש"],
+    [/\bב מערכת\b/g, "במערכת"],
+    [/\bו הורמונים\b/g, "והורמונים"],
+    [/\bהאוכלוס\s*י\s*יה\b/g, "האוכלוסייה"],
+    [/\bד\s*י\s*כאון\b/g, "דיכאון"],
+    [/\bת\s*י\s*אור\b/g, "תיאור"],
+    [/\bדפ\s*יקות\b/g, "דפיקות"],
+    [/\bא\s*ת\b/g, "את"],
+    [/\bשלו בטן\b/g, "הבטן שלו"],
+    [/\s{2,}/g, " "],
+  ];
+  return fixes.reduce((text, [pattern, replacement]) => text.replace(pattern, replacement), value).trim();
+}
+function explanationFor(question: ExamQuestion) {
+  if (question.explanation.trim()) return cleanExamText(question.explanation);
+  const correct = question.options.find((option) => option.id === question.correctAnswer);
+  return `התשובה הנכונה היא ${question.correctAnswer}${correct ? ` — ${cleanExamText(correct.text)}` : ""}. התשובה נבדקה מול מפתח התשובות המאומת של מבחן ${question.year}.`;
+}
 
 export function ExamRunner({ questions, title, sessionKey }: { questions: ExamQuestion[]; title: string; sessionKey: string }) {
   const [ready, setReady] = useState(false);
@@ -83,10 +109,10 @@ export function ExamRunner({ questions, title, sessionKey }: { questions: ExamQu
     const correct = attempts.filter(a => a.correct).length;
     const wrong = attempts.filter(a => !a.correct);
     const unanswered = attempts.filter(a => a.selected === null).length;
-    return <section className="exam-results"><div className="result-score"><b>{Math.round(correct / ordered.length * 100)}%</b><span>{correct} מתוך {ordered.length} תשובות נכונות</span></div><div className="result-stats"><div><b>{wrong.length}</b><span>טעויות</span></div><div><b>{unanswered}</b><span>שאלות שלא נענו</span></div><div><b>{Math.floor(elapsedSeconds / 60)}:{String(elapsedSeconds % 60).padStart(2, "0")}</b><span>זמן כולל</span></div></div><div className="full-review"><h2>פירוט כל השאלות</h2>{ordered.map((q, i) => { const answer = attempts.find(a => a.questionId === q.id); const studyId=studyIdForExamTopic(q.topic);return <article className={answer?.correct ? "review-correct" : "review-wrong"} key={q.id}><small>שאלה {i + 1} • {q.topic}</small><h3>{q.question}</h3><p>הבחירה שלך: <b>{answer?.selected ? `${answer.selected}. ${q.options.find(o => o.id === answer.selected)?.text}` : "לא נענתה"}</b></p><p>התשובה הנכונה: <strong>{q.correctAnswer}. {q.options.find(o => o.id === q.correctAnswer)?.text}</strong></p><p>הסבר: {q.explanation || "הסבר עדיין לא נוסף"}</p>{q.explanation&&studyId&&<Link className="study-explanation-link" href={`/study/${studyId}`}>לקטע הלימוד המלא ←</Link>}</article> })}</div><div className="result-actions"><button onClick={restart}>מבחן חדש</button><Link href="/exams">חזרה לכל המבחנים</Link></div></section>;
+    return <section className="exam-results"><div className="result-score"><span className="result-greeting">היי, זה ליאור. אני מאמין בך, אבל הציון שלך הוא:</span><b>{Math.round(correct / ordered.length * 100)}%</b><span>{correct} מתוך {ordered.length} תשובות נכונות</span></div><div className="result-stats"><div><b>{wrong.length}</b><span>טעויות</span></div><div><b>{unanswered}</b><span>שאלות שלא נענו</span></div><div><b>{Math.floor(elapsedSeconds / 60)}:{String(elapsedSeconds % 60).padStart(2, "0")}</b><span>זמן כולל</span></div></div><div className="full-review"><h2>פירוט כל השאלות</h2>{ordered.map((q, i) => { const answer = attempts.find(a => a.questionId === q.id); const studyId=studyIdForExamTopic(q.topic); const selectedOption=q.options.find(o => o.id === answer?.selected); const correctOption=q.options.find(o => o.id === q.correctAnswer);return <article className={answer?.correct ? "review-correct" : "review-wrong"} key={q.id}><small>שאלה {i + 1} • {q.topic}</small><h3>{cleanExamText(q.question)}</h3><p>הבחירה שלך: <b>{answer?.selected ? `${answer.selected}. ${cleanExamText(selectedOption?.text ?? "")}` : "לא נענתה"}</b></p><p>התשובה הנכונה: <strong>{q.correctAnswer}. {cleanExamText(correctOption?.text ?? "")}</strong></p><p>הסבר: {explanationFor(q)}</p>{studyId&&<Link className="study-explanation-link" href={`/study/${studyId}`}>לקטע הלימוד המלא ←</Link>}</article> })}</div><div className="result-actions"><button onClick={restart}>מבחן חדש</button><Link href="/exams">חזרה לכל המבחנים</Link></div></section>;
   }
 
-  const currentStudyId=studyIdForExamTopic(current.topic);return <section className="exam-runner"><header><div><small>{title}</small><b>שאלה {index + 1} מתוך {ordered.length}</b></div><span>{Math.round((index / ordered.length) * 100)}%</span></header><div className="exam-progress"><i style={{ width: `${((index + 1) / ordered.length) * 100}%` }} /></div><article className="question-card"><div className="question-meta"><span>שאלה {current.questionNumber}</span><span>{current.topic}</span></div><h1>{current.question}</h1><div className="answer-list">{current.options.map(o => { let state = selected === o.id ? "selected" : ""; if (checked && o.id === current.correctAnswer) state = "correct"; else if (checked && selected === o.id) state = "incorrect"; return <button disabled={checked} className={state} key={o.id} onClick={() => setSelected(o.id)}><b>{o.id}</b><span>{o.text}</span></button> })}</div>{checked && <div className={`answer-feedback ${selected === current.correctAnswer ? "right" : "wrong"}`}>{selected === current.correctAnswer ? CORRECT : WRONG}<p>{current.explanation||"הסבר עדיין לא נוסף"}</p>{current.explanation&&currentStudyId&&<Link href={`/study/${currentStudyId}`}>לקטע הלימוד המלא ←</Link>}</div>}<div className="question-actions dual-actions"><button disabled={!selected || checked} onClick={immediateCheck}>בדיקת תשובה</button><button className="next-unchecked" onClick={next}>שאלה הבאה</button></div></article></section>;
+  const currentStudyId=studyIdForExamTopic(current.topic);return <section className="exam-runner"><header><div><small>{title}</small><b>שאלה {index + 1} מתוך {ordered.length}</b></div><span>{Math.round((index / ordered.length) * 100)}%</span></header><div className="exam-progress"><i style={{ width: `${((index + 1) / ordered.length) * 100}%` }} /></div><article className="question-card"><div className="question-meta"><span>שאלה {current.questionNumber}</span><span>{current.topic}</span></div><h1>{cleanExamText(current.question)}</h1><div className="answer-list">{current.options.map(o => { let state = selected === o.id ? "selected" : ""; if (checked && o.id === current.correctAnswer) state = "correct"; else if (checked && selected === o.id) state = "incorrect"; return <button disabled={checked} className={state} key={o.id} onClick={() => setSelected(o.id)}><b>{o.id}</b><span>{cleanExamText(o.text)}</span></button> })}</div>{checked && <div className={`answer-feedback ${selected === current.correctAnswer ? "right" : "wrong"}`}>{selected === current.correctAnswer ? CORRECT : WRONG}<p>{explanationFor(current)}</p>{currentStudyId&&<Link href={`/study/${currentStudyId}`}>לקטע הלימוד המלא ←</Link>}</div>}<div className="question-actions dual-actions"><button disabled={!selected || checked} onClick={immediateCheck}>בדיקת תשובה</button><button className="next-unchecked" onClick={next}>שאלה הבאה</button></div></article></section>;
 }
 
 export const feedbackMessages = { CORRECT, WRONG, NOTICE };
