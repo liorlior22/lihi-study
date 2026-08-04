@@ -29,15 +29,70 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  padding-block: clamp(1.5rem, 3vw, 2.75rem);
+  width: 100%;
+  padding-block: clamp(1.25rem, 3vw, 2.75rem);
+  padding-inline: clamp(0.875rem, 4vw, 4rem);
+  overflow-x: clip;
+}
+
+.dashboard-page > * {
+  width: min(100%, 73.75rem);
+}
+
+.dashboard-page .family-gallery {
+  width: min(100%, 73.75rem);
+  margin-top: 0 !important;
+  gap: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+.dashboard-page .family-gallery article {
+  width: 100%;
+  min-width: 0;
+}
+
+.dashboard-page .family-gallery img {
+  max-width: none;
 }
 
 @media (max-width: 600px) {
   .dashboard-page { padding-top: clamp(1.25rem, 5vw, 1.75rem); }
   .dashboard-hero h1 {
-    font-size: clamp(1.85rem, 9vw, 2.45rem);
+    font-size: clamp(1.7rem, 8.5vw, 2.45rem);
     letter-spacing: -0.025em;
+    overflow-wrap: normal;
+    word-break: normal;
   }
+
+  .dashboard-hero .motivation-card {
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .dashboard-hero .motivation-card b {
+    font-size: clamp(0.95rem, 4.3vw, 1.05rem);
+    line-height: 1.45;
+  }
+
+  .dashboard-hero .motivation-card blockquote {
+    font-size: clamp(0.95rem, 4.2vw, 1.1rem);
+  }
+}
+
+@media (max-width: 360px) {
+  .dashboard-page { padding-inline: 0.75rem; }
+  .dashboard-hero h1 { font-size: 1.55rem; }
+  .dashboard-hero .motivation-card { padding: 0.875rem; }
+  .dashboard-hero .motivation-card > span { font-size: 1.25rem; }
+}
+
+@media (min-width: 761px) and (max-width: 980px) {
+  .dashboard-page .family-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .dashboard-page .family-gallery article { aspect-ratio: 1; }
+}
+
+@media (min-width: 1600px) {
+  .dashboard-page { padding-top: 2.75rem; }
 }
 
 .leader-heading h1 {
