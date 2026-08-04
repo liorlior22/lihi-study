@@ -1,0 +1,2 @@
+import Link from "next/link";
+export function ExamCard({year,count}:{year:number;count:number}){return <article className="exam-select-card"><div className="exam-year">{year}</div><h2>מבחן רפואה מערבית</h2><p>{count?`${count} שאלות מאומתות זמינות לתרגול`:`קובץ המקור ופתרון הבחינה זמינים לעיון`}</p><div className="exam-card-actions">{count?<Link href={`/exams/run?mode=year&value=${year}`}>התחלת מבחן</Link>:<span>ממתין לקליטת תוכן מאומת</span>}<a href={`/exams-pdf/western-${year}.pdf`} target="_blank">צפייה במבחן המקורי</a></div></article>}
