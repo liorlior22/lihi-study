@@ -1,0 +1,28 @@
+type Props = { name:string; size?:number; className?:string };
+const paths:Record<string,React.ReactNode> = {
+  home:<><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10M9 20v-6h6v6"/></>,
+  topics:<><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v17H6.5A2.5 2.5 0 0 1 4 17.5z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v17h4.5a2.5 2.5 0 0 0 2.5-2.5z"/></>,
+  cards:<><rect x="3" y="5" width="15" height="14" rx="2"/><path d="m7 5 1-2h11a2 2 0 0 1 2 2v10l-3 1"/></>,
+  practice:<><path d="M9 11 11 13 15 9"/><path d="M7 3h10v3H7zM5 5v16h14V5"/></>,
+  exam:<><path d="M6 2h12v20H6zM9 6h6M9 10h6M9 14h3"/></>,
+  progress:<><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></>,
+  ai:<><path d="M12 3v3M5.6 5.6l2.1 2.1M18.4 5.6l-2.1 2.1"/><rect x="4" y="8" width="16" height="12" rx="4"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/><path d="M9 17h6"/></>,
+  bell:<><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></>,
+  search:<><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></>,
+  flame:<path d="M12 22c4 0 7-3 7-7 0-3-2-5-4-7 0 3-2 4-3 4 1-5-2-8-5-10 1 6-3 8-3 13 0 4 4 7 8 7Z"/>,
+  clock:<><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></>,
+  target:<><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></>,
+  arrow:<path d="m9 18 6-6-6-6"/>,
+  spark:<><path d="m12 3 1.2 4.2L17 9l-3.8 1.8L12 15l-1.2-4.2L7 9l3.8-1.8z"/><path d="m19 14 .6 2.2L22 17l-2.4.8L19 20l-.6-2.2L16 17l2.4-.8z"/></>,
+  menu:<><path d="M4 7h16M4 12h16M4 17h16"/></>,
+  close:<><path d="m6 6 12 12M18 6 6 18"/></>,
+  check:<path d="m5 12 4 4L19 6"/>,
+  calculator:<><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 11h1M12 11h1M16 11h1M8 15h1M12 15h1M16 15h1"/></>,
+  book:<><path d="M4 5a3 3 0 0 1 3-3h4v18H7a3 3 0 0 0-3 2z"/><path d="M20 5a3 3 0 0 0-3-3h-4v18h4a3 3 0 0 1 3 2z"/></>,
+  pen:<><path d="m4 20 4-1 11-11-3-3L5 16zM14 7l3 3"/></>,
+  flask:<><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3M8 15h8"/></>,
+  play:<path d="m9 7 8 5-8 5z"/>,
+  trophy:<><path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H4v2a4 4 0 0 0 4 4M16 6h4v2a4 4 0 0 1-4 4M12 13v5M8 21h8M9 18h6"/></>,
+  send:<path d="m3 11 18-8-7 18-3-7zM11 14l4-4"/>,
+};
+export function Icon({name,size=20,className=""}:Props){return <svg aria-hidden="true" className={className} width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">{paths[name]}</svg>}

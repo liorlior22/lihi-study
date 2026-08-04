@@ -1,0 +1,2 @@
+import data from "../../data/content.json";import {Shell} from "../../components/shell";import {PageHead} from "../../components/ui";import {Practice} from "../../components/practice";
+export default function Page(){return <Shell><PageHead eyebrow="תרגול מותאם אישית" title="תרגול שאלות" description="שאלות שנבחרו במיוחד לפי הנושאים שדורשים אצלך חיזוק."/><Practice questions={data.questions}/></Shell>}
