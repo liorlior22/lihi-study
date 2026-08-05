@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { RedHeader } from "../../../components/red-header";
+import { StudySectionNav } from "../../../components/study-section-nav";
 import { allQuestions } from "../../../lib/exams";
 import { pageForSection, pagesForTopic, studyTopics } from "../../../lib/study";
 
@@ -10,11 +11,11 @@ export function generateStaticParams(){return studyTopics.map(topic=>({topic:top
 export default async function Topic({params}:{params:Promise<{topic:string}>}){
   const{topic:id}=await params,topic=studyTopics.find(item=>item.id===id);
   if(!topic)notFound();
-  const pages=pagesForTopic(topic),related=allQuestions.filter(q=>q.topic===topic.title);
+  const pages=pagesForTopic(topic),related=allQuestions.filter(q=>q.topic===topic.title),sections=topic.sections.flatMap((section,index)=>{const page=pageForSection(topic,section,index);return page?[{label:section,targetId:`page-${page.page}`}]:[]});
   return <><RedHeader/><main className="digital-textbook">
     <nav><Link href="/study">← כל נושאי הלימוד</Link><span>מקור: רפואה מערבית — מבחן סוף שנה • עמ׳ {topic.pages}</span></nav>
     <header><span>פרק לימוד</span><h1>{topic.title}</h1><p>{topic.summary}</p><div>{topic.terms.map(term=><b key={term}>{term}</b>)}</div></header>
-    <div className="textbook-layout"><aside><details open><summary>ניווט בפרק</summary><div><h2>תוכן הפרק</h2>{topic.sections.map((section,index)=>{const page=pageForSection(topic,section,index);return page?<a href={`#page-${page.page}`} key={section}>{section}</a>:null})}<h2>חוזר במבחנים</h2>{topic.repeated.map(item=><span key={item}>{item}</span>)}</div></details></aside>
+    <div className="textbook-layout"><aside><StudySectionNav sections={sections} repeated={topic.repeated}/></aside>
       <article id="content" className="source-content"><div className="source-note"><b>חומר המקור המלא לפי נושא</b><p>עמודי המקור מוצגים במלואם, ללא קיצור, שכתוב או השלמת מידע רפואי.</p></div>{pages.map(page=><figure id={`page-${page.page}`} key={page.page}><figcaption>עמוד {page.page} בחומר המקור</figcaption><Image src={`/study-pages/page-${String(page.page).padStart(3,"0")}.jpg`} alt={`${topic.title} — עמוד ${page.page} בחומר המקור`} width={940} height={1329} sizes="(max-width: 760px) 100vw, 900px"/></figure>)}</article>
     </div>
     <section className="topic-practice"><div><h2>שאלות קשורות</h2><p>{related.length?`${related.length} שאלות מאומתות זמינות בנושא.`:"לא נמצאו עדיין שאלות מאומתות המשויכות ישירות לנושא."}</p></div>{related.length>0&&<Link href={`/exams/run?mode=topic&value=${encodeURIComponent(topic.title)}`}>תרגול בנושא</Link>}</section>
