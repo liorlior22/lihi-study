@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { associationQuestions, improvisedQuestions, questionsByYear } from "../lib/exams";
 import { ExamCard } from "./exam-card";
+import { sourceExamQuestions } from "../lib/source-exams";
 
 const years = [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2024];
 const sourceYears = [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
@@ -24,11 +25,11 @@ function AssociationCard({ examKey, title }: { examKey: TopicKey; title: string 
   </article>;
 }
 
-function SourceExams({ examKey, title }: { examKey: "foundations" | "acupuncture" | "point-location"; title: string }) {
-  return <div className="exam-year-grid source-exam-grid">{sourceYears.map(year => <article className="exam-select-card source-exam-card" key={`${examKey}-${year}`}>
+function SourceExams({ examKey, title }: { examKey: "foundations" | "acupuncture" | "point-location" | "herbs"; title: string }) {
+  return <div className="exam-year-grid source-exam-grid">{sourceYears.map(year => { const key = `${examKey}-${year}`; const questions = sourceExamQuestions[key] ?? []; return <article className="exam-select-card source-exam-card" key={key}>
     <div className="exam-year">{year}</div><h2>{title}</h2><p>מבחן האיגוד {year} • מבחן מקורי ותשובון</p>
-    <div className="exam-card-actions"><a href={`/exams-pdf/${examKey}-${year}.pdf`} target="_blank">צפייה במבחן</a><a href={`/exams-pdf/${examKey}-${year}-answers.pdf`} target="_blank">צפייה בתשובון</a></div>
-  </article>)}</div>;
+    <div className="exam-card-actions">{questions.length > 0 ? <Link href={`/exams/run?mode=source&value=${key}`}>התחלת מבחן ({questions.length})</Link> : <a href={`/exams-pdf/${examKey}-${year}.pdf`} target="_blank">צפייה במקור</a>}<a href={`/exams-pdf/${examKey}-${year}-answers.pdf`} target="_blank">צפייה בתשובון</a></div>
+  </article>})}</div>;
 }
 
 export function ExamCatalog() {
@@ -46,10 +47,13 @@ export function ExamCatalog() {
       {selected === "western" && <><div className="exam-year-grid featured-topic-exams"><AssociationCard examKey="western" title="רפואה מערבית"/><article className="exam-select-card association-exam-card">
         <div className="exam-year">1</div><h2>מבחן מערבי מאולתר 1</h2><p>{improvisedQuestions["western-1"].length} שאלות מסודרות עם תשובות והסברים</p>
         <div className="exam-card-actions"><Link href="/exams/run?mode=improvised&value=western-1">התחלת מבחן</Link><a href="https://www.quizme.co.il/quiz-discussion/7566" target="_blank" rel="noreferrer">צפייה במקור</a></div>
-      </article></div><div className="exam-year-grid">{years.map(year => { const count = questionsByYear[year]?.length ?? 0; return <ExamCard key={year} year={year} count={count} available={count === 30}/>; })}</div></>}
+      </article></div><div className="exam-year-grid"><article className="exam-select-card source-exam-card">
+        <div className="exam-year">2012</div><h2>רפואה מערבית</h2><p>30 שאלות מאומתות • זמין</p>
+        <div className="exam-card-actions"><Link href="/exams/run?mode=source&value=western-2012">התחלת מבחן</Link><a href="/exams-pdf/western-2012-answers.pdf" target="_blank">צפייה בתשובון</a></div>
+      </article>{years.map(year => { const count = questionsByYear[year]?.length ?? 0; return <ExamCard key={year} year={year} count={count} available={count === 30}/>; })}</div></>}
       {selected === "acupuncture" && <><div className="exam-year-grid featured-topic-exams"><AssociationCard examKey="acupuncture" title="דיקור"/></div><SourceExams examKey="acupuncture" title="דיקור"/></>}
       {selected === "point-location" && <><div className="exam-year-grid featured-topic-exams"><AssociationCard examKey="point-location" title="איתור נקודות"/></div><SourceExams examKey="point-location" title="איתור נקודות"/></>}
-      {selected === "herbs" && <div className="exam-year-grid featured-topic-exams"><AssociationCard examKey="herbs" title="צמחי מרפא"/></div>}
+      {selected === "herbs" && <><div className="exam-year-grid featured-topic-exams"><AssociationCard examKey="herbs" title="צמחי מרפא"/></div><SourceExams examKey="herbs" title="צמחי מרפא"/></>}
     </div>
   </section>;
 }

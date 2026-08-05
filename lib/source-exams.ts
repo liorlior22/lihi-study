@@ -1,0 +1,70 @@
+import type { ExamQuestion } from "../types/exam";
+import herbs2012 from "../data/exams/source/herbs-2012.json";
+import herbs2013 from "../data/exams/source/herbs-2013.json";
+import herbs2014 from "../data/exams/source/herbs-2014.json";
+import herbs2015 from "../data/exams/source/herbs-2015.json";
+import herbs2016 from "../data/exams/source/herbs-2016.json";
+import herbs2017 from "../data/exams/source/herbs-2017.json";
+import herbs2018 from "../data/exams/source/herbs-2018.json";
+import herbs2019 from "../data/exams/source/herbs-2019.json";
+import acupuncture2012 from "../data/exams/source/acupuncture-2012.json";
+import acupuncture2013 from "../data/exams/source/acupuncture-2013.json";
+import acupuncture2014 from "../data/exams/source/acupuncture-2014.json";
+import acupuncture2015 from "../data/exams/source/acupuncture-2015.json";
+import acupuncture2016 from "../data/exams/source/acupuncture-2016.json";
+import acupuncture2017 from "../data/exams/source/acupuncture-2017.json";
+import acupuncture2018 from "../data/exams/source/acupuncture-2018.json";
+import acupuncture2019 from "../data/exams/source/acupuncture-2019.json";
+import foundations2012 from "../data/exams/source/foundations-2012.json";
+import foundations2013 from "../data/exams/source/foundations-2013.json";
+import foundations2014 from "../data/exams/source/foundations-2014.json";
+import foundations2015 from "../data/exams/source/foundations-2015.json";
+import foundations2016 from "../data/exams/source/foundations-2016.json";
+import foundations2017 from "../data/exams/source/foundations-2017.json";
+import foundations2018 from "../data/exams/source/foundations-2018.json";
+import foundations2019 from "../data/exams/source/foundations-2019.json";
+import pointLocation2012 from "../data/exams/source/point-location-2012.json";
+import pointLocation2013 from "../data/exams/source/point-location-2013.json";
+import pointLocation2014 from "../data/exams/source/point-location-2014.json";
+import pointLocation2015 from "../data/exams/source/point-location-2015.json";
+import pointLocation2016 from "../data/exams/source/point-location-2016.json";
+import pointLocation2017 from "../data/exams/source/point-location-2017.json";
+import pointLocation2018 from "../data/exams/source/point-location-2018.json";
+import pointLocation2019 from "../data/exams/source/point-location-2019.json";
+import western2012 from "../data/exams/source/western-2012.json";
+
+export const sourceExamQuestions: Record<string, ExamQuestion[]> = {
+  "western-2012": western2012 as ExamQuestion[],
+  "foundations-2012": foundations2012 as ExamQuestion[],
+  "foundations-2013": foundations2013 as ExamQuestion[],
+  "foundations-2014": foundations2014 as ExamQuestion[],
+  "foundations-2015": foundations2015 as ExamQuestion[],
+  "foundations-2016": foundations2016 as ExamQuestion[],
+  "foundations-2017": foundations2017 as ExamQuestion[],
+  "foundations-2018": foundations2018 as ExamQuestion[],
+  "foundations-2019": foundations2019 as ExamQuestion[],
+  "acupuncture-2012": acupuncture2012 as ExamQuestion[],
+  "acupuncture-2013": acupuncture2013 as ExamQuestion[],
+  "acupuncture-2014": acupuncture2014 as ExamQuestion[],
+  "acupuncture-2015": acupuncture2015 as ExamQuestion[],
+  "acupuncture-2016": acupuncture2016 as ExamQuestion[],
+  "acupuncture-2017": acupuncture2017 as ExamQuestion[],
+  "acupuncture-2018": acupuncture2018 as ExamQuestion[],
+  "acupuncture-2019": acupuncture2019 as ExamQuestion[],
+  "point-location-2012": pointLocation2012 as ExamQuestion[],
+  "point-location-2013": pointLocation2013 as ExamQuestion[],
+  "point-location-2014": pointLocation2014 as ExamQuestion[],
+  "point-location-2015": pointLocation2015 as ExamQuestion[],
+  "point-location-2016": pointLocation2016 as ExamQuestion[],
+  "point-location-2017": pointLocation2017 as ExamQuestion[],
+  "point-location-2018": pointLocation2018 as ExamQuestion[],
+  "point-location-2019": pointLocation2019 as ExamQuestion[],
+  "herbs-2012": herbs2012 as ExamQuestion[],
+  "herbs-2013": herbs2013 as ExamQuestion[],
+  "herbs-2014": herbs2014 as ExamQuestion[],
+  "herbs-2015": herbs2015 as ExamQuestion[],
+  "herbs-2016": herbs2016 as ExamQuestion[],
+  "herbs-2017": herbs2017 as ExamQuestion[],
+  "herbs-2018": herbs2018 as ExamQuestion[],
+  "herbs-2019": herbs2019 as ExamQuestion[],
+};

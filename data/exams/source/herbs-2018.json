@@ -1,0 +1,1452 @@
+[
+  {
+    "id": "source-herbs-2018-1",
+    "year": 2018,
+    "questionNumber": 1,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "בתהליך עיבוד הצמחים טיגון של צמח בדבש מעלה את יכולתו.________ איזו מהאפשרויות הבאות משלימה את המשפט בצורה הטובה ביותר?",
+    "options": [
+      {
+        "id": "א",
+        "text": "ללחלח"
+      },
+      {
+        "id": "ב",
+        "text": "לספוח"
+      },
+      {
+        "id": "ג",
+        "text": "לקרר"
+      },
+      {
+        "id": "ד",
+        "text": "ל הפסיק דימום"
+      }
+    ],
+    "correctAnswer": "א",
+    "explanation": "התשובה הנכונה היא „ללחלח”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-2",
+    "year": 2018,
+    "questionNumber": 2,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "לאיזו קטגוריה שייך הצמח (Radix Platycodi Grandiflori) Jie Geng?",
+    "options": [
+      {
+        "id": "א",
+        "text": "מקררי דם"
+      },
+      {
+        "id": "ב",
+        "text": "מסלקי רוח לחות"
+      },
+      {
+        "id": "ג",
+        "text": "מתמירי ליחה קרה"
+      },
+      {
+        "id": "ד",
+        "text": "משחרריחיצון חריפים חמימים"
+      }
+    ],
+    "correctAnswer": "ג",
+    "explanation": "התשובה הנכונה היא „מתמירי ליחה קרה”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-3",
+    "year": 2018,
+    "questionNumber": 3,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "לאיזו קטגוריה שייך הצמח Lian Zi (Semen Nelumbinis Nuciferae)?",
+    "options": [
+      {
+        "id": "א",
+        "text": "מרגיעי נפש"
+      },
+      {
+        "id": "ב",
+        "text": "מניעי דם"
+      },
+      {
+        "id": "ג",
+        "text": "מחזקי יאנג"
+      },
+      {
+        "id": "ד",
+        "text": "סופחים"
+      }
+    ],
+    "correctAnswer": "ד",
+    "explanation": "התשובה הנכונה היא „סופחים”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-4",
+    "year": 2018,
+    "questionNumber": 4,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "לאיזו קטגוריה שייך הצמח Ce Bai Ye (Cacumen Biotae Orientalis)?",
+    "options": [
+      {
+        "id": "א",
+        "text": "מסלקי רוח פנימית"
+      },
+      {
+        "id": "ב",
+        "text": "מטהריחום ולחות"
+      },
+      {
+        "id": "ג",
+        "text": "מרגיעי נפש"
+      },
+      {
+        "id": "ד",
+        "text": "מפסיקי דימום"
+      }
+    ],
+    "correctAnswer": "ד",
+    "explanation": "התשובה הנכונה היא „מפסיקי דימום”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-5",
+    "year": 2018,
+    "questionNumber": 5,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "הצמח Zhu Ru (Caulis Bambusae in Taeniis:) משפיע בעיקר על?",
+    "options": [
+      {
+        "id": "א",
+        "text": "ריאות, קיבה, כיס מרה"
+      },
+      {
+        "id": "ב",
+        "text": "כליות, ריאות, קיבה"
+      },
+      {
+        "id": "ג",
+        "text": "כליות, כבד, לב"
+      },
+      {
+        "id": "ד",
+        "text": "כיס מרה, כבד, לב"
+      }
+    ],
+    "correctAnswer": "א",
+    "explanation": "התשובה הנכונה היא „ריאות, קיבה, כיס מרה”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-6",
+    "year": 2018,
+    "questionNumber": 6,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "מה משותף לצמחים Shi Gao ו־Zhi Mu (Gypsum Fibrosum ו־Radix Anemarrhenae Asphodeloidis)?",
+    "options": [
+      {
+        "id": "א",
+        "text": "שניהם מזינים את יין הכליות"
+      },
+      {
+        "id": "ב",
+        "text": "שניהם מטהרים חום ריק"
+      },
+      {
+        "id": "ג",
+        "text": "שניהם מטהרים עודף חום מרמת ה- Qi"
+      },
+      {
+        "id": "ד",
+        "text": "שניהם מזיעים ומסלקים רוח חמה מרמת ה- Wei"
+      }
+    ],
+    "correctAnswer": "ג",
+    "explanation": "התשובה הנכונה היא „שניהם מטהרים עודף חום מרמת ה- Qi”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-7",
+    "year": 2018,
+    "questionNumber": 7,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "שלושה מהצמחים הבאים יעילים בטיפול בבחילות מהו הצמח הנותר?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Huo Xiang Herba Agastaches seu Pogostemi"
+      },
+      {
+        "id": "ב",
+        "text": "Zi Su Ye Folium Perillae Frutescentis"
+      },
+      {
+        "id": "ג",
+        "text": "Chen Pi Pericarpium Citri Reticulatae"
+      },
+      {
+        "id": "ד",
+        "text": "Fu Xiao Mai Semen Tritici Aestivi Levis"
+      }
+    ],
+    "correctAnswer": "ד",
+    "explanation": "התשובה הנכונה היא „Fu Xiao Mai Semen Tritici Aestivi Levis”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-8",
+    "year": 2018,
+    "questionNumber": 8,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "שלושה מהצמחים הבאים יעילים בהרגעת עובר לא שקט מהו הצמח הנותר?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Bai Zhu Rhizoma Atractylodis Macrocephalae"
+      },
+      {
+        "id": "ב",
+        "text": "Tu Si Zi Semen Cuscutae Chinensis"
+      },
+      {
+        "id": "ג",
+        "text": "Gou Qi Zi Fructus Lycii"
+      },
+      {
+        "id": "ד",
+        "text": "Sang Ji Sheng Ramulus Sangjishang"
+      }
+    ],
+    "correctAnswer": "ג",
+    "explanation": "התשובה הנכונה היא „Gou Qi Zi Fructus Lycii”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-9",
+    "year": 2018,
+    "questionNumber": 9,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזה מהצמחים הבאים הוא הטוב ביותר לטיפול בכאב ראש על רקע חדירת רוח חום?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Ju Hua Flos Chrysanthemi Morifolii"
+      },
+      {
+        "id": "ב",
+        "text": "Niu Bang Zi Fructus Arctii Lappae"
+      },
+      {
+        "id": "ג",
+        "text": "Long Dan Cao Radix Gentianae Longdancao"
+      },
+      {
+        "id": "ד",
+        "text": "Qiang Huo Rhizoma et Radix Notopterygii"
+      }
+    ],
+    "correctAnswer": "א",
+    "explanation": "התשובה הנכונה היא „Ju Hua Flos Chrysanthemi Morifolii”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-10",
+    "year": 2018,
+    "questionNumber": 10,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזה מהצמחים הבאים הוא הטוב ביותר לטיפול בהזעות על רקע חוסר צ'י הריאות?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Mai Men Dong Tuber Ophiopogonis Japonici"
+      },
+      {
+        "id": "ב",
+        "text": "Wu Wei Zi Fructus Schisandrae Chinensis"
+      },
+      {
+        "id": "ג",
+        "text": "Huang Qin Radix Scutellariae Baicalensis"
+      },
+      {
+        "id": "ד",
+        "text": "Niu Xi Radix Achyranthis Bidentatae"
+      }
+    ],
+    "correctAnswer": "ב",
+    "explanation": "התשובה הנכונה היא „Wu Wei Zi Fructus Schisandrae Chinensis”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-11",
+    "year": 2018,
+    "questionNumber": 11,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזה מהצמחים הבאים הוא הטוב ביותר לטיפול ב עצירות על רקע חוסר דם?",
+    "options": [
+      {
+        "id": "א",
+        "text": "E Jiao Gelatinum Corii Asini"
+      },
+      {
+        "id": "ב",
+        "text": "Xi Yang Shen Radix Panacis Quinquefolii"
+      },
+      {
+        "id": "ג",
+        "text": "Da Huang Rhubarb Rhizoma Rhei"
+      },
+      {
+        "id": "ד",
+        "text": "Huo Ma Ren Semen Cannabis Sativae"
+      }
+    ],
+    "correctAnswer": "ד",
+    "explanation": "התשובה הנכונה היא „Huo Ma Ren Semen Cannabis Sativae”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-12",
+    "year": 2018,
+    "questionNumber": 12,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזה מהצמחים הבאים הוא הטוב ביותר לטיפול בשיעול אקוטי יבש על רקע חדירת רוח חמה חיצונית?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Cang Zhu Rhizoma Atractylodis"
+      },
+      {
+        "id": "ב",
+        "text": "Sang Ye Folium Mori Albae"
+      },
+      {
+        "id": "ג",
+        "text": "Shi Gao Gypsum Fibrosum"
+      },
+      {
+        "id": "ד",
+        "text": "Sheng Jiang Rhizoma Zingiberis Officinalis Recens"
+      }
+    ],
+    "correctAnswer": "ב",
+    "explanation": "התשובה הנכונה היא „Sang Ye Folium Mori Albae”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-13",
+    "year": 2018,
+    "questionNumber": 13,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזה מהצמחים הבאים הוא הטוב ביותר להרגיע את ה נפש ולהניע רגשות תקועים?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Yan Hu Suo Rhizoma Corydalis Yanhusuo"
+      },
+      {
+        "id": "ב",
+        "text": "Long Gu Os Draconis"
+      },
+      {
+        "id": "ג",
+        "text": "He Huan Pi Cortex Albizziae Julibrissin"
+      },
+      {
+        "id": "ד",
+        "text": "Zhen Zhu Mu Concha Margaritiferae"
+      }
+    ],
+    "correctAnswer": "ג",
+    "explanation": "התשובה הנכונה היא „He Huan Pi Cortex Albizziae Julibrissin”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-14",
+    "year": 2018,
+    "questionNumber": 14,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזה משילובי הצמחים הבאים ה וא הטוב ביותר לטיפול בכאב גרון אקוטי עם שקדים נפוחים Radix Anemarrhenae Asphodeloidis + Semen Pruni Armeniacae?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Xing Ren + Zhi Zi Semen Pruni Armeniacae + Fructus Gardeniae Jasminoidis"
+      },
+      {
+        "id": "ב",
+        "text": "Xing Ren + Zhi Mu"
+      },
+      {
+        "id": "ג",
+        "text": "Ban Lan Gen + Xuan Shen Radix Isatidis seu Baphicacanthi + Radix Scrophulariae Ningpoensis"
+      },
+      {
+        "id": "ד",
+        "text": "Ban Lan Gen + Dan Shen"
+      }
+    ],
+    "correctAnswer": "ג",
+    "explanation": "התשובה הנכונה היא „Ban Lan Gen + Xuan Shen Radix Isatidis seu Baphicacanthi + Radix Scrophulariae Ningpoensis”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-15",
+    "year": 2018,
+    "questionNumber": 15,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "מה השפעותיו העיקריות של הצמח Da Zao (Fructus Ziziphi Jujubae)?",
+    "options": [
+      {
+        "id": "א",
+        "text": "מניע דם ומקל על כאבי מחזור"
+      },
+      {
+        "id": "ב",
+        "text": "מטהר חום מהקיבה ומלחלח מ עיים"
+      },
+      {
+        "id": "ג",
+        "text": "מזין יין הכבד והכליות ומיטיב עם הראייה"
+      },
+      {
+        "id": "ד",
+        "text": "מחזק צ'י ודם ומרגיע את הנפש"
+      }
+    ],
+    "correctAnswer": "ד",
+    "explanation": "התשובה הנכונה היא „מחזק צ'י ודם ומרגיע את הנפש”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-16",
+    "year": 2018,
+    "questionNumber": 16,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "מה השפעתו העיקרית של הצמח Sang Bai Pi Cortex Mori Albae Radicis)?",
+    "options": [
+      {
+        "id": "א",
+        "text": "מטפל בשיעול על רקע עודף חום בריאות"
+      },
+      {
+        "id": "ב",
+        "text": "מטפל בעצירות על רקע סטגנציה של צ'י"
+      },
+      {
+        "id": "ג",
+        "text": "מטפל בבחילות על רקע חוסר צ'י וחולשת המחמ ם האמצעי"
+      },
+      {
+        "id": "ד",
+        "text": "מטפל ב לחץ דם נמוך על רקע חוסר דם"
+      }
+    ],
+    "correctAnswer": "א",
+    "explanation": "התשובה הנכונה היא „מטפל בשיעול על רקע עודף חום בריאות”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-17",
+    "year": 2018,
+    "questionNumber": 17,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזו מהאפשרויות הבאות מתארת את השפעתו של הצמח Tian Hua Fen (Radix Trichosanthis Kirilowil)?",
+    "options": [
+      {
+        "id": "א",
+        "text": "ארומטי, מעורר את הטחול להתמיר לחות"
+      },
+      {
+        "id": "ב",
+        "text": "מייבש ליחה לבנה שופעת"
+      },
+      {
+        "id": "ג",
+        "text": "מטהר חום מחוסר יין הכליות"
+      },
+      {
+        "id": "ד",
+        "text": "מטהר חום מהקיבה ומהריאות ומייצר נוזלים"
+      }
+    ],
+    "correctAnswer": "ד",
+    "explanation": "התשובה הנכונה היא „מטהר חום מהקיבה ומהריאות ומייצר נוזלים”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-18",
+    "year": 2018,
+    "questionNumber": 18,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "שלש מהאפשרויות הבאות מתארות את השפעתו של הצמח Bai Zhu (Rhizoma Atractylodis Macrocephalae) מהי האפשרות הנותרת?",
+    "options": [
+      {
+        "id": "א",
+        "text": "מחזק את צ'י הטחול"
+      },
+      {
+        "id": "ב",
+        "text": "מחזק את דם הכבד"
+      },
+      {
+        "id": "ג",
+        "text": "מייצב את החיצון"
+      },
+      {
+        "id": "ד",
+        "text": "מייבש לחות"
+      }
+    ],
+    "correctAnswer": "ב",
+    "explanation": "התשובה הנכונה היא „מחזק את דם הכבד”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-19",
+    "year": 2018,
+    "questionNumber": 19,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "לאיזו קטגוריה שייכת הפורמולה Wan Dai Tang?",
+    "options": [
+      {
+        "id": "א",
+        "text": "מתמירות ליחה"
+      },
+      {
+        "id": "ב",
+        "text": "מרגיע ות נפש"
+      },
+      {
+        "id": "ג",
+        "text": "מפסיקות דימום"
+      },
+      {
+        "id": "ד",
+        "text": "סופחות"
+      }
+    ],
+    "correctAnswer": "ד",
+    "explanation": "התשובה הנכונה היא „סופחות”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-20",
+    "year": 2018,
+    "questionNumber": 20,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "לאיזו קטגוריה שייכת הפורמולה Dang Gui Bu Xue Tang?",
+    "options": [
+      {
+        "id": "א",
+        "text": "מחזקות צ'י ודם"
+      },
+      {
+        "id": "ב",
+        "text": "מחזקות דם ויין"
+      },
+      {
+        "id": "ג",
+        "text": "מניעות דם"
+      },
+      {
+        "id": "ד",
+        "text": "מחממות פנים"
+      }
+    ],
+    "correctAnswer": "א",
+    "explanation": "התשובה הנכונה היא „מחזקות צ'י ודם”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-21",
+    "year": 2018,
+    "questionNumber": 21,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "לאיזו קטגוריה שייכת הפורמולה Ping Wei San?",
+    "options": [
+      {
+        "id": "א",
+        "text": "פותחות פתחים"
+      },
+      {
+        "id": "ב",
+        "text": "מהרמנות"
+      },
+      {
+        "id": "ג",
+        "text": "מטהרות חום"
+      },
+      {
+        "id": "ד",
+        "text": "מתמירות לחות עכורה"
+      }
+    ],
+    "correctAnswer": "ד",
+    "explanation": "התשובה הנכונה היא „מתמירות לחות עכורה”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-22",
+    "year": 2018,
+    "questionNumber": 22,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "שלושה מהצמחים הבאים כלולים בפורמולה Li Zhong Wan, איזה צמח אינו כלול בה?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Ren Shen Radix Ginseng"
+      },
+      {
+        "id": "ב",
+        "text": "Bai Zhu Rhizoma Atractylodis Macrocephalae"
+      },
+      {
+        "id": "ג",
+        "text": "Fu Ling Sclerotium Poriae Cocos"
+      },
+      {
+        "id": "ד",
+        "text": "Gan Jiang Rhizoma Zingiberis Officinalis"
+      }
+    ],
+    "correctAnswer": "ג",
+    "explanation": "התשובה הנכונה היא „Fu Ling Sclerotium Poriae Cocos”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-23",
+    "year": 2018,
+    "questionNumber": 23,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "הצמחים בפורמולה Er Zhi Wan: הם Fructus Ligustri Lucidi + Fructus Xanthii Sibirici?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Nu Zhen Zi + Han Lian Cao Fructus Ligustri Lucidi + Herba Ecliptae Prostratae"
+      },
+      {
+        "id": "ב",
+        "text": "Nu Zhen Zi + Cang Er Zi"
+      },
+      {
+        "id": "ג",
+        "text": "Bai Zhi + Han Lian Cao Radix Angelicae Dahuricae + Herba Ecliptae Prostratae"
+      },
+      {
+        "id": "ד",
+        "text": "Bai Zhi + Cang Er Zi Radix Angelicae Dahuricae + Fructus Xanthii Sibirici"
+      }
+    ],
+    "correctAnswer": "א",
+    "explanation": "התשובה הנכונה היא „Nu Zhen Zi + Han Lian Cao Fructus Ligustri Lucidi + Herba Ecliptae Prostratae”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-24",
+    "year": 2018,
+    "questionNumber": 24,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזה מצירופי הצמחים הבאים כלול בפורמולה Wen Dan Tang?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Zhi Mu + Huang Bai Radix Anemarrhenae Asphodeloidis + Cortex Phellodendri"
+      },
+      {
+        "id": "ב",
+        "text": "Zhu Ru + Zhi Shi Caulis Bambusae in Taeniis + Fructus Immaturus Citri Aurantii"
+      },
+      {
+        "id": "ג",
+        "text": "Gui Zhi + Bai Shao Ramulus Cinnamomi Cassiae + Radix Paeoniae Lactiflorae"
+      },
+      {
+        "id": "ד",
+        "text": "Sha Shen + Mai Men Dong Glehniae Littoralis Radix + Tuber Ophiopogonis Japonici"
+      }
+    ],
+    "correctAnswer": "ב",
+    "explanation": "התשובה הנכונה היא „Zhu Ru + Zhi Shi Caulis Bambusae in Taeniis + Fructus Immaturus Citri Aurantii”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-25",
+    "year": 2018,
+    "questionNumber": 25,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "הפורמולה Shou Tai Wan משפיעה בעיקר: על?",
+    "options": [
+      {
+        "id": "א",
+        "text": "כיס המרה"
+      },
+      {
+        "id": "ב",
+        "text": "המפרקים"
+      },
+      {
+        "id": "ג",
+        "text": "פתחי החישה"
+      },
+      {
+        "id": "ד",
+        "text": "הרחם"
+      }
+    ],
+    "correctAnswer": "ד",
+    "explanation": "התשובה הנכונה היא „הרחם”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-26",
+    "year": 2018,
+    "questionNumber": 26,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "הפורמולה Dang Gui Si Ni Tang מ שפיעה בעיקר: על?",
+    "options": [
+      {
+        "id": "א",
+        "text": "התעלות"
+      },
+      {
+        "id": "ב",
+        "text": "המחמם האמצעי"
+      },
+      {
+        "id": "ג",
+        "text": "הפתחים התחתונים"
+      },
+      {
+        "id": "ד",
+        "text": "פתחי החישה"
+      }
+    ],
+    "correctAnswer": "א",
+    "explanation": "התשובה הנכונה היא „התעלות”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-27",
+    "year": 2018,
+    "questionNumber": 27,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזו פורמולה מטפלת ב מחולל מחלה השוכן בשכבת ה- Shao Yang?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Zhen Gan Xi Feng Tang"
+      },
+      {
+        "id": "ב",
+        "text": "Ba Zhen Tang"
+      },
+      {
+        "id": "ג",
+        "text": "Xiao Chai Hu Tang"
+      },
+      {
+        "id": "ד",
+        "text": "Jing Fang Bai Du San"
+      }
+    ],
+    "correctAnswer": "ג",
+    "explanation": "התשובה הנכונה היא „Xiao Chai Hu Tang”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-28",
+    "year": 2018,
+    "questionNumber": 28,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזו פורמולה מטהרת חום מרמת הצ'י המזין?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Qing Ying Tang"
+      },
+      {
+        "id": "ב",
+        "text": "Xi Jiao Di Huang Wan"
+      },
+      {
+        "id": "ג",
+        "text": "Shao Fu Zhu Yu Tang"
+      },
+      {
+        "id": "ד",
+        "text": "Qing Qi Hua Tan Wan"
+      }
+    ],
+    "correctAnswer": "א",
+    "explanation": "התשובה הנכונה היא „Qing Ying Tang”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-29",
+    "year": 2018,
+    "questionNumber": 29,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזו פורמולה מייצבת את הכליות ו סופחת שתן?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Zhu Ling Tang"
+      },
+      {
+        "id": "ב",
+        "text": "Suo Quan Wan"
+      },
+      {
+        "id": "ג",
+        "text": "Mu Li San"
+      },
+      {
+        "id": "ד",
+        "text": "Shi Xiao San"
+      }
+    ],
+    "correctAnswer": "ב",
+    "explanation": "התשובה הנכונה היא „Suo Quan Wan”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-30",
+    "year": 2018,
+    "questionNumber": 30,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזו מהפורמולות הבאות היא הטובה ביותר לטיפול בעצירות על רקע חוסר יאנג הכליות?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Jin Suo Gu Jing Wan"
+      },
+      {
+        "id": "ב",
+        "text": "Run Chang Wan"
+      },
+      {
+        "id": "ג",
+        "text": "Ji Chuan Jian"
+      },
+      {
+        "id": "ד",
+        "text": "Yue Ju Wan"
+      }
+    ],
+    "correctAnswer": "ג",
+    "explanation": "התשובה הנכונה היא „Ji Chuan Jian”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-31",
+    "year": 2018,
+    "questionNumber": 31,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזו מהפורמולות הבאות היא הטובה ביותר לטיפול במצב אקוטי של צמרמורות, חום נמוך (ללא) הזעה, נזלת שקופה, כאבי שרירים וכאב ראש?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Sang Ju Yin"
+      },
+      {
+        "id": "ב",
+        "text": "Jing Fang Bai Du San"
+      },
+      {
+        "id": "ג",
+        "text": "Shao Yao Gan Cao Tang"
+      },
+      {
+        "id": "ד",
+        "text": "Gui Zhi Shao Yao Zhi Mu Tang"
+      }
+    ],
+    "correctAnswer": "ב",
+    "explanation": "התשובה הנכונה היא „Jing Fang Bai Du San”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-32",
+    "year": 2018,
+    "questionNumber": 32,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזו מהפורמולות הבאות היא הטובה ביותר למניעה של חדירות חוזרות ונשנות של מחוללי מחלה חיצוניים?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Yu Ping Feng San"
+      },
+      {
+        "id": "ב",
+        "text": "Mu Li San"
+      },
+      {
+        "id": "ג",
+        "text": "Ren Shen Bai Du San"
+      },
+      {
+        "id": "ד",
+        "text": "Zuo Gui Wan"
+      }
+    ],
+    "correctAnswer": "א",
+    "explanation": "התשובה הנכונה היא „Yu Ping Feng San”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-33",
+    "year": 2018,
+    "questionNumber": 33,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזו מהפורמולות הבאות היא הטובה ביותר לטיפול בסחרחורות על רקע רוח- ליחה?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Ban Xia Bai Zhu Tian Ma Tang"
+      },
+      {
+        "id": "ב",
+        "text": "Liu Jun Zi Tang"
+      },
+      {
+        "id": "ג",
+        "text": "Tian Ma Gou Teng Yin"
+      },
+      {
+        "id": "ד",
+        "text": "San Zi Yang Qin Tang"
+      }
+    ],
+    "correctAnswer": "א",
+    "explanation": "התשובה הנכונה היא „Ban Xia Bai Zhu Tian Ma Tang”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-34",
+    "year": 2018,
+    "questionNumber": 34,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזו מהפורמולות הבאות היא הטובה ביותר לטיפול בכאבי מפרקים על רקע סטגנציה של דם?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Du Huo Ji Sheng Tang"
+      },
+      {
+        "id": "ב",
+        "text": "Shen Tong Zhu Yu Tang"
+      },
+      {
+        "id": "ג",
+        "text": "Ge Gen Tang"
+      },
+      {
+        "id": "ד",
+        "text": "Si Miao San"
+      }
+    ],
+    "correctAnswer": "ב",
+    "explanation": "התשובה הנכונה היא „Shen Tong Zhu Yu Tang”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-35",
+    "year": 2018,
+    "questionNumber": 35,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזו מהפורמולות הבאות היא הטובה ביותר לטיפול באינסומניה על רקע חוסר צ'י הטחול ו דם הלב?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Huang Lian Jie Du Tang"
+      },
+      {
+        "id": "ב",
+        "text": "Dan Shen Yin"
+      },
+      {
+        "id": "ג",
+        "text": "Gui Pi Tang"
+      },
+      {
+        "id": "ד",
+        "text": "Ding Zhi Wan"
+      }
+    ],
+    "correctAnswer": "ג",
+    "explanation": "התשובה הנכונה היא „Gui Pi Tang”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-36",
+    "year": 2018,
+    "questionNumber": 36,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "מהו התסמין העיקרי בו מטפלת הפורמולה Da Huang Mu Dan Tang?",
+    "options": [
+      {
+        "id": "א",
+        "text": "כאבים בבטן התחתונה"
+      },
+      {
+        "id": "ב",
+        "text": "הזעות לילה"
+      },
+      {
+        "id": "ג",
+        "text": "אמנוריאה"
+      },
+      {
+        "id": "ד",
+        "text": "תסמונת גלעין השיזף"
+      }
+    ],
+    "correctAnswer": "א",
+    "explanation": "התשובה הנכונה היא „כאבים בבטן התחתונה”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-37",
+    "year": 2018,
+    "questionNumber": 37,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "באיזה מהתסמינים הבאים מטפלת הפורמולה Xiao Feng San?",
+    "options": [
+      {
+        "id": "א",
+        "text": "גרד"
+      },
+      {
+        "id": "ב",
+        "text": "עצירות"
+      },
+      {
+        "id": "ג",
+        "text": "בצקות"
+      },
+      {
+        "id": "ד",
+        "text": "הזעות ספונטניות"
+      }
+    ],
+    "correctAnswer": "א",
+    "explanation": "התשובה הנכונה היא „גרד”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-38",
+    "year": 2018,
+    "questionNumber": 38,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "באיזה מהתסמינים הבאים מטפלת הפורמולה Wu Zhu Yu Tang?",
+    "options": [
+      {
+        "id": "א",
+        "text": "הקאות על רקע חום בקיבה"
+      },
+      {
+        "id": "ב",
+        "text": "הקאות על רקע קור בקיבה"
+      },
+      {
+        "id": "ג",
+        "text": "כאב ראש טמפורלי על רקע עליית אש הכבד"
+      },
+      {
+        "id": "ד",
+        "text": "כאב ראש טמפורלי על רקע חוסר דם"
+      }
+    ],
+    "correctAnswer": "ב",
+    "explanation": "התשובה הנכונה היא „הקאות על רקע קור בקיבה”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-39",
+    "year": 2018,
+    "questionNumber": 39,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "באיזה מהתסמינים הבאים מטפלת הפורמולה Sheng Mai San?",
+    "options": [
+      {
+        "id": "א",
+        "text": "נפיחות בשקדים"
+      },
+      {
+        "id": "ב",
+        "text": "שינויים במצב הרוח"
+      },
+      {
+        "id": "ג",
+        "text": "בחילות בהריון"
+      },
+      {
+        "id": "ד",
+        "text": "שיעול כרוני"
+      }
+    ],
+    "correctAnswer": "ד",
+    "explanation": "התשובה הנכונה היא „שיעול כרוני”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-40",
+    "year": 2018,
+    "questionNumber": 40,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "באיזה מהתסמינים הבאים מטפלת הפורמולה Du Huo Ji Sheng Tang?",
+    "options": [
+      {
+        "id": "א",
+        "text": "כאב ראש"
+      },
+      {
+        "id": "ב",
+        "text": "כאבי מפרקים"
+      },
+      {
+        "id": "ג",
+        "text": "הפרשות וגינליות"
+      },
+      {
+        "id": "ד",
+        "text": "דיסמנוריאה"
+      }
+    ],
+    "correctAnswer": "ב",
+    "explanation": "התשובה הנכונה היא „כאבי מפרקים”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-41",
+    "year": 2018,
+    "questionNumber": 41,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזו מ האפשרויות הבאות מציינת את השפעותיו העיקריות של הצמח Yi Yi Ren (Semen Coicis Lacryma-jobi) בפורמולה Shen Ling Bai Zhu San?",
+    "options": [
+      {
+        "id": "א",
+        "text": "מסלק רוח-לחות ומטפל בכאבי מפרקים"
+      },
+      {
+        "id": "ב",
+        "text": "מלחלח מעיים ומקל על עצירות"
+      },
+      {
+        "id": "ג",
+        "text": "מחזק את צ'י הט חול ומסלקלחות"
+      },
+      {
+        "id": "ד",
+        "text": "מחזק את צ'י ה ריאות ומייצב את החיצון"
+      }
+    ],
+    "correctAnswer": "ג",
+    "explanation": "התשובה הנכונה היא „מחזק את צ'י הט חול ומסלקלחות”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-42",
+    "year": 2018,
+    "questionNumber": 42,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזו מ האפשרויות הבאות מציינת את פעולתו העיקרית של הצמח Shan Yao (Radix Dioscoreae Oppositae) בפורמולה Liu Wei Di Huang Wan?",
+    "options": [
+      {
+        "id": "א",
+        "text": "מזין את דם הכבד ויין הלב"
+      },
+      {
+        "id": "ב",
+        "text": "מטהר חום מחוסר יין"
+      },
+      {
+        "id": "ג",
+        "text": "מחזק את הטחול ומייצב את הג'ינג"
+      },
+      {
+        "id": "ד",
+        "text": "משתן כדי לאזן את הכבדות של הקיסר"
+      }
+    ],
+    "correctAnswer": "ג",
+    "explanation": "התשובה הנכונה היא „מחזק את הטחול ומייצב את הג'ינג”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-43",
+    "year": 2018,
+    "questionNumber": 43,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזה ממאפייני הלשון והדופק הבאים מתאימים ביותר לפורמולה Si Ni San?",
+    "options": [
+      {
+        "id": "א",
+        "text": "; לשון אדומה עם חיפוי צהוב דופק מיתרי"
+      },
+      {
+        "id": "ב",
+        "text": "לשון חיוורת עם חיפוי לבן; דופק מתוח"
+      },
+      {
+        "id": "ג",
+        "text": "לשון אדומה חסרת חיפוי; דופק חלש ודק"
+      },
+      {
+        "id": "ד",
+        "text": "לשון חיוורת תפוחה ורטובה; דופק עמוק ומתגלגל"
+      }
+    ],
+    "correctAnswer": "א",
+    "explanation": "התשובה הנכונה היא „; לשון אדומה עם חיפוי צהוב דופק מיתרי”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-44",
+    "year": 2018,
+    "questionNumber": 44,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "מטופלת (21) מתלוננת על שיעול יבש, שהחל לפני כשלשה חודשים, אחרי שהתחילה לעבוד כאופה בפיצרייה השכונתית היא מדווחת גם על צמא ועל יובש בגרון. הלשון אדומה חסרת חיפוי, הדופק דק ומהיר איזה מהבאים הוא הטיפול הטוב ביותר עבור מטופלת זו?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Sang Ju Yin"
+      },
+      {
+        "id": "ב",
+        "text": "Yin Qiao San"
+      },
+      {
+        "id": "ג",
+        "text": "Qi Ju Di Huang Wan"
+      },
+      {
+        "id": "ד",
+        "text": "Sha Shen Mai Men Dong Tang"
+      }
+    ],
+    "correctAnswer": "ד",
+    "explanation": "התשובה הנכונה היא „Sha Shen Mai Men Dong Tang”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-45",
+    "year": 2018,
+    "questionNumber": 45,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "מטופל בן 8 מגיע עם אמו למרפאה. האם מספרת שמאז שלשום הוא סובל מחום, צמרמורות, כאב ראש, כאבי בטן, הקאות ושלשולים. הדופק שטחי איזה מהבאים הוא הטיפול הטוב ביותר עבור מטופל זה?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Ban Xia Hou Po Tang"
+      },
+      {
+        "id": "ב",
+        "text": "Ba Zhen Tang"
+      },
+      {
+        "id": "ג",
+        "text": "Si Miao San"
+      },
+      {
+        "id": "ד",
+        "text": "Huo Xiang Zheng Qi Tang"
+      }
+    ],
+    "correctAnswer": "ד",
+    "explanation": "התשובה הנכונה היא „Huo Xiang Zheng Qi Tang”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-46",
+    "year": 2018,
+    "questionNumber": 46,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "(מטופלת (45) שסובלת מבחילות ומשיעול כרוני עם ליחה לבנה שופעת קיבלה את הפורמולה Er Chen Tang. לאחר שבועיים היא מדווחת על שיפור במצב הבחילות, השיעול עדיין מטריד מאוד איזה מהצמחים הבאים מומלץ ביותר להוסיף לפורמולה כדי לשפר את תוצאות הטיפול?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Zi Wan Radix Asteris Tatarici"
+      },
+      {
+        "id": "ב",
+        "text": "Sang Ye Folium Mori Albae"
+      },
+      {
+        "id": "ג",
+        "text": "Shi Gao Gypsum Fibrosum"
+      },
+      {
+        "id": "ד",
+        "text": "Jin Yin Hua Flos Lonicerae Japonicae"
+      }
+    ],
+    "correctAnswer": "א",
+    "explanation": "התשובה הנכונה היא „Zi Wan Radix Asteris Tatarici”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-47",
+    "year": 2018,
+    "questionNumber": 47,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "מטופלת (61) שסובלת מעייפות ואי שקט על רקע חוסר יין קיבלה את הפורמול ה Tian Wang Bu Xin Dan. לאחר שבוע היא מדווחת על שיפור במצבה, מלבד יובש בפה ובגרון שמציקים לה מאוד איזה מהצמחים הבאים מומלץ ביותר להוסיף לפורמולה כדי לשפר את תוצאות הטיפול?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Huang Qi Radix Astragali Membranaceus"
+      },
+      {
+        "id": "ב",
+        "text": "Ban Xia Rhizoma Pinelliae Ternatae"
+      },
+      {
+        "id": "ג",
+        "text": "Shi Hu Herba Dendrobii"
+      },
+      {
+        "id": "ד",
+        "text": "Cang Zhu Rhizoma Atractylodis"
+      }
+    ],
+    "correctAnswer": "ג",
+    "explanation": "התשובה הנכונה היא „Shi Hu Herba Dendrobii”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-48",
+    "year": 2018,
+    "questionNumber": 48,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "מטופלת (42), שסובלת מאינסומניה על רקע חוסר דם הכבד, יבל ק ה את הפורמולה Suan Zao Ren Tang. בפגישה הבאה המטופלת מספרת ששכחה לציין שמדי פעם היא סובלת מהזעות לילה איזה מ שילובי הצמחים הבאים מומלץ ביותר להוסיף לפורמולה כדי לשפר את תוצאות הטיפול?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Wu Wei Zi + Mu Li Fructus Schisandrae Chinensis + Concha Ostreae"
+      },
+      {
+        "id": "ב",
+        "text": "Gan Jiang + Mu Dan Pi Rhizoma Zingiberis Officinalis + Cortex Moutan Radicis"
+      },
+      {
+        "id": "ג",
+        "text": "Chai Hu + Bo He Radix Bupleuri + Herba Menthae Haplocalycis"
+      },
+      {
+        "id": "ד",
+        "text": "He Zi + Wu Mei Fructus Terminaliae Chebulae + Fructus Pruni Mume"
+      }
+    ],
+    "correctAnswer": "א",
+    "explanation": "התשובה הנכונה היא „Wu Wei Zi + Mu Li Fructus Schisandrae Chinensis + Concha Ostreae”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-49",
+    "year": 2018,
+    "questionNumber": 49,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "איזה צמח הוא גם תבלין, שיכול לסייע בעצירת שלשול מימי על רקע קור וחוסר של הטחול והכליות?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Bai Jie Zi Semen Sinapsis Albae"
+      },
+      {
+        "id": "ב",
+        "text": "Lai Fu Zi Semen Raphani Satavi"
+      },
+      {
+        "id": "ג",
+        "text": "Ling Yang Jiao Cornu Antelopis"
+      },
+      {
+        "id": "ד",
+        "text": "Rou Dou Kou Semen Myristicae Fragrantis"
+      }
+    ],
+    "correctAnswer": "ד",
+    "explanation": "התשובה הנכונה היא „Rou Dou Kou Semen Myristicae Fragrantis”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  },
+  {
+    "id": "source-herbs-2018-50",
+    "year": 2018,
+    "questionNumber": 50,
+    "topic": "צמחי מרפא",
+    "subject": "צמחי מרפא",
+    "question": "בהתייחס לתפקודים הסיניים הקלאסיים של הצמחים הבאים איזה צמח אסור לתת למטופלת בהריון הסובלת מעצירות עם צואה יבשה?",
+    "options": [
+      {
+        "id": "א",
+        "text": "Gua Lou Ren Semen Trichosanthis"
+      },
+      {
+        "id": "ב",
+        "text": "Tao Ren Semen Persicae"
+      },
+      {
+        "id": "ג",
+        "text": "Bai Zi Ren Semen Biotae Orientalis"
+      },
+      {
+        "id": "ד",
+        "text": "Huo Ma Ren Semen Cannabis Sativae"
+      }
+    ],
+    "correctAnswer": "ב",
+    "explanation": "התשובה הנכונה היא „Tao Ren Semen Persicae”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2018.",
+    "source": "מבחן האיגוד — צמחי מרפא, 2018"
+  }
+]

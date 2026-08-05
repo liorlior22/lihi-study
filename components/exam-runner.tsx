@@ -31,6 +31,9 @@ function cleanExamText(value: string) {
     [/\bדפ\s*יקות\b/g, "דפיקות"],
     [/\bא\s*ת\b/g, "את"],
     [/\bשלו בטן\b/g, "הבטן שלו"],
+    [/(?<!^)\b([בהוכלמש])\s+(?=[א-ת]{2,}\b)/g, "$1"],
+    [/\b([א-ת]{3,})\s+(יים|יות|ים|ות|ית|יה|יו|ון|ני|רי|רת|לה|לו|ם|ן)\b/g, "$1$2"],
+    [/\.{2,}/g, "."],
     [/\s{2,}/g, " "],
   ];
   return fixes.reduce((text, [pattern, replacement]) => text.replace(pattern, replacement), value).trim();
