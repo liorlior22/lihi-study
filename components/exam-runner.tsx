@@ -5,39 +5,16 @@ import { useEffect, useMemo, useState } from "react";
 import type { AnswerId, ExamQuestion, ExamSession, SavedAttempt } from "../types/exam";
 import { studyIdForExamTopic } from "../lib/study";
 import { correctOptionFor, explanationForQuestion } from "../lib/exam-feedback";
+import { cleanExamText } from "../lib/exam-text";
 
 const CORRECT = "תשובה נכונה — אבל ליהי גרוסמן אנגלצ׳ין פתרה אותה מהר יותר!";
-const WRONG = "לא נכון. הלוואי שתטעו בזה גם במבחן וליהי תענה נכון!";
+const WRONG = "לא נכון, הלוואי שתטעה גם במבחן וליהי תענה נכון";
 const NOTICE = "שימו לב: בכל שאלה ניתן לבדוק את התשובה מיד או לעבור לשאלה הבאה ולקבל את כל התשובות בסוף המבחן.";
 const SESSION = "lihi-exam-session";
 const MISTAKES = "lihi-exam-mistakes";
 const HISTORY = "lihi-exam-history";
 
 function mix<T>(items: T[]) { return [...items].sort(() => Math.random() - .5); }
-function cleanExamText(value: string) {
-  const fixes: Array<[RegExp, string]> = [
-    [/\s+([,.:;?!])/g, "$1"],
-    [/([,;:])(?=\S)/g, "$1 "],
-    [/\(\s+/g, "("],
-    [/\s+\)/g, ")"],
-    [/\s+־\s+/g, "־"],
-    [/\bב יותר\b/g, "ביותר"],
-    [/\bל שימוש\b/g, "לשימוש"],
-    [/\bב מערכת\b/g, "במערכת"],
-    [/\bו הורמונים\b/g, "והורמונים"],
-    [/\bהאוכלוס\s*י\s*יה\b/g, "האוכלוסייה"],
-    [/\bד\s*י\s*כאון\b/g, "דיכאון"],
-    [/\bת\s*י\s*אור\b/g, "תיאור"],
-    [/\bדפ\s*יקות\b/g, "דפיקות"],
-    [/\bא\s*ת\b/g, "את"],
-    [/\bשלו בטן\b/g, "הבטן שלו"],
-    [/(?<!^)\b([בהוכלמש])\s+(?=[א-ת]{2,}\b)/g, "$1"],
-    [/\b([א-ת]{3,})\s+(יים|יות|ים|ות|ית|יה|יו|ון|ני|רי|רת|לה|לו|ם|ן)\b/g, "$1$2"],
-    [/\.{2,}/g, "."],
-    [/\s{2,}/g, " "],
-  ];
-  return fixes.reduce((text, [pattern, replacement]) => text.replace(pattern, replacement), value).trim();
-}
 function explanationFor(question: ExamQuestion) {
   return cleanExamText(explanationForQuestion(question));
 }

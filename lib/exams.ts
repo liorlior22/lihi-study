@@ -6,8 +6,14 @@ import associationAcupunctureData from "../data/exams/association-acupuncture.js
 import associationPointLocationData from "../data/exams/association-point-location.json";
 import associationHerbsData from "../data/exams/association-herbs.json";
 import improvisedWestern1ExtraData from "../data/exams/improvised-western-1-extra.json";
+import {sourceExamQuestions} from "./source-exams";
 export const questionsByYear:Record<number,ExamQuestion[]>={2013:y2013 as ExamQuestion[],2014:y2014 as ExamQuestion[],2015:y2015 as ExamQuestion[],2016:y2016 as ExamQuestion[],2017:y2017 as ExamQuestion[],2018:y2018 as ExamQuestion[],2019:y2019 as ExamQuestion[]};
 export const allQuestions=Object.values(questionsByYear).flat();
 export const associationQuestions:Record<string,ExamQuestion[]>={foundations:associationFoundationsData as ExamQuestion[],western:associationWesternData as ExamQuestion[],acupuncture:associationAcupunctureData as ExamQuestion[],"point-location":associationPointLocationData as ExamQuestion[],herbs:associationHerbsData as ExamQuestion[]};
 export const improvisedQuestions:Record<string,ExamQuestion[]>={"western-1":[...(associationWesternData as ExamQuestion[]),...(improvisedWestern1ExtraData as ExamQuestion[])]};
-export const questionMap=new Map([...allQuestions,...Object.values(associationQuestions).flat(),...Object.values(improvisedQuestions).flat()].map(q=>[q.id,q]));
+const sourceByPrefix=(prefix:string)=>Object.entries(sourceExamQuestions).filter(([key])=>key.startsWith(`${prefix}-`)).flatMap(([,questions])=>questions);
+const streakFoundations=sourceByPrefix("foundations").slice(0,340);
+const streakWestern=[...sourceByPrefix("western"),...allQuestions];
+const streakAcupuncture=sourceByPrefix("acupuncture");
+export const streakQuestions:ExamQuestion[]=[...streakFoundations,...streakWestern,...streakAcupuncture];
+export const questionMap=new Map([...streakQuestions,...Object.values(associationQuestions).flat(),...Object.values(improvisedQuestions).flat()].map(q=>[q.id,q]));
