@@ -5,7 +5,7 @@ import { MotivationQuoteCard } from "../components/motivation-quote-card";
 export default function Home() {
   return <><RedHeader/><main className="dashboard-page">
     <section className="dashboard-hero">
-      <h1 dir="ltr">Welcome to the Lihi Last Test!!!</h1>
+      <h1 dir="ltr">Welcome to Lihi&apos;s Last Test!</h1>
       <MotivationQuoteCard/>
     </section>
     <section className="family-gallery" aria-label="התמונות של ליהי">

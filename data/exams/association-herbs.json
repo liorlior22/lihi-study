@@ -7,10 +7,22 @@
     "questionNumber": 1,
     "question": "מה משותף לצמחים Du Zhong ‏(Cortex Eucommiae Ulmoidis) ו־Xu Duan ‏(Radix Dipsaci Asperi)?",
     "options": [
-      { "id": "א", "text": "שניהם מטפלים בכאבי גב באמצעות סילוק לחות חמה מהתעלות" },
-      { "id": "ב", "text": "שניהם מרגיעים עובר לא שקט בזמן היריון" },
-      { "id": "ג", "text": "שניהם מזינים את יין הכליות" },
-      { "id": "ד", "text": "שניהם מחממים, בנוסף ליאנג הכליות, גם את יאנג הטחול" }
+      {
+        "id": "א",
+        "text": "שניהם מטפלים בכאבי גב באמצעות סילוק לחות חמה מהתעלות"
+      },
+      {
+        "id": "ב",
+        "text": "שניהם מרגיעים עובר לא שקט בזמן היריון"
+      },
+      {
+        "id": "ג",
+        "text": "שניהם מזינים את יין הכליות"
+      },
+      {
+        "id": "ד",
+        "text": "שניהם מחממים, בנוסף ליאנג הכליות, גם את יאנג הטחול"
+      }
     ],
     "correctAnswer": "ב",
     "explanation": "שני הצמחים מחזקים את הכליות והכבד, מחזקים גידים ועצמות ומשמשים גם להרגעת עובר לא שקט.",
@@ -24,10 +36,22 @@
     "questionNumber": 2,
     "question": "לאיזו קטגוריה שייך הצמח Ba Ji Tian ‏(Radix Morindae Officinalis)?",
     "options": [
-      { "id": "א", "text": "מסלקי ליחה קרה" },
-      { "id": "ב", "text": "מפסיקי רוח ורעידות" },
-      { "id": "ג", "text": "מחממי פנים" },
-      { "id": "ד", "text": "מחזקי יאנג" }
+      {
+        "id": "א",
+        "text": "מסלקי ליחה קרה"
+      },
+      {
+        "id": "ב",
+        "text": "מפסיקי רוח ורעידות"
+      },
+      {
+        "id": "ג",
+        "text": "מחממי פנים"
+      },
+      {
+        "id": "ד",
+        "text": "מחזקי יאנג"
+      }
     ],
     "correctAnswer": "ד",
     "explanation": "Ba Ji Tian שייך לקטגוריית הצמחים המחזקים יאנג, ובפרט מחזק את יאנג הכליות.",
@@ -41,10 +65,22 @@
     "questionNumber": 3,
     "question": "הצמח Jie Geng ‏(Radix Platycodi Grandiflori) משפיע בעיקר על:",
     "options": [
-      { "id": "א", "text": "הלב" },
-      { "id": "ב", "text": "הקיבה" },
-      { "id": "ג", "text": "הריאות" },
-      { "id": "ד", "text": "הכליות" }
+      {
+        "id": "א",
+        "text": "הלב"
+      },
+      {
+        "id": "ב",
+        "text": "הקיבה"
+      },
+      {
+        "id": "ג",
+        "text": "הריאות"
+      },
+      {
+        "id": "ד",
+        "text": "הכליות"
+      }
     ],
     "correctAnswer": "ג",
     "explanation": "Jie Geng נכנס בעיקר למרידיאן הריאות, מפזר צ׳י ריאות ומסייע בפינוי ליחה ובהקלה על הגרון.",
@@ -58,10 +94,22 @@
     "questionNumber": 4,
     "question": "איזה מהצמחים הבאים הוא הטוב ביותר לטיפול בבחילות על רקע הצטברות לחות עכורה במחמם האמצעי?",
     "options": [
-      { "id": "א", "text": "Zhu Ru — Caulis Bambusae in Taeniis" },
-      { "id": "ב", "text": "Zhi Mu — Radix Anemarrhenae Asphodeloidis" },
-      { "id": "ג", "text": "Xiang Fu — Rhizoma Cyperi Rotundi" },
-      { "id": "ד", "text": "Huo Xiang — Herba Agastaches seu Pogostemi" }
+      {
+        "id": "א",
+        "text": "Zhu Ru — Caulis Bambusae in Taeniis"
+      },
+      {
+        "id": "ב",
+        "text": "Zhi Mu — Radix Anemarrhenae Asphodeloidis"
+      },
+      {
+        "id": "ג",
+        "text": "Xiang Fu — Rhizoma Cyperi Rotundi"
+      },
+      {
+        "id": "ד",
+        "text": "Huo Xiang — Herba Agastaches seu Pogostemi"
+      }
     ],
     "correctAnswer": "ד",
     "explanation": "Huo Xiang מתמיר לחות, מווסת את המחמם האמצעי ומפסיק הקאות ובחילות הנובעות מלחות עכורה.",
@@ -75,10 +123,22 @@
     "questionNumber": 5,
     "question": "איזה מהצמחים הבאים מתאים לטיפול בתקיעות מזון אצל מטופל הסובל גם מהשתנת לילה תכופה?",
     "options": [
-      { "id": "א", "text": "Ji Nei Jin — Endothelium Corneum Gigeraiae Galli" },
-      { "id": "ב", "text": "Lai Fu Zi — Semen Raphani Satavi" },
-      { "id": "ג", "text": "Shen Qu — Massa Fermentata" },
-      { "id": "ד", "text": "Shan Zhu Yu — Fructus Corni Officinalis" }
+      {
+        "id": "א",
+        "text": "Ji Nei Jin — Endothelium Corneum Gigeraiae Galli"
+      },
+      {
+        "id": "ב",
+        "text": "Lai Fu Zi — Semen Raphani Satavi"
+      },
+      {
+        "id": "ג",
+        "text": "Shen Qu — Massa Fermentata"
+      },
+      {
+        "id": "ד",
+        "text": "Shan Zhu Yu — Fructus Corni Officinalis"
+      }
     ],
     "correctAnswer": "א",
     "explanation": "Ji Nei Jin מפחית תקיעות מזון ובמקביל מסייע במצבים של השתנה תכופה והרטבת לילה.",
@@ -92,10 +152,22 @@
     "questionNumber": 6,
     "question": "מה נכון ביותר לגבי פעולת הצמח Di Gu Pi ‏(Cortex Lycii Chinensis Radicis)?",
     "options": [
-      { "id": "א", "text": "מחמם את יאנג הכליות ומטפל בצפצופי נשימה" },
-      { "id": "ב", "text": "מחזק את הטחול ומשתן עודף לחות" },
-      { "id": "ג", "text": "מטהר חום ריק ומקל על הזעות לילה" },
-      { "id": "ד", "text": "מייצב את החיצון ומונע חדירת רוח חיצונית" }
+      {
+        "id": "א",
+        "text": "מחמם את יאנג הכליות ומטפל בצפצופי נשימה"
+      },
+      {
+        "id": "ב",
+        "text": "מחזק את הטחול ומשתן עודף לחות"
+      },
+      {
+        "id": "ג",
+        "text": "מטהר חום ריק ומקל על הזעות לילה"
+      },
+      {
+        "id": "ד",
+        "text": "מייצב את החיצון ומונע חדירת רוח חיצונית"
+      }
     ],
     "correctAnswer": "ג",
     "explanation": "Di Gu Pi מטהר חום מחוסר ומקרר את הדם, ומשמש בין היתר לחום ריק ולהזעות לילה.",
@@ -109,10 +181,22 @@
     "questionNumber": 7,
     "question": "כל הפורמולות הבאות שייכות לקבוצת הפורמולות המהרמנות, מלבד:",
     "options": [
-      { "id": "א", "text": "Ban Xia Xie Xin Tang" },
-      { "id": "ב", "text": "Xiao Feng San" },
-      { "id": "ג", "text": "Xiao Chai Hu Tang" },
-      { "id": "ד", "text": "Si Ni San" }
+      {
+        "id": "א",
+        "text": "Ban Xia Xie Xin Tang"
+      },
+      {
+        "id": "ב",
+        "text": "Xiao Feng San"
+      },
+      {
+        "id": "ג",
+        "text": "Xiao Chai Hu Tang"
+      },
+      {
+        "id": "ד",
+        "text": "Si Ni San"
+      }
     ],
     "correctAnswer": "ב",
     "explanation": "Xiao Feng San מסווגת כפורמולה המסלקת רוח ומטפלת בבעיות עור, ולא כפורמולה מהרמנת.",
@@ -126,10 +210,22 @@
     "questionNumber": 8,
     "question": "איזה צמח הוא הקיסר בפורמולה Xie Bai San?",
     "options": [
-      { "id": "א", "text": "Bai Shao — Radix Paeoniae Lactiflorae" },
-      { "id": "ב", "text": "Bai Zhu — Rhizoma Atractylodis Macrocephalae" },
-      { "id": "ג", "text": "Huang Bai — Cortex Phellodendri" },
-      { "id": "ד", "text": "Sang Bai Pi — Cortex Mori Albae Radicis" }
+      {
+        "id": "א",
+        "text": "Bai Shao — Radix Paeoniae Lactiflorae"
+      },
+      {
+        "id": "ב",
+        "text": "Bai Zhu — Rhizoma Atractylodis Macrocephalae"
+      },
+      {
+        "id": "ג",
+        "text": "Huang Bai — Cortex Phellodendri"
+      },
+      {
+        "id": "ד",
+        "text": "Sang Bai Pi — Cortex Mori Albae Radicis"
+      }
     ],
     "correctAnswer": "ד",
     "explanation": "Sang Bai Pi הוא הצמח הראשי ב־Xie Bai San; הוא מטהר חום מהריאות ומוריד צ׳י ריאות.",
@@ -143,10 +239,22 @@
     "questionNumber": 9,
     "question": "הפורמולה Yin Qiao San משפיעה בעיקר על רמת ה־:",
     "options": [
-      { "id": "א", "text": "Wei" },
-      { "id": "ב", "text": "Qi" },
-      { "id": "ג", "text": "Ying" },
-      { "id": "ד", "text": "Xue" }
+      {
+        "id": "א",
+        "text": "Wei"
+      },
+      {
+        "id": "ב",
+        "text": "Qi"
+      },
+      {
+        "id": "ג",
+        "text": "Ying"
+      },
+      {
+        "id": "ד",
+        "text": "Xue"
+      }
     ],
     "correctAnswer": "א",
     "explanation": "Yin Qiao San משחררת רוח־חום מהחיצון ולכן פועלת בעיקר ברמת ה־Wei.",
@@ -160,10 +268,22 @@
     "questionNumber": 10,
     "question": "מטופלת מתלוננת על תחושות חום בכפות הרגליים המלוות בכאב, חולשה ונימול. יש גם הפרשות וגינליות צהובות, מרובות, צמיגות ובעלות ריח רע; השתן מועט וצהוב וחיפוי הלשון עבה, צהוב ושמנוני. מהו הטיפול הטוב ביותר?",
     "options": [
-      { "id": "א", "text": "Zhi Bai Di Huang Wan" },
-      { "id": "ב", "text": "Sha Shen Mai Dong Tang" },
-      { "id": "ג", "text": "Dan Shen Yin" },
-      { "id": "ד", "text": "Si Miao San" }
+      {
+        "id": "א",
+        "text": "Zhi Bai Di Huang Wan"
+      },
+      {
+        "id": "ב",
+        "text": "Sha Shen Mai Dong Tang"
+      },
+      {
+        "id": "ג",
+        "text": "Dan Shen Yin"
+      },
+      {
+        "id": "ד",
+        "text": "Si Miao San"
+      }
     ],
     "correctAnswer": "ד",
     "explanation": "התמונה מתאימה ללחות־חום במחמם התחתון. Si Miao San מטהרת חום ומסלקת לחות, במיוחד מהגפיים התחתונות.",
