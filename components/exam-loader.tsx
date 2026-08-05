@@ -1,7 +1,7 @@
 "use client";
 import { useSearchParams } from "next/navigation";
 import { ExamRunner } from "./exam-runner";
-import { allQuestions, associationQuestions, questionsByYear } from "../lib/exams";
+import { allQuestions, associationQuestions, improvisedQuestions, questionsByYear } from "../lib/exams";
 import type { ExamQuestion } from "../types/exam";
 
 export function ExamLoader() {
@@ -19,6 +19,9 @@ export function ExamLoader() {
     questions = associationQuestions[value] ?? [];
     const titles: Record<string, string> = { foundations: "מבחן האיגוד — יסודות הרפואה הסינית", western: "מבחן האיגוד — רפואה מערבית", acupuncture: "מבחן האיגוד — דיקור", "point-location": "מבחן האיגוד — איתור נקודות", herbs: "מבחן האיגוד — צמחי מרפא" };
     title = titles[value] ?? "מבחן האיגוד";
+  } else if (mode === "improvised") {
+    questions = improvisedQuestions[value] ?? [];
+    title = value === "western-1" ? "מבחן מערבי מאולתר 1" : "מבחן מאולתר";
   } else if (mode === "topic") {
     questions = allQuestions.filter((question) => question.topic === value);
     title = `תרגול בנושא ${value}`;
