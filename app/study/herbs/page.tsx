@@ -1,0 +1,4 @@
+import Link from "next/link";
+import {RedHeader} from "../../../components/red-header";
+import {herbCategories} from "../../../lib/herbs";
+export default function HerbsPage(){return <><RedHeader/><main className="study-library"><header><span>ספריית צמחי מרפא</span><h1>צמחים בודדים</h1><p>הספר המלא מחולק לקטגוריות ולתתי־נושאים, עם מעבר ישיר לכל עמוד מקור.</p></header><nav className="study-subject-switch"><Link href="/study">רפואה מערבית</Link><Link className="active" href="/study/herbs">צמחים</Link></nav><section className="study-topic-grid">{herbCategories.map((category,i)=><Link href={`/study/herbs/${category.id}`} key={category.id}><span>{String(i+1).padStart(2,"0")}</span><h2>{category.title}</h2><p>{category.summary}</p><small>עמודי PDF {category.pages} • {category.subtopics.length} תתי־נושאים</small><b>לפתיחת הקטגוריה ←</b></Link>)}</section></main></>}
