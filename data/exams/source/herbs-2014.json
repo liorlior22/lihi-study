@@ -25,7 +25,7 @@
       }
     ],
     "correctAnswer": "ג",
-    "explanation": "התשובה הנכונה היא „Che Qian Zi Semen Plantaginis”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי כללי ההכנה בסיכומים, „Che Qian Zi Semen Plantaginis” דורש את אופן הבישול המתואר בשאלה. אופן הבישול נקבע לפי מבנה החומר והרגישות שלו לחום, ולכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -54,7 +54,7 @@
       }
     ],
     "correctAnswer": "א",
-    "explanation": "התשובה הנכונה היא „ארומטיים מתמירי לחות”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "Rhizoma Atractylodis ו־Cang Zhu שייך לקטגוריית „ארומטיים מתמירי לחות”, בהתאם לפעולה הטיפולית המרכזית שלו. בסיכומים מתואר גם: .2מסלק רוח לחות )(Bi לחות חמה אך בשילוב עם צמחים אחרים – קרים יותר). לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -83,7 +83,7 @@
       }
     ],
     "correctAnswer": "ב",
-    "explanation": "התשובה הנכונה היא „מניעי צ'י”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "Radix Linderae Strychnifoliae ו־Wu Yao שייך לקטגוריית „מניעי צ'י”, בהתאם לפעולה הטיפולית המרכזית שלו. בסיכומים מתואר גם: Radix Linderae Strychni Foliae (Wu Yao )B לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -112,7 +112,7 @@
       }
     ],
     "correctAnswer": "ג",
-    "explanation": "התשובה הנכונה היא „סופחים”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "Semen Tritici Aestivi ו־Fu Xiao Mai שייך לקטגוריית „סופחים”, בהתאם לפעולה הטיפולית המרכזית שלו. בסיכומים מתואר גם: Semen Tritici Aestivi Levis (( Fu Xiao Mai )Bזרעי חיטה) Indigo Pulverata Levis (Qing Dai )B לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -141,7 +141,7 @@
       }
     ],
     "correctAnswer": "ב",
-    "explanation": "התשובה הנכונה היא „הריאות והטחול”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: )( Zi Su Ye (Aעלה סגול של הצמח Folium Perillae Frutescenis )Su מכאן שהתשובה הנכונה היא „הריאות והטחול”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -170,7 +170,7 @@
       }
     ],
     "correctAnswer": "ג",
-    "explanation": "התשובה הנכונה היא „שניהם מקררים את הדם”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, Radix Scrophulariae Ningpoensis ו־Cortex Moutan Radicis חולקים את התפקוד המתואר: שניהם מקררים את הדם. בסיכומים מצוין: .1מטהר חום ומקרר את הדם: עם Sheng Diלמחלות חום על רקע של חוסר Yinעם חום ברמת הדם. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -199,7 +199,7 @@
       }
     ],
     "correctAnswer": "ג",
-    "explanation": "התשובה הנכונה היא „Hou Po Cortex Magnoliae Officinalis”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Hou Po Cortex Magnoliae Officinalis” תואם לתפקוד, לשיוך או לאינדיקציה של Magnoliae Officinalis ו־Hou Po Cortex. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -228,7 +228,7 @@
       }
     ],
     "correctAnswer": "ד",
-    "explanation": "התשובה הנכונה היא „Yi Zhi Ren Fructus Alpiniae Oxyphyllae”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: Fructas Alpiniae (Yi Zhi Ren )B ( = :Yiלהגביר = Zhi ,אינטיליגנציה = Ren ,זרע) מכאן שהתשובה הנכונה היא „Yi Zhi Ren Fructus Alpiniae Oxyphyllae”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -257,7 +257,7 @@
       }
     ],
     "correctAnswer": "א",
-    "explanation": "התשובה הנכונה היא „Huang Lian Rhizoma Coptidis”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: Rhizoma Coptidis )Huang Lian (A ( = Lianמחבר = Huang ,צהוב) מכאן שהתשובה הנכונה היא „Huang Lian Rhizoma Coptidis”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -286,7 +286,7 @@
       }
     ],
     "correctAnswer": "ג",
-    "explanation": "התשובה הנכונה היא „Sang Ye Folium Mori Albae”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: Folium Mori Albae (( Sang Ye )Aעלה על התות) מכאן שהתשובה הנכונה היא „Sang Ye Folium Mori Albae”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -315,7 +315,7 @@
       }
     ],
     "correctAnswer": "ב",
-    "explanation": "התשובה הנכונה היא „Lu Gen Rhizoma Phragmitis Communis”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Lu Gen Rhizoma Phragmitis Communis” תואם לתפקוד, לשיוך או לאינדיקציה של Phragmitis Communis ו־Lu Gen Rhizoma. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -344,7 +344,7 @@
       }
     ],
     "correctAnswer": "א",
-    "explanation": "התשובה הנכונה היא „Shan Zha Fructus Crataegi”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: Fructus Crataegi )Shan Zha )A מכאן שהתשובה הנכונה היא „Shan Zha Fructus Crataegi”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -373,7 +373,7 @@
       }
     ],
     "correctAnswer": "א",
-    "explanation": "התשובה הנכונה היא „Hou Po + Zhi Shi Cortex Magnoliae Officinalis + Fructus Immaturus Citri Aurantii”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: Fructus Immaturus Citri Aurantii (Zhi Shi )A עם Ru Xiangו Hou Po-לחום קיץ עם לחות. מכאן שהתשובה הנכונה היא „Hou Po + Zhi Shi Cortex Magnoliae Officinalis + Fructus Immaturus Citri Aurantii”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -402,7 +402,7 @@
       }
     ],
     "correctAnswer": "ג",
-    "explanation": "התשובה הנכונה היא „Gou Qi Zi + Ju Hua Fructus Lycii + Flos Chrysanthemi Morifolii”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: Flos Chrysanthemi Morifolii (Ju Hua )A Cortex Lycii Radicis )Di Gu Pi (A מכאן שהתשובה הנכונה היא „Gou Qi Zi + Ju Hua Fructus Lycii + Flos Chrysanthemi Morifolii”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -431,7 +431,7 @@
       }
     ],
     "correctAnswer": "א",
-    "explanation": "התשובה הנכונה היא „מחזק את הכבד והכליות ומסלק רוח לחות”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: .1מסלק רוח לחות קור: רוח קור לחות (חיצון): .2 מכאן שהתשובה הנכונה היא „מחזק את הכבד והכליות ומסלק רוח לחות”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -460,7 +460,7 @@
       }
     ],
     "correctAnswer": "ב",
-    "explanation": "התשובה הנכונה היא „מחזק צ'י ודם”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: מחזק דם HT + SPומרגיע נפש .1 Gelatinum Corrii Asini )Long Yan Rou (C מכאן שהתשובה הנכונה היא „מחזק צ'י ודם”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -489,7 +489,7 @@
       }
     ],
     "correctAnswer": "ד",
-    "explanation": "התשובה הנכונה היא „מפריד בין עכור וטהור”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „מפריד בין עכור וטהור” תואם לתפקוד, לשיוך או לאינדיקציה של Rhizoma Dioscorea Hypoglaucae ו־Bi Xie. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -518,7 +518,7 @@
       }
     ],
     "correctAnswer": "א",
-    "explanation": "התשובה הנכונה היא „מניעות דם”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "Tao He Cheng ו־Qi Tang שייך לקטגוריית „מניעות דם”, בהתאם לפעולה הטיפולית המרכזית שלו. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -547,7 +547,7 @@
       }
     ],
     "correctAnswer": "ג",
-    "explanation": "התשובה הנכונה היא „Wu Ling San”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Wu Ling San” תואם לתפקוד, לשיוך או לאינדיקציה של Wu Ling San. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -576,7 +576,7 @@
       }
     ],
     "correctAnswer": "ג",
-    "explanation": "התשובה הנכונה היא „Er Zhi Wan”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Er Zhi Wan” תואם לתפקוד, לשיוך או לאינדיקציה של Er Zhi Wan. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -605,7 +605,7 @@
       }
     ],
     "correctAnswer": "ד",
-    "explanation": "התשובה הנכונה היא „Yue Ju Wan”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Yue Ju Wan” תואם לתפקוד, לשיוך או לאינדיקציה של Yue Ju Wan. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -634,7 +634,7 @@
       }
     ],
     "correctAnswer": "א",
-    "explanation": "התשובה הנכונה היא „Fu Zi Radix Lateralis Aconiti Carmichaeli Praeparata”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Fu Zi Radix Lateralis Aconiti Carmichaeli Praeparata” תואם לתפקוד, לשיוך או לאינדיקציה של Lateralis Aconiti Carmichaeli ו־Fu Zi Radix. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -663,7 +663,7 @@
       }
     ],
     "correctAnswer": "ב",
-    "explanation": "התשובה הנכונה היא „Ren Shen + Gan Jiang Panax Ginseng + Rhizoma Zingiberis Officinalis”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: Radix Ginseng )( Ren Shen (Aשורש אדם) סותר את .Wu Ling Zhi Ren Shen מכאן שהתשובה הנכונה היא „Ren Shen + Gan Jiang Panax Ginseng + Rhizoma Zingiberis Officinalis”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -692,7 +692,7 @@
       }
     ],
     "correctAnswer": "ג",
-    "explanation": "התשובה הנכונה היא „Sheng Jiang Rhizoma Zingiberis Officinalis Recens”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Sheng Jiang Rhizoma Zingiberis Officinalis Recens” תואם לתפקוד, לשיוך או לאינדיקציה של Zingiberis Officinalis Recens ו־Sheng Jiang Rhizoma. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -721,7 +721,7 @@
       }
     ],
     "correctAnswer": "ב",
-    "explanation": "התשובה הנכונה היא „Qi”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Qi” תואם לתפקוד, לשיוך או לאינדיקציה של Bai Hu Tang ו־Qi. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -750,7 +750,7 @@
       }
     ],
     "correctAnswer": "א",
-    "explanation": "התשובה הנכונה היא „צ'י ודם”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „צ'י ודם” תואם לתפקוד, לשיוך או לאינדיקציה של Dang Gui Bu ו־Xue Tang. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -779,7 +779,7 @@
       }
     ],
     "correctAnswer": "ד",
-    "explanation": "התשובה הנכונה היא „Gui Zhi Tang”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: יותר עם אלמנט של הזנה (של ה ) Ying QI-ואיזונו עם אלמנט ההגנה ( ה. ( WEI QI מכאן שהתשובה הנכונה היא „Gui Zhi Tang”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -808,7 +808,7 @@
       }
     ],
     "correctAnswer": "ב",
-    "explanation": "התשובה הנכונה היא „Huang Lian Jie Du Tang”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Huang Lian Jie Du Tang” תואם לתפקוד, לשיוך או לאינדיקציה של Huang Lian Jie ו־Du Tang. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -837,7 +837,7 @@
       }
     ],
     "correctAnswer": "א",
-    "explanation": "התשובה הנכונה היא „Ji Chuan Jian”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Ji Chuan Jian” תואם לתפקוד, לשיוך או לאינדיקציה של Ji Chuan Jian. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -866,7 +866,7 @@
       }
     ],
     "correctAnswer": "ג",
-    "explanation": "התשובה הנכונה היא „Xiao Chai Hu Tang”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: )(GB/TW Shao Yang מייצגים Yang הספר החשוב הבא משושלת ( Tangשנת 659לספירה) נקרא ,Xin Xiu Ben Caoוהוא הכיל כבר מכאן שהתשובה הנכונה היא „Xiao Chai Hu Tang”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -895,7 +895,7 @@
       }
     ],
     "correctAnswer": "ג",
-    "explanation": "התשובה הנכונה היא „Mu Li San”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Mu Li San” תואם לתפקוד, לשיוך או לאינדיקציה של Mu Li San. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -924,7 +924,7 @@
       }
     ],
     "correctAnswer": "א",
-    "explanation": "התשובה הנכונה היא „Si Miao San”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Si Miao San” תואם לתפקוד, לשיוך או לאינדיקציה של Si Miao San. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -953,7 +953,7 @@
       }
     ],
     "correctAnswer": "ד",
-    "explanation": "התשובה הנכונה היא „Shen Ling Bai Zhu San”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Shen Ling Bai Zhu San” תואם לתפקוד, לשיוך או לאינדיקציה של Shen Ling Bai ו־Zhu San. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -982,7 +982,7 @@
       }
     ],
     "correctAnswer": "ב",
-    "explanation": "התשובה הנכונה היא „Qi Ju Di Huang Wan”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Qi Ju Di Huang Wan” תואם לתפקוד, לשיוך או לאינדיקציה של Huang Wan ו־Qi Ju Di. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -1011,7 +1011,7 @@
       }
     ],
     "correctAnswer": "א",
-    "explanation": "התשובה הנכונה היא „Ban Xia Hou Po Tang”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Ban Xia Hou Po Tang” תואם לתפקוד, לשיוך או לאינדיקציה של Plum Pit Qi ו־Ban Xia Hou. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -1040,7 +1040,7 @@
       }
     ],
     "correctAnswer": "ד",
-    "explanation": "התשובה הנכונה היא „Ban Xia Bai Zhu Tian Ma Tang”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: הספר החשוב הבא משושלת ( Tangשנת 659לספירה) נקרא ,Xin Xiu Ben Caoוהוא הכיל כבר מכאן שהתשובה הנכונה היא „Ban Xia Bai Zhu Tian Ma Tang”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -1069,7 +1069,7 @@
       }
     ],
     "correctAnswer": "ג",
-    "explanation": "התשובה הנכונה היא „מאזנת את המחמם האמצעי”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „מאזנת את המחמם האמצעי” תואם לתפקוד, לשיוך או לאינדיקציה של Tian Ma Gou ו־Teng Yin. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -1098,7 +1098,7 @@
       }
     ],
     "correctAnswer": "א",
-    "explanation": "התשובה הנכונה היא „להרמן בין הכבד והטחול”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: עם – Fang Fengלטיפול ברוח קור (שני הצמחים בעלי עוצמה בינונית בסילוק גפ\"ח ולכן העוסק בצמחי מרפא ששמו\"( Wu Shi Er Bing Fang :פורמולות ל -52מחלות\"). מכאן שהתשובה הנכונה היא „להרמן בין הכבד והטחול”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -1127,7 +1127,7 @@
       }
     ],
     "correctAnswer": "א",
-    "explanation": "התשובה הנכונה היא „Long Dan Xie Gan Tang”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Long Dan Xie Gan Tang” תואם לתפקוד, לשיוך או לאינדיקציה של Long Dan Xie ו־Gan Tang. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -1156,7 +1156,7 @@
       }
     ],
     "correctAnswer": "ב",
-    "explanation": "התשובה הנכונה היא „Shou Tai Wan”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Shou Tai Wan” תואם לתפקוד, לשיוך או לאינדיקציה של Shou Tai Wan. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -1185,7 +1185,7 @@
       }
     ],
     "correctAnswer": "ג",
-    "explanation": "התשובה הנכונה היא „Yu Ye Tang”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Yu Ye Tang” תואם לתפקוד, לשיוך או לאינדיקציה של Yu Ye Tang. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -1214,7 +1214,7 @@
       }
     ],
     "correctAnswer": "א",
-    "explanation": "התשובה הנכונה היא „Si Wu Tang”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Si Wu Tang” תואם לתפקוד, לשיוך או לאינדיקציה של Si Wu Tang. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -1243,7 +1243,7 @@
       }
     ],
     "correctAnswer": "ד",
-    "explanation": "התשובה הנכונה היא „Cang Er Zi San”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: סותר את .San Leng Ya Xiao Fructus Xan thii Sibrici )( Cang Er Zi (Bפרי הקסנסיום) מכאן שהתשובה הנכונה היא „Cang Er Zi San”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -1272,7 +1272,7 @@
       }
     ],
     "correctAnswer": "א",
-    "explanation": "התשובה הנכונה היא „Tao Hong Si Wu Tang”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Tao Hong Si Wu Tang” תואם לתפקוד, לשיוך או לאינדיקציה של Tao Hong Si ו־Wu Tang. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -1301,7 +1301,7 @@
       }
     ],
     "correctAnswer": "ד",
-    "explanation": "התשובה הנכונה היא „Du Huo Ji Sheng Tang”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים, „Du Huo Ji Sheng Tang” תואם לתפקוד, לשיוך או לאינדיקציה של Sheng Tang ו־Du Huo Ji. לכן זו התשובה הנכונה.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -1330,7 +1330,7 @@
       }
     ],
     "correctAnswer": "ב",
-    "explanation": "התשובה הנכונה היא „Da Huang Rhubarb, Radix et Rhizoma Rhei”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: )\"( Du Huang (Aצהוב גדול\" ידוע בכינוי \"הגנרל\") Radix et Rhizoma Rhei מכאן שהתשובה הנכונה היא „Da Huang Rhubarb, Radix et Rhizoma Rhei”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -1359,7 +1359,7 @@
       }
     ],
     "correctAnswer": "ג",
-    "explanation": "התשובה הנכונה היא „Yi Mu Cao Herba Leonuri Heterophylli”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: Herba Leonuri Heterophylli (Yi Mu Cao )A עם – Yi Mu Caoלהנעת דם והסדרת המחזור. מכאן שהתשובה הנכונה היא „Yi Mu Cao Herba Leonuri Heterophylli”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -1388,7 +1388,7 @@
       }
     ],
     "correctAnswer": "ד",
-    "explanation": "התשובה הנכונה היא „Sheng Jiang Rhizoma Zingiberis Officinalis Recens”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: סותר את .San Leng Ya Xiao מכאן שהתשובה הנכונה היא „Sheng Jiang Rhizoma Zingiberis Officinalis Recens”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -1417,7 +1417,7 @@
       }
     ],
     "correctAnswer": "ב",
-    "explanation": "התשובה הנכונה היא „Mu Dan Pi + Zhi Zi Cortex Moutan Radicis + Fructus Gardeniae Jasminoidis”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: Cortex Moutan Radicis )Mu Dan Pi (A Fructus Gardeniae Jasminoidis )Zhi Zi (A מכאן שהתשובה הנכונה היא „Mu Dan Pi + Zhi Zi Cortex Moutan Radicis + Fructus Gardeniae Jasminoidis”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   },
   {
@@ -1446,7 +1446,7 @@
       }
     ],
     "correctAnswer": "א",
-    "explanation": "התשובה הנכונה היא „Shan Yao + Yi Zhi Ren Radix Dioscoreae Oppositae + Fructus Alpiniae Oxyphyllae”. היא תואמת למפתח התשובות הרשמי של מבחן האיגוד משנת 2014.",
+    "explanation": "לפי סיכומי הצמחים: Radix Dioscoreae Oppositae )Shan Yao (A Fructas Alpiniae (Yi Zhi Ren )B מכאן שהתשובה הנכונה היא „Shan Yao + Yi Zhi Ren Radix Dioscoreae Oppositae + Fructus Alpiniae Oxyphyllae”.",
     "source": "מבחן האיגוד — צמחי מרפא, 2014"
   }
 ]
