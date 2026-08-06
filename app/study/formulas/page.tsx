@@ -1,0 +1,4 @@
+import Link from "next/link";
+import {RedHeader} from "../../../components/red-header";
+import {formulaCategories} from "../../../lib/formulas";
+export default function FormulasPage(){return <><RedHeader/><main className="study-library"><header><span>ספריית פורמולות צמחי מרפא</span><h1>פורמולות צמחי מרפא</h1><p>הספר המלא מחולק לקטגוריות ולתתי־פרקים, עם מעבר ישיר לכל מקום בחומר המקור.</p></header><nav className="study-subject-switch"><Link href="/study">רפואה מערבית</Link><Link href="/study/herbs">צמחים בודדים</Link><Link className="active" href="/study/formulas">פורמולות</Link></nav><section className="study-topic-grid">{formulaCategories.map((category,i)=><Link href={`/study/formulas/${category.id}`} key={category.id}><span>{String(i+1).padStart(2,"0")}</span><h2>{category.title}</h2><p>{category.summary}</p><small>עמודי PDF {category.pages} • {category.subtopics.length} תתי־פרקים</small><b>לפתיחת הקטגוריה ←</b></Link>)}</section></main></>}

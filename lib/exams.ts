@@ -12,8 +12,41 @@ export const allQuestions=Object.values(questionsByYear).flat();
 export const associationQuestions:Record<string,ExamQuestion[]>={foundations:associationFoundationsData as ExamQuestion[],western:associationWesternData as ExamQuestion[],acupuncture:associationAcupunctureData as ExamQuestion[],"point-location":associationPointLocationData as ExamQuestion[],herbs:associationHerbsData as ExamQuestion[]};
 export const improvisedQuestions:Record<string,ExamQuestion[]>={"western-1":[...(associationWesternData as ExamQuestion[]),...(improvisedWestern1ExtraData as ExamQuestion[])]};
 const sourceByPrefix=(prefix:string)=>Object.entries(sourceExamQuestions).filter(([key])=>key.startsWith(`${prefix}-`)).flatMap(([,questions])=>questions);
+
+/**
+ * Builds a stable fingerprint for duplicate detection.
+ * Source PDFs sometimes contain the same question with different punctuation,
+ * niqqud or OCR-created spaces inside words, so IDs and raw text are not enough.
+ */
+export function questionFingerprint(value:string){
+  return value
+    .normalize("NFKD")
+    .replace(/[\u0591-\u05c7]/g,"")
+    .toLocaleLowerCase("he")
+    .replace(/[^\p{L}\p{N}]+/gu,"");
+}
+
+export function uniqueQuestions(questions:ExamQuestion[]){
+  const seen=new Set<string>();
+  return questions.filter(question=>{
+    const fingerprint=questionFingerprint(question.question);
+    if(!fingerprint||seen.has(fingerprint))return false;
+    seen.add(fingerprint);
+    return true;
+  });
+}
+
 const streakFoundations=sourceByPrefix("foundations").slice(0,340);
 const streakWestern=[...sourceByPrefix("western"),...allQuestions];
 const streakAcupuncture=sourceByPrefix("acupuncture");
-export const streakQuestions:ExamQuestion[]=[...streakFoundations,...streakWestern,...streakAcupuncture];
+const streakQuestionCandidates=[...streakFoundations,...streakWestern,...streakAcupuncture];
+export const streakQuestions:ExamQuestion[]=uniqueQuestions(streakQuestionCandidates);
+
+export const mixedQuestions:Record<string,ExamQuestion[]>={
+  foundations:uniqueQuestions(sourceByPrefix("foundations")),
+  western:uniqueQuestions(allQuestions),
+  acupuncture:uniqueQuestions(sourceByPrefix("acupuncture")),
+  "point-location":uniqueQuestions(sourceByPrefix("point-location")),
+  herbs:uniqueQuestions(sourceByPrefix("herbs")),
+};
 export const questionMap=new Map([...streakQuestions,...Object.values(associationQuestions).flat(),...Object.values(improvisedQuestions).flat()].map(q=>[q.id,q]));

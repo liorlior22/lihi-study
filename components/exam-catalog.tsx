@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { associationQuestions, improvisedQuestions, questionsByYear } from "../lib/exams";
+import { associationQuestions, improvisedQuestions, mixedQuestions, questionsByYear } from "../lib/exams";
 import { ExamCard } from "./exam-card";
 import { sourceExamQuestions } from "../lib/source-exams";
 
@@ -17,6 +17,14 @@ const topics = [
   { key: "herbs", number: "05", title: "צמחי מרפא", description: "מבחן צמחי המרפא" },
 ] as const;
 type TopicKey = typeof topics[number]["key"];
+
+function MixedExamCard({ examKey, title }: { examKey: TopicKey; title: string }) {
+  const count = mixedQuestions[examKey]?.length ?? 0;
+  return <article className="exam-select-card association-exam-card mixed-exam-card">
+    <div className="exam-year">הכול</div><h2>מבחן מעורב — {title}</h2><p>{count} שאלות ייחודיות מכל שנות המבחנים, ללא כפילויות</p>
+    <div className="exam-card-actions"><Link href={`/exams/run?mode=mixed&value=${examKey}`}>התחלת מבחן מעורב</Link></div>
+  </article>;
+}
 
 function AssociationCard({ examKey, title }: { examKey: TopicKey; title: string }) {
   return <article className="exam-select-card association-exam-card">
@@ -43,17 +51,17 @@ export function ExamCatalog() {
 
     <div className="exam-topic-panel" role="tabpanel">
       <header><span>נושא {topic.number}</span><h2>{topic.title}</h2></header>
-      {selected === "foundations" && <><div className="exam-year-grid featured-topic-exams"><AssociationCard examKey="foundations" title="יסודות הרפואה הסינית"/></div><SourceExams examKey="foundations" title="יסודות הרפואה הסינית"/></>}
-      {selected === "western" && <><div className="exam-year-grid featured-topic-exams"><AssociationCard examKey="western" title="רפואה מערבית"/><article className="exam-select-card association-exam-card">
+      {selected === "foundations" && <><div className="exam-year-grid featured-topic-exams"><MixedExamCard examKey="foundations" title="יסודות הרפואה הסינית"/><AssociationCard examKey="foundations" title="יסודות הרפואה הסינית"/></div><SourceExams examKey="foundations" title="יסודות הרפואה הסינית"/></>}
+      {selected === "western" && <><div className="exam-year-grid featured-topic-exams"><MixedExamCard examKey="western" title="רפואה מערבית"/><AssociationCard examKey="western" title="רפואה מערבית"/><article className="exam-select-card association-exam-card">
         <div className="exam-year">1</div><h2>מבחן מערבי מאולתר 1</h2><p>{improvisedQuestions["western-1"].length} שאלות מסודרות עם תשובות והסברים</p>
         <div className="exam-card-actions"><Link href="/exams/run?mode=improvised&value=western-1">התחלת מבחן</Link><a href="https://www.quizme.co.il/quiz-discussion/7566" target="_blank" rel="noreferrer">צפייה במקור</a></div>
       </article></div><div className="exam-year-grid"><article className="exam-select-card source-exam-card">
         <div className="exam-year">2012</div><h2>רפואה מערבית</h2><p>30 שאלות מאומתות • זמין</p>
         <div className="exam-card-actions"><Link href="/exams/run?mode=source&value=western-2012">התחלת מבחן</Link><a href="/exams-pdf/western-2012-answers.pdf" target="_blank">צפייה בתשובון</a></div>
       </article>{years.map(year => { const count = questionsByYear[year]?.length ?? 0; return <ExamCard key={year} year={year} count={count} available={count === 30}/>; })}</div></>}
-      {selected === "acupuncture" && <><div className="exam-year-grid featured-topic-exams"><AssociationCard examKey="acupuncture" title="דיקור"/></div><SourceExams examKey="acupuncture" title="דיקור"/></>}
-      {selected === "point-location" && <><div className="exam-year-grid featured-topic-exams"><AssociationCard examKey="point-location" title="איתור נקודות"/></div><SourceExams examKey="point-location" title="איתור נקודות"/></>}
-      {selected === "herbs" && <><div className="exam-year-grid featured-topic-exams"><AssociationCard examKey="herbs" title="צמחי מרפא"/></div><SourceExams examKey="herbs" title="צמחי מרפא"/></>}
+      {selected === "acupuncture" && <><div className="exam-year-grid featured-topic-exams"><MixedExamCard examKey="acupuncture" title="דיקור"/><AssociationCard examKey="acupuncture" title="דיקור"/></div><SourceExams examKey="acupuncture" title="דיקור"/></>}
+      {selected === "point-location" && <><div className="exam-year-grid featured-topic-exams"><MixedExamCard examKey="point-location" title="איתור נקודות"/><AssociationCard examKey="point-location" title="איתור נקודות"/></div><SourceExams examKey="point-location" title="איתור נקודות"/></>}
+      {selected === "herbs" && <><div className="exam-year-grid featured-topic-exams"><MixedExamCard examKey="herbs" title="צמחי מרפא"/><AssociationCard examKey="herbs" title="צמחי מרפא"/></div><SourceExams examKey="herbs" title="צמחי מרפא"/></>}
     </div>
   </section>;
 }

@@ -1,7 +1,7 @@
 "use client";
 import { useSearchParams } from "next/navigation";
 import { ExamRunner } from "./exam-runner";
-import { allQuestions, associationQuestions, improvisedQuestions, questionsByYear } from "../lib/exams";
+import { allQuestions, associationQuestions, improvisedQuestions, mixedQuestions, questionsByYear } from "../lib/exams";
 import { sourceExamQuestions } from "../lib/source-exams";
 import type { ExamQuestion } from "../types/exam";
 
@@ -30,6 +30,10 @@ export function ExamLoader() {
   } else if (mode === "improvised") {
     questions = improvisedQuestions[value] ?? [];
     title = value === "western-1" ? "מבחן מערבי מאולתר 1" : "מבחן מאולתר";
+  } else if (mode === "mixed") {
+    questions = mixedQuestions[value] ?? [];
+    const titles: Record<string, string> = { foundations: "יסודות הרפואה הסינית", western: "רפואה מערבית", acupuncture: "דיקור", "point-location": "איתור נקודות", herbs: "צמחי מרפא" };
+    title = `מבחן מעורב — ${titles[value] ?? "כל השאלות"}`;
   } else if (mode === "topic") {
     questions = allQuestions.filter((question) => question.topic === value);
     title = `תרגול בנושא ${value}`;
