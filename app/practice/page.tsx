@@ -1,0 +1,2 @@
+import data from "../../data/content.json";import {RedHeader} from "../../components/red-header";import {PageHead} from "../../components/ui";import {Practice} from "../../components/practice";
+export default function Page(){return <><RedHeader/><main className="professional-content"><PageHead eyebrow="תרגול מותאם אישית" title="תרגול שאלות" description="שאלות שנבחרו במיוחד לפי הנושאים שדורשים אצלך חיזוק."/><Practice questions={data.questions}/></main></>}

@@ -1,0 +1,28 @@
+{
+  "topics": [
+    {"id":"math","title":"מתמטיקה","subtitle":"אלגברה, גאומטריה וחשיבה כמותית","icon":"calculator","color":"mint","progress":72,"lessons":18,"completed":13,"time":"4 שעות ו־20 דקות","next":"משוואות ריבועיות"},
+    {"id":"english","title":"אנגלית","subtitle":"אוצר מילים, הבנת הנקרא ודקדוק","icon":"book","color":"blue","progress":58,"lessons":16,"completed":9,"time":"3 שעות ו־10 דקות","next":"Reading comprehension"},
+    {"id":"hebrew","title":"עברית","subtitle":"לשון, תחביר והבעה","icon":"pen","color":"purple","progress":84,"lessons":14,"completed":12,"time":"2 שעות ו־45 דקות","next":"מילות קישור"},
+    {"id":"science","title":"מדעים","subtitle":"ביולוגיה, כימיה ופיזיקה","icon":"flask","color":"orange","progress":45,"lessons":20,"completed":9,"time":"5 שעות ו־05 דקות","next":"מערכת הנשימה"}
+  ],
+  "flashcards": [
+    {"topic":"מתמטיקה","front":"מהי נוסחת השורשים?","back":"x = (-b ± √(b²-4ac)) / 2a","hint":"השתמשי במקדמים a, b, c"},
+    {"topic":"אנגלית","front":"What does “significant” mean?","back":"משמעותי / בעל חשיבות","hint":"Something important or noticeable"},
+    {"topic":"עברית","front":"מהו נשוא במשפט?","back":"החלק במשפט המספר מה הנושא עושה או מה מצבו","hint":"חפשי את הפועל המרכזי"},
+    {"topic":"מדעים","front":"מה תפקיד המיטוכונדריה?","back":"ייצור אנרגיה זמינה לתא בתהליך הנשימה התאית","hint":"תחנת הכוח של התא"}
+  ],
+  "questions": [
+    {"topic":"מתמטיקה","question":"מהו הפתרון של המשוואה 3x + 6 = 21?","options":["3","5","7","9"],"answer":1,"explanation":"מחסרים 6 משני האגפים ומקבלים 3x=15. מחלקים ב־3 ולכן x=5."},
+    {"topic":"אנגלית","question":"Choose the correct sentence:","options":["She don't like coffee","She doesn't likes coffee","She doesn't like coffee","She not like coffee"],"answer":2,"explanation":"אחרי does not משתמשים בצורת הבסיס של הפועל: like."},
+    {"topic":"מדעים","question":"איזה איבר אחראי על סינון הדם ויצירת שתן?","options":["הלב","הריאות","הכליות","הכבד"],"answer":2,"explanation":"הכליות מסננות חומרי פסולת ועודפי נוזלים מן הדם."}
+  ],
+  "exams": [
+    {"title":"סימולציה מלאה #4","date":"מומלץ להיום","questions":45,"duration":90,"level":"בינוני","status":"new","score":null},
+    {"title":"סימולציה מלאה #3","date":"28 ביולי 2026","questions":45,"duration":90,"level":"מתקדם","status":"done","score":87},
+    {"title":"מבחן מיקוד — כמותי","date":"24 ביולי 2026","questions":20,"duration":35,"level":"בינוני","status":"done","score":82},
+    {"title":"מבחן מיקוד — אנגלית","date":"19 ביולי 2026","questions":25,"duration":40,"level":"בינוני","status":"done","score":91}
+  ],
+  "weekly": [
+    {"day":"א׳","minutes":42},{"day":"ב׳","minutes":65},{"day":"ג׳","minutes":38},{"day":"ד׳","minutes":80},{"day":"ה׳","minutes":54},{"day":"ו׳","minutes":72},{"day":"ש׳","minutes":28}
+  ]
+}

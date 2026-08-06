@@ -1,0 +1,2 @@
+import {NextResponse}from"next/server";import{setPlayerName}from"../../../../lib/leaderboard";
+export async function POST(request:Request){const{name,code}=await request.json();if(!String(name||"").trim())return NextResponse.json({error:"יש להזין שם סטודנט/ית"},{status:400});const accessCode=process.env.LEADERBOARD_ACCESS_CODE||"1312";if(String(code)!==accessCode)return NextResponse.json({error:"קוד שגוי"},{status:403});await setPlayerName(String(name).trim().slice(0,80));return NextResponse.json({ok:true})}

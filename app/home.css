@@ -1,0 +1,129 @@
+.dashboard-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.35rem);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem) !important;
+  text-align: center;
+}
+
+.dashboard-hero h1 {
+  margin: 0;
+  color: #a90f19;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3.6vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.dashboard-hero .motivation-card {
+  width: 100%;
+  max-width: 46rem;
+  margin-top: 0 !important;
+  text-align: right;
+}
+
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  padding-block: clamp(1.25rem, 3vw, 2.75rem);
+  padding-inline: clamp(0.875rem, 4vw, 4rem);
+  overflow-x: clip;
+}
+
+.dashboard-page > * {
+  width: min(100%, 73.75rem);
+}
+
+.dashboard-page .family-gallery {
+  width: min(100%, 73.75rem);
+  margin-top: 0 !important;
+  gap: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+.dashboard-page .family-gallery article {
+  width: 100%;
+  min-width: 0;
+}
+
+.dashboard-page .family-gallery img {
+  max-width: none;
+}
+
+@media (max-width: 600px) {
+  .dashboard-page { padding-top: clamp(1.25rem, 5vw, 1.75rem); }
+  .dashboard-hero h1 {
+    font-size: clamp(1.7rem, 8.5vw, 2.45rem);
+    letter-spacing: -0.025em;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .dashboard-hero .motivation-card {
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .dashboard-hero .motivation-card b {
+    font-size: clamp(0.95rem, 4.3vw, 1.05rem);
+    line-height: 1.45;
+  }
+
+  .dashboard-hero .motivation-card blockquote {
+    font-size: clamp(0.95rem, 4.2vw, 1.1rem);
+  }
+}
+
+@media (max-width: 360px) {
+  .dashboard-page { padding-inline: 0.75rem; }
+  .dashboard-hero h1 { font-size: 1.55rem; }
+  .dashboard-hero .motivation-card { padding: 0.875rem; }
+  .dashboard-hero .motivation-card > span { font-size: 1.25rem; }
+}
+
+@media (min-width: 761px) and (max-width: 980px) {
+  .dashboard-page .family-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .dashboard-page .family-gallery article { aspect-ratio: 1; }
+}
+
+@media (min-width: 1600px) {
+  .dashboard-page { padding-top: 2.75rem; }
+}
+
+.leader-heading h1 {
+  font-size: 0;
+}
+
+.leader-heading h1::after {
+  content: "מצטיין כיתתי";
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+}
+
+.streak-game button:disabled { cursor: not-allowed; opacity: .65; }
+.streak-feedback { margin-top: 1rem; border-radius: .6rem; background: #edf8f3; padding: .85rem; color: #176142; font-weight: 800; }
+.streak-feedback.incorrect { border: 1px solid #efb7bc; background: #fff0f1; color: #98131d; }
+.streak-feedback.correct { border: 1px solid #b9dfce; background: #edf8f3; color: #176142; }
+
+.minimal-home { width: 50px; height: 50px; }
+.minimal-home svg { width: 26px; height: 26px; }
+
+.exam-topics { max-width: 74rem; margin: 0 auto clamp(2rem, 4vw, 3rem); }
+.exam-topics h2 { margin-bottom: .8rem; font-size: clamp(1.2rem, 2vw, 1.5rem); }
+.exam-topics > div { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(13rem, 100%), 1fr)); gap: .75rem; }
+.exam-topics a { display: flex; justify-content: space-between; gap: .75rem; min-height: 52px; border: 1px solid #eadfe0; border-radius: 10px; background: #fff; padding: .8rem 1rem; }
+.exam-topics a span { color: #a6151e; white-space: nowrap; }
+.exam-select-card { display: flex; min-height: 13rem; flex-direction: column; }
+.exam-select-card .exam-year { position: static; color: #a6151e; font-size: clamp(1.5rem, 2vw, 2rem); line-height: 1; }
+.exam-select-card h2 { margin-top: .7rem; }
+.exam-select-card p { min-height: 0; }
+.exam-card-actions { margin-top: auto; flex-wrap: wrap; }
+
+@media (max-width: 760px) {
+  .minimal-home { width: 46px; height: 46px; }
+  .minimal-home svg { width: 24px; height: 24px; }
+}
