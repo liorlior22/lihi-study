@@ -7,8 +7,8 @@ import { studyIdForExamTopic } from "../lib/study";
 import { correctOptionFor, explanationForQuestion } from "../lib/exam-feedback";
 import { cleanExamText } from "../lib/exam-text";
 
-const CORRECT = "תשובה נכונה — אבל ליהי גרוסמן אנגלצ׳ין פתרה אותה מהר יותר!";
-const WRONG = "לא נכון, הלוואי שתטעה גם במבחן וליהי תענה נכון";
+const CORRECT = "תשובה נכונה, אבל ליהי אנגלצ׳ין גרוסמן ענתה מהר יותר";
+const WRONG = "לא נכון, הלוואי שגם במבחן תטעו וליהי תענה נכון";
 const NOTICE = "שימו לב: בכל שאלה ניתן לבדוק את התשובה מיד או לעבור לשאלה הבאה ולקבל את כל התשובות בסוף המבחן.";
 const SESSION = "lihi-exam-session";
 const MISTAKES = "lihi-exam-mistakes";
