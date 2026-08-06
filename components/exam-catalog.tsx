@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { associationQuestions, improvisedQuestions, mixedQuestions, questionsByYear } from "../lib/exams";
+import { associationQuestions, improvisedQuestions, mixedQuestions, questionsByYear, generatedQuestions } from "../lib/exams";
 import { ExamCard } from "./exam-card";
 import { sourceExamQuestions } from "../lib/source-exams";
 
@@ -55,6 +55,9 @@ export function ExamCatalog() {
       {selected === "western" && <><div className="exam-year-grid featured-topic-exams"><MixedExamCard examKey="western" title="רפואה מערבית"/><AssociationCard examKey="western" title="רפואה מערבית"/><article className="exam-select-card association-exam-card">
         <div className="exam-year">1</div><h2>מבחן מערבי מאולתר 1</h2><p>{improvisedQuestions["western-1"].length} שאלות מסודרות עם תשובות והסברים</p>
         <div className="exam-card-actions"><Link href="/exams/run?mode=improvised&value=western-1">התחלת מבחן</Link><a href="https://www.quizme.co.il/quiz-discussion/7566" target="_blank" rel="noreferrer">צפייה במקור</a></div>
+      </article><article className="exam-select-card association-exam-card">
+        <div className="exam-year">צ׳אט</div><h2>גיליון שאלות שהצ׳אט המציא</h2><p>{generatedQuestions["western-chat-100"].length} שאלות חדשות לתרגול נוסף ברפואה מערבית, עם תשובות והסברים</p>
+        <div className="exam-card-actions"><Link href="/exams/run?mode=generated&value=western-chat-100">התחלת תרגול</Link></div>
       </article></div><div className="exam-year-grid"><article className="exam-select-card source-exam-card">
         <div className="exam-year">2012</div><h2>רפואה מערבית</h2><p>30 שאלות מאומתות • זמין</p>
         <div className="exam-card-actions"><Link href="/exams/run?mode=source&value=western-2012">התחלת מבחן</Link><a href="/exams-pdf/western-2012-answers.pdf" target="_blank">צפייה בתשובון</a></div>

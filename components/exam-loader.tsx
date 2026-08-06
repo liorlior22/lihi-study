@@ -1,7 +1,7 @@
 "use client";
 import { useSearchParams } from "next/navigation";
 import { ExamRunner } from "./exam-runner";
-import { allQuestions, associationQuestions, improvisedQuestions, mixedQuestions, questionsByYear } from "../lib/exams";
+import { allQuestions, associationQuestions, improvisedQuestions, mixedQuestions, questionsByYear, generatedQuestions } from "../lib/exams";
 import { sourceExamQuestions } from "../lib/source-exams";
 import type { ExamQuestion } from "../types/exam";
 
@@ -34,6 +34,9 @@ export function ExamLoader() {
     questions = mixedQuestions[value] ?? [];
     const titles: Record<string, string> = { foundations: "יסודות הרפואה הסינית", western: "רפואה מערבית", acupuncture: "דיקור", "point-location": "איתור נקודות", herbs: "צמחי מרפא" };
     title = `מבחן מעורב — ${titles[value] ?? "כל השאלות"}`;
+  } else if (mode === "generated") {
+    questions = generatedQuestions[value] ?? [];
+    title = value === "western-chat-100" ? "גיליון שאלות שהצ׳אט המציא" : "שאלות לתרגול נוסף";
   } else if (mode === "topic") {
     questions = allQuestions.filter((question) => question.topic === value);
     title = `תרגול בנושא ${value}`;
