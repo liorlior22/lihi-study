@@ -9,6 +9,7 @@ const links = [
   ["/exams", "מבחנים"],
   ["/study", "קטעי לימוד וסיכומים"],
   ["/leaderboard", "מצטיין כיתתי"],
+  ["/who-am-i", "מי אני?"],
 ];
 
 export function RedHeader() {
