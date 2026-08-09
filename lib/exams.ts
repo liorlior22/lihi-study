@@ -38,11 +38,24 @@ export function uniqueQuestions(questions:ExamQuestion[]){
   });
 }
 
-const streakFoundations=sourceByPrefix("foundations").slice(0,340);
-const streakWestern=[...sourceByPrefix("western"),...allQuestions];
-const streakAcupuncture=sourceByPrefix("acupuncture");
-const streakQuestionCandidates=[...streakFoundations,...streakWestern,...streakAcupuncture];
-export const streakQuestions:ExamQuestion[]=uniqueQuestions(streakQuestionCandidates);
+const normalizeStreakQuestion=(value:string)=>value
+  .normalize("NFKC")
+  .toLowerCase()
+  .replace(/[\u0591-\u05c7]/g,"")
+  .replace(/[^\p{L}\p{N}]+/gu,"")
+  .trim();
+const dedupeStreakQuestions=(questions:ExamQuestion[])=>{
+  const seen=new Set<string>();
+  return questions.filter(question=>{
+    const key=normalizeStreakQuestion(question.question);
+    if(!key||seen.has(key))return false;
+    seen.add(key);
+    return true;
+  });
+};
+const streakHerbs=[...sourceByPrefix("herbs"),...(associationQuestions.herbs??[])];
+const streakPointLocation=[...sourceByPrefix("point-location"),...(associationQuestions["point-location"]??[])];
+export const streakQuestions:ExamQuestion[]=dedupeStreakQuestions([...streakHerbs,...streakPointLocation]);
 
 export const mixedQuestions:Record<string,ExamQuestion[]>={
   foundations:uniqueQuestions(sourceByPrefix("foundations")),

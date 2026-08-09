@@ -8,6 +8,8 @@ import { sourceExamQuestions } from "../lib/source-exams";
 
 const years = [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2024];
 const sourceYears = [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
+const herbsSourceYears = [...sourceYears, 2025];
+const pointLocationSourceYears = [...sourceYears, 2025];
 const specificationUrl = "https://www.tcmisrael.org/wp-content/uploads/2025/06/%D7%9E%D7%A4%D7%A8%D7%98-%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%90%D7%97%D7%A8%D7%95%D7%9F-2022-15.9.pdf";
 const topics = [
   { key: "foundations", number: "01", title: "יסודות הרפואה הסינית", description: "מבחני יסודות לפי שנה" },
@@ -34,9 +36,11 @@ function AssociationCard({ examKey, title }: { examKey: TopicKey; title: string 
 }
 
 function SourceExams({ examKey, title }: { examKey: "foundations" | "acupuncture" | "point-location" | "herbs"; title: string }) {
-  return <div className="exam-year-grid source-exam-grid">{sourceYears.map(year => { const key = `${examKey}-${year}`; const questions = sourceExamQuestions[key] ?? []; return <article className="exam-select-card source-exam-card" key={key}>
-    <div className="exam-year">{year}</div><h2>{title}</h2><p>מבחן האיגוד {year} • מבחן מקורי ותשובון</p>
-    <div className="exam-card-actions">{questions.length > 0 ? <Link href={`/exams/run?mode=source&value=${key}`}>התחלת מבחן ({questions.length})</Link> : <a href={`/exams-pdf/${examKey}-${year}.pdf`} target="_blank">צפייה במקור</a>}<a href={`/exams-pdf/${examKey}-${year}-answers.pdf`} target="_blank">צפייה בתשובון</a></div>
+  const yearsForTopic = examKey === "herbs" ? herbsSourceYears : examKey === "point-location" ? pointLocationSourceYears : sourceYears;
+  
+  return <div className="exam-year-grid source-exam-grid">{yearsForTopic.map(year => { const key = `${examKey}-${year}`; const questions = sourceExamQuestions[key] ?? []; return <article className="exam-select-card source-exam-card" key={key}>
+    <div className="exam-year">{year}</div><h2>{title}</h2><p>{year === 2025 && examKey === "herbs" ? "שחזור מבחן האיגוד 2025 • 50 שאלות • תשובות לפי הסימון הצהוב" : `מבחן האיגוד ${year} • מבחן מקורי ותשובון`}</p>
+    <div className="exam-card-actions">{questions.length > 0 ? <Link href={`/exams/run?mode=source&value=${key}`}>התחלת מבחן ({questions.length})</Link> : <a href={`/exams-pdf/${examKey}-${year}.pdf`} target="_blank">צפייה במקור</a>}{!(examKey === "herbs" && year === 2025) && <a href={`/exams-pdf/${examKey}-${year}-answers.pdf`} target="_blank">צפייה בתשובון</a>}</div>
   </article>})}</div>;
 }
 
