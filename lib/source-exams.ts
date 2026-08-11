@@ -8,6 +8,7 @@ import herbs2017 from "../data/exams/source/herbs-2017.json";
 import herbs2018 from "../data/exams/source/herbs-2018.json";
 import herbs2019 from "../data/exams/source/herbs-2019.json";
 import herbs2025 from "../data/exams/source/herbs-2025.json";
+import herbs2024 from "../data/exams/source/herbs-2024.json";
 import acupuncture2012 from "../data/exams/source/acupuncture-2012.json";
 import acupuncture2013 from "../data/exams/source/acupuncture-2013.json";
 import acupuncture2014 from "../data/exams/source/acupuncture-2014.json";
@@ -73,4 +74,5 @@ export const sourceExamQuestions: Record<string, ExamQuestion[]> = {
   "herbs-2018": herbs2018 as ExamQuestion[],
   "herbs-2019": herbs2019 as ExamQuestion[],
 
+  "herbs-2024": herbs2024 as ExamQuestion[],
 };

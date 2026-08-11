@@ -8,7 +8,7 @@ import { sourceExamQuestions } from "../lib/source-exams";
 
 const years = [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2024];
 const sourceYears = [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019];
-const herbsSourceYears = [...sourceYears, 2025];
+const herbsSourceYears = [...sourceYears, 2024, 2025];
 const pointLocationSourceYears = [...sourceYears, 2025];
 const specificationUrl = "https://www.tcmisrael.org/wp-content/uploads/2025/06/%D7%9E%D7%A4%D7%A8%D7%98-%D7%A2%D7%93%D7%9B%D7%95%D7%9F-%D7%90%D7%97%D7%A8%D7%95%D7%9F-2022-15.9.pdf";
 const topics = [
@@ -36,7 +36,7 @@ function AssociationCard({ examKey, title }: { examKey: TopicKey; title: string 
 }
 
 function SourceExams({ examKey, title }: { examKey: "foundations" | "acupuncture" | "point-location" | "herbs"; title: string }) {
-  const yearsForTopic = examKey === "herbs" ? herbsSourceYears : examKey === "point-location" ? pointLocationSourceYears : sourceYears;
+  const yearsForTopic = examKey === "herbs" ? herbsSourceYears : examKey === "point-location" && typeof pointLocationSourceYears !== "undefined" ? pointLocationSourceYears : sourceYears;
   
   return <div className="exam-year-grid source-exam-grid">{yearsForTopic.map(year => { const key = `${examKey}-${year}`; const questions = sourceExamQuestions[key] ?? []; return <article className="exam-select-card source-exam-card" key={key}>
     <div className="exam-year">{year}</div><h2>{title}</h2><p>{year === 2025 && examKey === "herbs" ? "שחזור מבחן האיגוד 2025 • 50 שאלות • תשובות לפי הסימון הצהוב" : `מבחן האיגוד ${year} • מבחן מקורי ותשובון`}</p>
