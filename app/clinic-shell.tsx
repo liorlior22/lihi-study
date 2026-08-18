@@ -8,6 +8,7 @@ const nav = [
   ["#", "▣", "יומן טיפולים"],
   ["/study", "▤", "ספריית ידע"],
   ["/finance", "₪", "הרו״ח שלי"],
+  ["#", "↗", "מכירות ושיווק"],
 ] as const;
 
 export function ClinicShell({ children, active = "ראשי" }: { children: React.ReactNode; active?: string }) {
@@ -39,7 +40,7 @@ export function ClinicShell({ children, active = "ראשי" }: { children: React
       <nav className="clinic-mobile-nav">
         {nav.map(([href, icon, label]) => (
           <Link key={label} href={href} className={active === label ? "active" : ""}>
-            <b>{icon}</b>{label === "המטופלים שלי" ? "מטופלים" : label === "הרו״ח שלי" ? "רו״ח" : label.replace(" טיפולים", "")}
+            <b>{icon}</b>{label === "המטופלים שלי" ? "מטופלים" : label === "הרו״ח שלי" ? "רו״ח" : label === "מכירות ושיווק" ? "שיווק" : label.replace(" טיפולים", "")}
           </Link>
         ))}
       </nav>
