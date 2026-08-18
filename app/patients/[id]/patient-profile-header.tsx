@@ -62,7 +62,12 @@ export function PatientProfileHeader({ patient }: { patient: Patient }) {
             <div className={styles.avatar}>
               {photo ? <img src={photo} alt={`תמונה של ${patient.name}`} /> : patient.initials}
             </div>
-            <button type="button" className={styles.cameraButton} onClick={openEditor} aria-label="שינוי תמונת מטופל">⌁</button>
+            <button type="button" className={styles.cameraButton} onClick={openEditor} aria-label="שינוי תמונת מטופל">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M8.5 7 10 5h4l1.5 2H18a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h2.5Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
+                <circle cx="12" cy="12.5" r="3" stroke="currentColor" strokeWidth="2"/>
+              </svg>
+            </button>
           </div>
 
           <div className={styles.identityText}>
