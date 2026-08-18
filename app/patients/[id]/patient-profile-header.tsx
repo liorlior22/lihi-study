@@ -5,14 +5,23 @@ import type { Patient } from "../../clinic-data";
 import styles from "./patient-profile-header.module.css";
 
 type EditableProfile = {
+  fullName: string;
   phone: string;
   age: string;
   heightCm: string;
   weightKg: string;
 };
 
+function getInitials(name: string, fallback: string) {
+  const parts = name.trim().split(/\s+/).filter(Boolean);
+  if (!parts.length) return fallback;
+  if (parts.length === 1) return parts[0].slice(0, 2);
+  return `${parts[0][0] ?? ""}${parts[parts.length - 1][0] ?? ""}`;
+}
+
 export function PatientProfileHeader({ patient }: { patient: Patient }) {
   const initialProfile: EditableProfile = {
+    fullName: patient.name,
     phone: patient.phone,
     age: String(patient.age),
     heightCm: patient.heightCm ? String(patient.heightCm) : "",
@@ -47,12 +56,14 @@ export function PatientProfileHeader({ patient }: { patient: Patient }) {
   }
 
   function saveProfile() {
-    setProfile(draft);
+    if (!draft.fullName.trim()) return;
+    setProfile({ ...draft, fullName: draft.fullName.trim() });
     setPhoto(draftPhoto);
     setIsEditing(false);
   }
 
   const paymentOpen = patient.balance > 0;
+  const initials = getInitials(profile.fullName, patient.initials);
 
   return (
     <div className={styles.profileArea}>
@@ -60,7 +71,7 @@ export function PatientProfileHeader({ patient }: { patient: Patient }) {
         <div className={styles.identity}>
           <div className={styles.avatarWrap}>
             <div className={styles.avatar}>
-              {photo ? <img src={photo} alt={`תמונה של ${patient.name}`} /> : patient.initials}
+              {photo ? <img src={photo} alt={`תמונה של ${profile.fullName}`} /> : initials}
             </div>
             <button type="button" className={styles.cameraButton} onClick={openEditor} aria-label="שינוי תמונת מטופל">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -71,8 +82,7 @@ export function PatientProfileHeader({ patient }: { patient: Patient }) {
           </div>
 
           <div className={styles.identityText}>
-            <h1>{patient.name}</h1>
-            <p className={styles.occupation}>{patient.occupation}</p>
+            <h1>{profile.fullName}</h1>
             <div className={styles.statusLine}>
               <span className={styles.status}>{patient.status}</span>
               <span className={paymentOpen ? styles.balanceOpen : styles.balanceOk}>
@@ -123,7 +133,7 @@ export function PatientProfileHeader({ patient }: { patient: Patient }) {
           <section className={styles.modal} role="dialog" aria-modal="true" aria-labelledby="patient-edit-title">
             <header className={styles.modalHeader}>
               <div>
-                <h2 id="patient-edit-title">עריכת הפרופיל של {patient.name}</h2>
+                <h2 id="patient-edit-title">עריכת פרופיל מטופל</h2>
                 <p>עדכון פרטים אישיים ותמונת מטופל</p>
               </div>
               <button type="button" className={styles.closeButton} onClick={closeEditor} aria-label="סגירה">×</button>
@@ -132,7 +142,7 @@ export function PatientProfileHeader({ patient }: { patient: Patient }) {
             <div className={styles.modalBody}>
               <div className={styles.photoEditor}>
                 <div className={styles.modalAvatar}>
-                  {draftPhoto ? <img src={draftPhoto} alt={`תצוגה מקדימה של ${patient.name}`} /> : patient.initials}
+                  {draftPhoto ? <img src={draftPhoto} alt={`תצוגה מקדימה של ${draft.fullName || "המטופל"}`} /> : getInitials(draft.fullName, patient.initials)}
                 </div>
                 <div className={styles.photoEditorText}>
                   <strong>תמונת פרופיל</strong>
@@ -145,6 +155,11 @@ export function PatientProfileHeader({ patient }: { patient: Patient }) {
               </div>
 
               <div className={styles.formGrid}>
+                <label className={`${styles.field} ${styles.fullWidthField ?? ""}`}>
+                  <span>שם מלא</span>
+                  <input required type="text" value={draft.fullName} onChange={(event) => setDraft({ ...draft, fullName: event.target.value })} placeholder="שם פרטי ושם משפחה" />
+                </label>
+
                 <label className={styles.field}>
                   <span>מספר טלפון</span>
                   <input type="tel" value={draft.phone} onChange={(event) => setDraft({ ...draft, phone: event.target.value })} placeholder="05X-XXXXXXX" />
@@ -174,7 +189,7 @@ export function PatientProfileHeader({ patient }: { patient: Patient }) {
             </div>
 
             <footer className={styles.modalFooter}>
-              <button type="button" className={styles.saveButton} onClick={saveProfile}>שמור שינויים</button>
+              <button type="button" className={styles.saveButton} onClick={saveProfile} disabled={!draft.fullName.trim()}>שמור שינויים</button>
               <button type="button" className={styles.cancelButton} onClick={closeEditor}>ביטול</button>
             </footer>
           </section>
