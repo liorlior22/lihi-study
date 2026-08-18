@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ClinicShell } from "../../clinic-shell";
 import { getPatient, patients } from "../../clinic-data";
 import { PatientTabs } from "./patient-tabs";
+import { PatientProfileHeader } from "./patient-profile-header";
 
 export function generateStaticParams() {
   return patients.map((patient) => ({ id: patient.id }));
@@ -17,19 +18,7 @@ export default async function PatientPage({ params }: { params: Promise<{ id: st
     <ClinicShell active="המטופלים שלי">
       <section className="patient-profile">
         <Link href="/patients" className="back-link">← חזרה לכל המטופלים</Link>
-
-        <header className="patient-hero">
-          <div className="patient-avatar">{patient.initials}</div>
-          <div>
-            <h1>{patient.name}</h1>
-            <p>{patient.occupation} · גיל {patient.age} · {patient.phone}</p>
-          </div>
-          <div className="patient-hero-actions">
-            <small>הטיפול הבא</small>
-            <b>{patient.nextTreatment}</b>
-          </div>
-        </header>
-
+        <PatientProfileHeader patient={patient} />
         <PatientTabs patient={patient} />
       </section>
     </ClinicShell>
