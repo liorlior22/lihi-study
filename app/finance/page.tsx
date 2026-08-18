@@ -3,6 +3,7 @@ import { ClinicShell } from "../clinic-shell";
 import { patients } from "../clinic-data";
 import { ExpensesSheet } from "./expenses-sheet";
 import styles from "./finance.module.css";
+import income from "./income.module.css";
 
 const initialExpensesTotal = 5000;
 
@@ -63,24 +64,24 @@ export default function FinancePage() {
           </article>
         </section>
 
-        <section className={`${styles.panel} ${styles.incomePanel}`}>
+        <section className={`${styles.panel} ${income.incomePanel}`}>
           <div className={styles.panelHeader}>
             <div>
               <span>אוגוסט 2026</span>
               <h2>הכנסות מטיפולים</h2>
             </div>
-            <strong className={styles.incomeTotal}>{formatCurrency(totalIncome)}</strong>
+            <strong className={income.incomeTotal}>{formatCurrency(totalIncome)}</strong>
           </div>
 
-          <div className={styles.incomeColumns}>
+          <div className={income.incomeColumns}>
             <div>
-              <div className={styles.incomeGroupTitle}>
+              <div className={income.incomeGroupTitle}>
                 <strong>שולם</strong>
                 <span>{formatCurrency(paidIncome)}</span>
               </div>
-              <div className={styles.incomeList}>
+              <div className={income.incomeList}>
                 {paidTreatments.map((treatment) => (
-                  <Link className={styles.incomeRow} href={`/patients/${treatment.patientId}`} key={treatment.id}>
+                  <Link className={income.incomeRow} href={`/patients/${treatment.patientId}`} key={treatment.id}>
                     <div>
                       <strong>{treatment.patientName}</strong>
                       <span>{formatDate(treatment.date)}</span>
@@ -92,20 +93,20 @@ export default function FinancePage() {
             </div>
 
             <div>
-              <div className={`${styles.incomeGroupTitle} ${styles.unpaidTitle}`}>
+              <div className={`${income.incomeGroupTitle} ${income.unpaidTitle}`}>
                 <strong>טרם שולם</strong>
                 <span>{formatCurrency(unpaidIncome)}</span>
               </div>
-              <div className={styles.incomeList}>
+              <div className={income.incomeList}>
                 {unpaidTreatments.length ? unpaidTreatments.map((treatment) => (
-                  <Link className={`${styles.incomeRow} ${styles.unpaidRow}`} href={`/patients/${treatment.patientId}`} key={treatment.id}>
+                  <Link className={`${income.incomeRow} ${income.unpaidRow}`} href={`/patients/${treatment.patientId}`} key={treatment.id}>
                     <div>
                       <strong>{treatment.patientName}</strong>
                       <span>{formatDate(treatment.date)}</span>
                     </div>
                     <b>{formatCurrency(treatment.price)}</b>
                   </Link>
-                )) : <p className={styles.emptyIncome}>אין תשלומים פתוחים החודש.</p>}
+                )) : <p className={income.emptyIncome}>אין תשלומים פתוחים החודש.</p>}
               </div>
             </div>
           </div>
