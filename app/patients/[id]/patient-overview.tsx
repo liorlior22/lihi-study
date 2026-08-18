@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import type { MaritalStatus, Patient } from "../../clinic-data";
+import { getPatientTreatmentPrice } from "../../pricing-data";
 import styles from "./patient-overview.module.css";
 
 type OverviewState = {
   occupation: string;
   maritalStatus: MaritalStatus;
   childrenCount: 0 | 1 | 2 | 3 | 4 | 5;
+  treatmentPrice: number;
   hobbies: string;
   profile: string;
 };
@@ -17,6 +19,7 @@ export function PatientOverview({ patient }: { patient: Patient }) {
     occupation: patient.occupation,
     maritalStatus: patient.maritalStatus,
     childrenCount: patient.childrenCount,
+    treatmentPrice: getPatientTreatmentPrice(patient.id),
     hobbies: patient.hobbies,
     profile: patient.profile,
   };
@@ -62,6 +65,7 @@ export function PatientOverview({ patient }: { patient: Patient }) {
           <div className={styles.compactField}><span>מקצוע / עיסוק</span><strong>{value.occupation || "לא הוזן"}</strong></div>
           <div className={styles.compactField}><span>מצב משפחתי</span><strong>{value.maritalStatus}</strong></div>
           <div className={styles.compactField}><span>כמות ילדים</span><strong>{value.childrenCount}</strong></div>
+          <div className={styles.compactField}><span>מחיר טיפול קבוע</span><strong>₪{value.treatmentPrice}</strong></div>
           <div className={`${styles.textField} ${styles.fullWidth}`}><span>תחביבים</span><p>{value.hobbies || "לא הוזן"}</p></div>
           <div className={`${styles.textField} ${styles.fullWidth}`}><span>האפיון של ליהי</span><p>{value.profile || "לא הוזן"}</p></div>
         </div>
@@ -86,6 +90,17 @@ export function PatientOverview({ patient }: { patient: Patient }) {
             <select value={draft.childrenCount} onChange={(event) => setDraft({ ...draft, childrenCount: Number(event.target.value) as OverviewState["childrenCount"] })}>
               {[0, 1, 2, 3, 4, 5].map((count) => <option key={count} value={count}>{count}</option>)}
             </select>
+          </label>
+
+          <label className={styles.field}>
+            <span>מחיר טיפול קבוע (₪)</span>
+            <input
+              type="number"
+              min="0"
+              step="10"
+              value={draft.treatmentPrice}
+              onChange={(event) => setDraft({ ...draft, treatmentPrice: Number(event.target.value) || 0 })}
+            />
           </label>
 
           <label className={`${styles.field} ${styles.fullWidth}`}>
