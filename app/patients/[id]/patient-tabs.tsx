@@ -24,6 +24,8 @@ export function PatientTabs({ patient }: { patient: Patient }) {
           <div className="info-stack">
             <article className="clinic-card info-block">
               <div className="clinic-section-title"><h2>היכרות ואפיון</h2><button className="clinic-primary">עריכה</button></div>
+              <h3>מקצוע / עיסוק</h3><p>{patient.occupation || "לא הוזן"}</p>
+              <hr style={{border:0,borderTop:"1px solid #edf0ea",margin:"18px 0"}} />
               <h3>רקע משפחתי</h3><p>{patient.family}</p>
               <hr style={{border:0,borderTop:"1px solid #edf0ea",margin:"18px 0"}} />
               <h3>תחביבים ואורח חיים</h3><p>{patient.hobbies}</p>
