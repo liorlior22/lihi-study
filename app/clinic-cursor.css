@@ -1,0 +1,3 @@
+.clinic-shell{cursor:default!important}
+.clinic-shell a,.clinic-shell button,.clinic-shell summary,.clinic-shell label{cursor:pointer!important}
+.clinic-shell input,.clinic-shell textarea,.clinic-shell [contenteditable="true"]{cursor:text!important}
