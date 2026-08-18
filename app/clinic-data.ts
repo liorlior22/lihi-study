@@ -6,6 +6,8 @@ export type Treatment = {
   note: string;
 };
 
+export type MaritalStatus = "רווק" | "גרוש" | "נשוי";
+
 export type Patient = {
   id: string;
   name: string;
@@ -13,6 +15,8 @@ export type Patient = {
   age: number;
   phone: string;
   occupation: string;
+  maritalStatus: MaritalStatus;
+  childrenCount: 0 | 1 | 2 | 3 | 4 | 5;
   heightCm: number | null;
   weightKg: number | null;
   status: "פעיל" | "חדש";
@@ -35,6 +39,8 @@ export const patients: Patient[] = [
     age: 36,
     phone: "050-555-1201",
     occupation: "מנהל מוצר",
+    maritalStatus: "נשוי",
+    childrenCount: 2,
     heightCm: 181,
     weightKg: 84,
     status: "פעיל",
@@ -47,7 +53,7 @@ export const patients: Patient[] = [
       { id: "michael-2", date: "2026-08-05", price: 350, paid: true, note: "שיפור בשינה, המשך טיפול בעומס בצד ימין." },
       { id: "michael-1", date: "2026-07-29", price: 350, paid: true, note: "פגישת היכרות ואבחון ראשוני." },
     ],
-    family: "נשוי + 2. משפחה מאוד מרכזית בחיים שלו. הורים גרים קרוב והוא עוזר להם באופן קבוע.",
+    family: "נשוי + 2",
     hobbies: "כדורגל פעמיים בשבוע, בישול בסופי שבוע וטיולים בארץ.",
     profile: "עובד שעות ארוכות, ישן מעט ומגיע בעיקר סביב עומס, מתח וכאבי צוואר. חשוב לו להבין למה עושים כל פעולה בטיפול.",
     reminder: "בפגישה האחרונה דיווח על שיפור בשינה, אבל כאב הצוואר חזר אחרי יום עבודה ארוך. לבדוק עומס, שינה ורגישות בצד ימין.",
@@ -59,6 +65,8 @@ export const patients: Patient[] = [
     age: 31,
     phone: "052-555-8842",
     occupation: "יזם",
+    maritalStatus: "נשוי",
+    childrenCount: 1,
     heightCm: 176,
     weightKg: 78,
     status: "פעיל",
@@ -73,7 +81,7 @@ export const patients: Patient[] = [
       { id: "lior-2", date: "2026-07-20", price: 350, paid: true, note: "המשך תוכנית טיפול." },
       { id: "lior-1", date: "2026-07-13", price: 350, paid: true, note: "פגישת היכרות ואבחון ראשוני." },
     ],
-    family: "נשוי + ילדה. סדר היום משתנה מאוד בין עבודה למשפחה.",
+    family: "נשוי + ילדה",
     hobbies: "פאדל, ריצה, כדורגל וטכנולוגיה.",
     profile: "אוהב תשובות קצרות ותוכנית ברורה. מגיב טוב למעקב מספרי וליעדים קצרים.",
     reminder: "לבדוק האם נשמרה ההטבה בסחרחורת ובמתח. לשאול על שינה, שתייה ופעילות גופנית מאז הפגישה האחרונה.",
@@ -85,6 +93,8 @@ export const patients: Patient[] = [
     age: 28,
     phone: "054-555-7720",
     occupation: "מעצב",
+    maritalStatus: "רווק",
+    childrenCount: 0,
     heightCm: 183,
     weightKg: 81,
     status: "חדש",
@@ -93,8 +103,8 @@ export const patients: Patient[] = [
     balance: 0,
     treatments: 0,
     treatmentHistory: [],
-    family: "טרם מולא שאלון קליטה.",
-    hobbies: "טרם מולא שאלון קליטה.",
+    family: "רווק",
+    hobbies: "צילום, מוזיקה ורכיבה על אופניים.",
     profile: "מטופל חדש — יש להשלים שאלון ראשוני לפני הפגישה.",
     reminder: "פגישה ראשונה. לעבור על שאלון הקליטה ולברר סיבת הגעה, מטרות וציפיות מהטיפול.",
   },
