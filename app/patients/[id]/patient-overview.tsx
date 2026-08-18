@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import type { MaritalStatus, Patient } from "../../clinic-data";
-import { getPatientTreatmentPrice } from "../../pricing-data";
 import styles from "./patient-overview.module.css";
 
 type OverviewState = {
@@ -14,12 +13,18 @@ type OverviewState = {
   profile: string;
 };
 
-export function PatientOverview({ patient }: { patient: Patient }) {
+type Props = {
+  patient: Patient;
+  treatmentPrice: number;
+  onTreatmentPriceChange: (price: number) => void;
+};
+
+export function PatientOverview({ patient, treatmentPrice, onTreatmentPriceChange }: Props) {
   const initial: OverviewState = {
     occupation: patient.occupation,
     maritalStatus: patient.maritalStatus,
     childrenCount: patient.childrenCount,
-    treatmentPrice: getPatientTreatmentPrice(patient.id),
+    treatmentPrice,
     hobbies: patient.hobbies,
     profile: patient.profile,
   };
@@ -29,17 +34,19 @@ export function PatientOverview({ patient }: { patient: Patient }) {
   const [editing, setEditing] = useState(false);
 
   function startEditing() {
-    setDraft(value);
+    setDraft({ ...value, treatmentPrice });
     setEditing(true);
   }
 
   function cancelEditing() {
-    setDraft(value);
+    setDraft({ ...value, treatmentPrice });
     setEditing(false);
   }
 
   function save() {
-    setValue(draft);
+    const nextValue = { ...draft, treatmentPrice: Math.max(0, draft.treatmentPrice) };
+    setValue(nextValue);
+    onTreatmentPriceChange(nextValue.treatmentPrice);
     setEditing(false);
   }
 
@@ -65,7 +72,7 @@ export function PatientOverview({ patient }: { patient: Patient }) {
           <div className={styles.compactField}><span>מקצוע / עיסוק</span><strong>{value.occupation || "לא הוזן"}</strong></div>
           <div className={styles.compactField}><span>מצב משפחתי</span><strong>{value.maritalStatus}</strong></div>
           <div className={styles.compactField}><span>כמות ילדים</span><strong>{value.childrenCount}</strong></div>
-          <div className={styles.compactField}><span>מחיר טיפול קבוע</span><strong>₪{value.treatmentPrice}</strong></div>
+          <div className={styles.compactField}><span>מחיר טיפול קבוע</span><strong>₪{treatmentPrice}</strong></div>
           <div className={`${styles.textField} ${styles.fullWidth}`}><span>תחביבים</span><p>{value.hobbies || "לא הוזן"}</p></div>
           <div className={`${styles.textField} ${styles.fullWidth}`}><span>האפיון של ליהי</span><p>{value.profile || "לא הוזן"}</p></div>
         </div>
