@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { Patient } from "../../clinic-data";
+import { PatientOverview } from "./patient-overview";
 import { TreatmentList } from "./treatment-list";
 
 type Tab = "overview" | "treatments" | "questionnaire" | "payments" | "files";
@@ -22,16 +23,7 @@ export function PatientTabs({ patient }: { patient: Patient }) {
       {activeTab === "overview" && (
         <div className="patient-content">
           <div className="info-stack">
-            <article className="clinic-card info-block">
-              <div className="clinic-section-title"><h2>היכרות ואפיון</h2><button className="clinic-primary">עריכה</button></div>
-              <h3>מקצוע / עיסוק</h3><p>{patient.occupation || "לא הוזן"}</p>
-              <hr style={{border:0,borderTop:"1px solid #edf0ea",margin:"18px 0"}} />
-              <h3>רקע משפחתי</h3><p>{patient.family}</p>
-              <hr style={{border:0,borderTop:"1px solid #edf0ea",margin:"18px 0"}} />
-              <h3>תחביבים ואורח חיים</h3><p>{patient.hobbies}</p>
-              <hr style={{border:0,borderTop:"1px solid #edf0ea",margin:"18px 0"}} />
-              <h3>האפיון של ליהי</h3><p>{patient.profile}</p>
-            </article>
+            <PatientOverview patient={patient} />
           </div>
 
           <aside>
@@ -40,10 +32,13 @@ export function PatientTabs({ patient }: { patient: Patient }) {
               <h3>מה חשוב לזכור היום?</h3>
               <p>{patient.reminder}</p>
             </div>
-            <div className="clinic-card" style={{marginTop:16}}>
-              <div className="clinic-section-title"><h2>תשלום</h2><span className={patient.balance ? "status-pill new" : "status-pill"}>{patient.balance ? "פתוח" : "מסודר"}</span></div>
-              <p style={{margin:0,color:"#6e7973"}}>יתרה נוכחית</p>
-              <strong style={{display:"block",fontSize:28,marginTop:6}}>{patient.balance ? `₪${patient.balance}` : "₪0"}</strong>
+            <div className="clinic-card" style={{ marginTop: 16 }}>
+              <div className="clinic-section-title">
+                <h2>תשלום</h2>
+                <span className={patient.balance ? "status-pill new" : "status-pill"}>{patient.balance ? "פתוח" : "מסודר"}</span>
+              </div>
+              <p style={{ margin: 0, color: "#6e7973" }}>יתרה נוכחית</p>
+              <strong style={{ display: "block", fontSize: 28, marginTop: 6 }}>{patient.balance ? `₪${patient.balance}` : "₪0"}</strong>
             </div>
           </aside>
         </div>
@@ -54,7 +49,7 @@ export function PatientTabs({ patient }: { patient: Patient }) {
           <div className="clinic-section-title">
             <div>
               <h2>טיפולים של {patient.name}</h2>
-              <p style={{margin:"5px 0 0",color:"#7c8781"}}>תאריכים, תשלום והערות לכל טיפול.</p>
+              <p style={{ margin: "5px 0 0", color: "#7c8781" }}>תאריכים, תשלום והערות לכל טיפול.</p>
             </div>
             <button className="clinic-primary">+ טיפול חדש</button>
           </div>
