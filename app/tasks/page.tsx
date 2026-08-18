@@ -1,15 +1,19 @@
 import { ClinicShell } from "../clinic-shell";
+import { TasksBoard } from "./tasks-board";
+import styles from "./tasks.module.css";
 
 export default function TasksPage() {
   return (
     <ClinicShell active="משימות וניהול">
-      <section style={{maxWidth:1180,margin:"0 auto"}}>
-        <div className="clinic-topbar">
+      <section className={styles.page}>
+        <header className={styles.header}>
           <div>
+            <span>ניהול שוטף</span>
             <h1>משימות וניהול</h1>
-            <p>העמוד נשמר להמשך בנייה. כרגע ממשיכים לעבוד על המטופלים שלי.</p>
+            <p>טבלת משימות פשוטה עם סטטוס והערות חופשיות.</p>
           </div>
-        </div>
+        </header>
+        <TasksBoard />
       </section>
     </ClinicShell>
   );
