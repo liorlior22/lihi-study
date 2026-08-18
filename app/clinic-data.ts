@@ -13,6 +13,8 @@ export type Patient = {
   age: number;
   phone: string;
   occupation: string;
+  heightCm: number | null;
+  weightKg: number | null;
   status: "פעיל" | "חדש";
   lastTreatment: string;
   nextTreatment: string;
@@ -33,6 +35,8 @@ export const patients: Patient[] = [
     age: 36,
     phone: "050-555-1201",
     occupation: "מנהל מוצר",
+    heightCm: null,
+    weightKg: null,
     status: "פעיל",
     lastTreatment: "12.08.26",
     nextTreatment: "20.08.26 · 18:00",
@@ -55,6 +59,8 @@ export const patients: Patient[] = [
     age: 31,
     phone: "052-555-8842",
     occupation: "יזם",
+    heightCm: null,
+    weightKg: null,
     status: "פעיל",
     lastTreatment: "10.08.26",
     nextTreatment: "אין תור עתידי",
@@ -79,6 +85,8 @@ export const patients: Patient[] = [
     age: 28,
     phone: "054-555-7720",
     occupation: "מעצב",
+    heightCm: null,
+    weightKg: null,
     status: "חדש",
     lastTreatment: "טרם בוצע טיפול",
     nextTreatment: "22.08.26 · 11:30",
