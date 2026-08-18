@@ -26,7 +26,15 @@ export function ClinicShell({ children, active = "ראשי" }: { children: React
         </nav>
         <div className="clinic-user"><strong>ליהי אנגלצ׳ין</strong><small>מטפלת · הקליניקה שלי</small></div>
       </aside>
-      <main className="clinic-main">{children}</main>
+      <main className="clinic-main">
+        {active !== "ראשי" && (
+          <Link href="/" className="clinic-home-back" aria-label="חזרה לעמוד הבית">
+            <span aria-hidden="true">⌂</span>
+            חזרה לעמוד הבית
+          </Link>
+        )}
+        {children}
+      </main>
       <nav className="clinic-mobile-nav">
         {nav.map(([href, icon, label]) => (
           <Link key={label} href={href} className={active === label ? "active" : ""}>
