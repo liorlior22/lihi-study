@@ -6,6 +6,7 @@ import styles from "./treatment-list.module.css";
 
 type Props = {
   treatments: Treatment[];
+  defaultTreatmentPrice: number;
 };
 
 type TreatmentEntry = Treatment & {
@@ -26,20 +27,22 @@ const formatDate = (date: string) =>
 const formatCurrency = (value: number) =>
   new Intl.NumberFormat("he-IL", { style: "currency", currency: "ILS", maximumFractionDigits: 0 }).format(value);
 
-const emptyNewTreatment: NewTreatment = {
-  date: "",
-  price: "350",
-  paid: true,
-  note: "",
-  improvement: "",
-};
+function createEmptyTreatment(defaultTreatmentPrice: number): NewTreatment {
+  return {
+    date: "",
+    price: String(defaultTreatmentPrice),
+    paid: true,
+    note: "",
+    improvement: "",
+  };
+}
 
-export function TreatmentList({ treatments: initialTreatments }: Props) {
+export function TreatmentList({ treatments: initialTreatments, defaultTreatmentPrice }: Props) {
   const [treatments, setTreatments] = useState<TreatmentEntry[]>(
     initialTreatments.map((treatment) => ({ ...treatment, improvement: "" })),
   );
   const [adding, setAdding] = useState(false);
-  const [newTreatment, setNewTreatment] = useState<NewTreatment>(emptyNewTreatment);
+  const [newTreatment, setNewTreatment] = useState<NewTreatment>(() => createEmptyTreatment(defaultTreatmentPrice));
 
   function updateTreatment(
     id: string,
@@ -57,6 +60,16 @@ export function TreatmentList({ treatments: initialTreatments }: Props) {
     );
   }
 
+  function toggleAdd() {
+    if (!adding) {
+      setNewTreatment(createEmptyTreatment(defaultTreatmentPrice));
+      setAdding(true);
+      return;
+    }
+    setAdding(false);
+    setNewTreatment(createEmptyTreatment(defaultTreatmentPrice));
+  }
+
   function addTreatment(event: React.FormEvent) {
     event.preventDefault();
     if (!newTreatment.date) return;
@@ -71,7 +84,7 @@ export function TreatmentList({ treatments: initialTreatments }: Props) {
     };
 
     setTreatments((current) => [treatment, ...current]);
-    setNewTreatment(emptyNewTreatment);
+    setNewTreatment(createEmptyTreatment(defaultTreatmentPrice));
     setAdding(false);
   }
 
@@ -83,7 +96,7 @@ export function TreatmentList({ treatments: initialTreatments }: Props) {
           <h2>מעקב טיפולים</h2>
           <p>כל טיפול נשמר בנפרד, כולל מה נעשה ומה השתנה מאז הפעם הקודמת.</p>
         </div>
-        <button type="button" className={styles.addButton} onClick={() => setAdding((current) => !current)}>
+        <button type="button" className={styles.addButton} onClick={toggleAdd}>
           {adding ? "סגור" : "+ טיפול חדש"}
         </button>
       </div>
@@ -92,7 +105,7 @@ export function TreatmentList({ treatments: initialTreatments }: Props) {
         <form className={styles.newTreatmentForm} onSubmit={addTreatment}>
           <div className={styles.formTitle}>
             <strong>טיפול #{treatments.length + 1}</strong>
-            <span>פתיחת טיפול חדש</span>
+            <span>פתיחת טיפול חדש · מחיר ברירת מחדל ₪{defaultTreatmentPrice}</span>
           </div>
 
           <div className={styles.metaGrid}>
@@ -151,10 +164,7 @@ export function TreatmentList({ treatments: initialTreatments }: Props) {
 
           <div className={styles.formActions}>
             <button type="submit" className={styles.saveButton}>שמור טיפול</button>
-            <button type="button" className={styles.cancelButton} onClick={() => {
-              setAdding(false);
-              setNewTreatment(emptyNewTreatment);
-            }}>ביטול</button>
+            <button type="button" className={styles.cancelButton} onClick={toggleAdd}>ביטול</button>
           </div>
         </form>
       )}
@@ -234,7 +244,7 @@ export function TreatmentList({ treatments: initialTreatments }: Props) {
         </div>
       )}
 
-      <small className={styles.localNote}>כרגע הטיפולים והשינויים נשמרים לתצוגת ה־V1 בלבד; לאחר חיבור מסד הנתונים הם יישמרו קבוע.</small>
+      <small className={styles.localNote}>המחיר האישי משפיע על טיפולים חדשים קדימה בלבד. טיפולים קודמים נשארים עם המחיר ההיסטורי שלהם.</small>
     </div>
   );
 }
