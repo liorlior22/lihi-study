@@ -26,6 +26,7 @@ const initialGroups: ExpenseGroup[] = [
     subtitle: "הוצאות שחוזרות באופן קבוע",
     rows: [
       { id: "office", name: "משרד", amount: 3500, note: "" },
+      { id: "accountant", name: "רו״ח", amount: 150, note: "" },
       { id: "marketing", name: "פרסום", amount: 0, note: "" },
       { id: "bills", name: "חשבונות", amount: 0, note: "" },
     ],
