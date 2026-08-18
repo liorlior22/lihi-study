@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { useRoomRentals } from "../room-rentals/room-rentals-store";
 import styles from "./income-sheet.module.css";
 
 const formatCurrency = (value: number) =>
@@ -18,9 +19,14 @@ const patientBreakdown = [
 
 export function IncomeSheet() {
   const [showPatientDetails, setShowPatientDetails] = useState(false);
+  const [showRentalDetails, setShowRentalDetails] = useState(false);
+  const [rentals] = useRoomRentals();
 
   const patientIncome = 5000;
-  const roomRentalIncome = 0;
+  const roomRentalIncome = useMemo(
+    () => rentals.reduce((sum, rental) => sum + rental.priceBeforeVat, 0),
+    [rentals],
+  );
   const totalIncome = patientIncome + roomRentalIncome;
 
   return (
@@ -80,9 +86,36 @@ export function IncomeSheet() {
 
           <div className={styles.sheetRow}>
             <div className={styles.sheetName}>השכרת חדר טיפולים</div>
-            <div className={`${styles.amountCell} ${styles.emptyAmount}`}>{formatCurrency(roomRentalIncome)}</div>
-            <div className={styles.noteCell}>אפיק הכנסות נוסף</div>
+            <div className={`${styles.amountCell} ${roomRentalIncome ? "" : styles.emptyAmount}`}>{formatCurrency(roomRentalIncome)}</div>
+            {rentals.length ? (
+              <button
+                type="button"
+                className={styles.detailsButton}
+                onClick={() => setShowRentalDetails((current) => !current)}
+                aria-expanded={showRentalDetails}
+              >
+                {showRentalDetails ? "סגור פירוט" : "פתח פירוט השכרות"}
+              </button>
+            ) : (
+              <div className={styles.noteCell}>אפיק הכנסות נוסף · עדיין אין השכרות</div>
+            )}
           </div>
+
+          {showRentalDetails && rentals.length > 0 && (
+            <div className={styles.breakdown}>
+              <div className={styles.breakdownTitle}>פירוט השכרת קליניקה · מחיר לפני מע״מ</div>
+              {rentals.map((rental) => (
+                <div className={styles.breakdownRow} key={rental.id}>
+                  <span>{rental.therapistName} · {rental.date} · {rental.time} · {rental.paymentStatus}</span>
+                  <strong>{formatCurrency(rental.priceBeforeVat)}</strong>
+                </div>
+              ))}
+              <div className={styles.breakdownTotal}>
+                <span>סה״כ השכרת קליניקה</span>
+                <strong>{formatCurrency(roomRentalIncome)}</strong>
+              </div>
+            </div>
+          )}
         </section>
       </div>
 
