@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import styles from "./finance.module.css";
+import styles from "./expenses-sheet.module.css";
 
 type ExpenseRow = {
   id: string;
