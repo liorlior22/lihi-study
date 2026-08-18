@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ClinicShell } from "../../clinic-shell";
 import { getPatient, patients } from "../../clinic-data";
+import { TreatmentList } from "./treatment-list";
 
 export function generateStaticParams() {
   return patients.map((patient) => ({ id: patient.id }));
@@ -50,13 +51,7 @@ export default async function PatientPage({ params }: { params: Promise<{ id: st
 
             <article className="clinic-card">
               <div className="clinic-section-title"><h2>מעקב טיפולים</h2><button className="clinic-primary">+ טיפול חדש</button></div>
-              {patient.treatments > 0 ? (
-                <div className="treatment-timeline">
-                  <div className="treatment-item"><strong>טיפול #{patient.treatments}</strong><span>{patient.lastTreatment} · מעקב אחר התלונה המרכזית</span></div>
-                  {patient.treatments > 1 && <div className="treatment-item"><strong>טיפול #{patient.treatments - 1}</strong><span>פגישה קודמת · המשך תוכנית טיפול</span></div>}
-                  {patient.treatments > 2 && <div className="treatment-item"><strong>טיפול #1</strong><span>פגישת היכרות ואבחון ראשוני</span></div>}
-                </div>
-              ) : <p style={{color:"#7c8781"}}>עדיין אין טיפולים מתועדים. הטיפול הראשון יופיע כאן.</p>}
+              <TreatmentList treatments={patient.treatmentHistory} />
             </article>
           </div>
 
