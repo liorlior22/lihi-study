@@ -3,8 +3,9 @@
 import { useState } from "react";
 import type { Patient } from "../../clinic-data";
 import { PatientOverview } from "./patient-overview";
+import { TreatmentList } from "./treatment-list";
 
-type Tab = "overview" | "questionnaire" | "payments" | "files";
+type Tab = "overview" | "treatments" | "questionnaire" | "payments" | "files";
 
 export function PatientTabs({ patient }: { patient: Patient }) {
   const [activeTab, setActiveTab] = useState<Tab>("overview");
@@ -13,6 +14,7 @@ export function PatientTabs({ patient }: { patient: Patient }) {
     <>
       <div className="patient-tabs" aria-label="כרטיסיות מטופל">
         <button className={activeTab === "overview" ? "active" : ""} onClick={() => setActiveTab("overview")}>סקירה</button>
+        <button className={activeTab === "treatments" ? "active" : ""} onClick={() => setActiveTab("treatments")}>מעקב טיפולים</button>
         <button className={activeTab === "questionnaire" ? "active" : ""} onClick={() => setActiveTab("questionnaire")}>שאלון ראשוני</button>
         <button className={activeTab === "payments" ? "active" : ""} onClick={() => setActiveTab("payments")}>תשלומים</button>
         <button className={activeTab === "files" ? "active" : ""} onClick={() => setActiveTab("files")}>קבצים</button>
@@ -40,6 +42,12 @@ export function PatientTabs({ patient }: { patient: Patient }) {
             </div>
           </aside>
         </div>
+      )}
+
+      {activeTab === "treatments" && (
+        <article className="clinic-card">
+          <TreatmentList treatments={patient.treatmentHistory} />
+        </article>
       )}
 
       {activeTab === "questionnaire" && (
