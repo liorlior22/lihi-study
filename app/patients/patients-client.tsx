@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { MaritalStatus, Patient } from "../clinic-data";
+import { getPatientTreatmentPrice } from "../pricing-data";
 import styles from "./patients-client.module.css";
 
 type NewPatientForm = {
@@ -14,6 +15,7 @@ type NewPatientForm = {
   occupation: string;
   maritalStatus: MaritalStatus;
   childrenCount: "0" | "1" | "2" | "3" | "4" | "5";
+  treatmentPrice: string;
   hobbies: string;
   profile: string;
 };
@@ -27,6 +29,7 @@ const emptyForm: NewPatientForm = {
   occupation: "",
   maritalStatus: "רווק",
   childrenCount: "0",
+  treatmentPrice: "250",
   hobbies: "",
   profile: "",
 };
@@ -41,6 +44,9 @@ function initialsFromName(name: string) {
 export function PatientsClient({ initialPatients }: { initialPatients: Patient[] }) {
   const [items, setItems] = useState<Patient[]>(initialPatients);
   const [temporaryIds, setTemporaryIds] = useState<Set<string>>(new Set());
+  const [patientPrices, setPatientPrices] = useState<Record<string, number>>(() =>
+    Object.fromEntries(initialPatients.map((patient) => [patient.id, getPatientTreatmentPrice(patient.id)])),
+  );
   const [search, setSearch] = useState("");
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState<NewPatientForm>(emptyForm);
@@ -85,11 +91,13 @@ export function PatientsClient({ initialPatients }: { initialPatients: Patient[]
     };
 
     setItems((current) => [patient, ...current]);
+    setPatientPrices((current) => ({ ...current, [id]: Number(form.treatmentPrice) || 0 }));
     setTemporaryIds((current) => new Set(current).add(id));
     closeModal();
   }
 
   function PatientCard({ patient }: { patient: Patient }) {
+    const treatmentPrice = patientPrices[patient.id] ?? getPatientTreatmentPrice(patient.id);
     const card = (
       <article className="patient-card">
         <div className="patient-card-head">
@@ -99,6 +107,7 @@ export function PatientsClient({ initialPatients }: { initialPatients: Patient[]
         <h2>{patient.name}</h2>
         <p>{patient.phone || "ללא טלפון"}{patient.age ? ` · גיל ${patient.age}` : ""}</p>
         <dl>
+          <div><dt>מחיר טיפול</dt><dd>₪{treatmentPrice}</dd></div>
           <div><dt>טיפול אחרון</dt><dd>{patient.lastTreatment}</dd></div>
           <div><dt>טיפול הבא</dt><dd>{patient.nextTreatment}</dd></div>
           <div><dt>טיפולים</dt><dd>{patient.treatments}</dd></div>
@@ -142,6 +151,7 @@ export function PatientsClient({ initialPatients }: { initialPatients: Patient[]
               <label><span>גיל</span><input type="number" min="0" max="120" value={form.age} onChange={(e) => setForm({ ...form, age: e.target.value })} /></label>
               <label><span>גובה</span><input type="number" min="0" value={form.heightCm} onChange={(e) => setForm({ ...form, heightCm: e.target.value })} placeholder="ס״מ" /></label>
               <label><span>משקל</span><input type="number" min="0" step="0.1" value={form.weightKg} onChange={(e) => setForm({ ...form, weightKg: e.target.value })} placeholder="ק״ג" /></label>
+              <label><span>מחיר טיפול (₪)</span><input type="number" min="0" step="10" value={form.treatmentPrice} onChange={(e) => setForm({ ...form, treatmentPrice: e.target.value })} /></label>
               <label className={styles.fullWidth}><span>מקצוע / עיסוק</span><input value={form.occupation} onChange={(e) => setForm({ ...form, occupation: e.target.value })} /></label>
               <label><span>מצב משפחתי</span><select value={form.maritalStatus} onChange={(e) => setForm({ ...form, maritalStatus: e.target.value as MaritalStatus })}><option>רווק</option><option>גרוש</option><option>נשוי</option></select></label>
               <label><span>כמות ילדים</span><select value={form.childrenCount} onChange={(e) => setForm({ ...form, childrenCount: e.target.value as NewPatientForm["childrenCount"] })}>{[0,1,2,3,4,5].map((n) => <option key={n} value={n}>{n}</option>)}</select></label>
