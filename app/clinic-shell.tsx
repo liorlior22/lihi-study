@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "./clinic.css";
+import "./clinic-cursor.css";
 
 const nav = [
   ["/", "⌂", "ראשי"],
