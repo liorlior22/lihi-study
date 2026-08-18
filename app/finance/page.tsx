@@ -1,23 +1,10 @@
 import { ClinicShell } from "../clinic-shell";
 import { ExpensesSheet } from "./expenses-sheet";
+import { FinanceSummary } from "./finance-summary";
 import { IncomeSheet } from "./income-sheet";
 import styles from "./finance.module.css";
 
-const totalIncome = 5000;
-const paidIncome = 5000;
-const unpaidIncome = 0;
-const initialExpensesTotal = 5000;
-
-const formatCurrency = (value: number) =>
-  new Intl.NumberFormat("he-IL", {
-    style: "currency",
-    currency: "ILS",
-    maximumFractionDigits: 0,
-  }).format(value);
-
 export default function FinancePage() {
-  const monthlyResult = totalIncome - initialExpensesTotal;
-
   return (
     <ClinicShell active="הרו״ח שלי">
       <div className={styles.page}>
@@ -29,31 +16,7 @@ export default function FinancePage() {
           </div>
         </header>
 
-        <section className={styles.summaryGrid} aria-label="סיכום פיננסי חודשי">
-          <article className={styles.summaryCard}>
-            <span>הכנסות החודש</span>
-            <strong>{formatCurrency(totalIncome)}</strong>
-            <small>כל מקורות ההכנסה</small>
-          </article>
-
-          <article className={styles.summaryCard}>
-            <span>כבר שולם</span>
-            <strong>{formatCurrency(paidIncome)}</strong>
-            <small>כסף שכבר התקבל</small>
-          </article>
-
-          <article className={`${styles.summaryCard} ${styles.vatCard}`}>
-            <span>טרם שולם</span>
-            <strong>{formatCurrency(unpaidIncome)}</strong>
-            <small>כסף שעדיין צריך להיכנס</small>
-          </article>
-
-          <article className={styles.summaryCard}>
-            <span>תוצאה לפני מס</span>
-            <strong>{formatCurrency(monthlyResult)}</strong>
-            <small>הכנסות פחות הוצאות</small>
-          </article>
-        </section>
+        <FinanceSummary />
 
         <div style={{ marginBottom: 18 }}>
           <IncomeSheet />
@@ -78,8 +41,8 @@ export default function FinancePage() {
               <ul className={styles.futureList}>
                 <li><span>✓</span> ההכנסות מחולקות לפי מקור הכנסה</li>
                 <li><span>✓</span> מטופלים מסוכמים לסכום אחד</li>
-                <li><span>✓</span> ניתן לפתוח פירוט ולראות מאילו מטופלים הסכום מורכב</li>
-                <li><span>✓</span> ניתן להוסיף אפיקי הכנסה נוספים כמו השכרת חדר</li>
+                <li><span>✓</span> השכרת קליניקה מתווספת אוטומטית להכנסות</li>
+                <li><span>✓</span> סטטוס התשלום משפיע על שולם / טרם שולם</li>
               </ul>
             </article>
           </aside>
