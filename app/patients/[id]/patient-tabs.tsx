@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { Patient } from "../../clinic-data";
 import { PatientOverview } from "./patient-overview";
 import { TreatmentList } from "./treatment-list";
+import { PatientPackageCard } from "./patient-package-card";
 
 type Tab = "overview" | "treatments" | "questionnaire" | "payments" | "files";
 
@@ -40,6 +41,7 @@ export function PatientTabs({ patient }: { patient: Patient }) {
               <p style={{ margin: 0, color: "#6e7973" }}>יתרה נוכחית</p>
               <strong style={{ display: "block", fontSize: 28, marginTop: 6 }}>{patient.balance ? `₪${patient.balance}` : "₪0"}</strong>
             </div>
+            <PatientPackageCard />
           </aside>
         </div>
       )}
