@@ -8,11 +8,23 @@ const nav = [
   ["#", "▣", "יומן טיפולים"],
   ["/study", "▤", "ספריית ידע"],
   ["/finance", "₪", "הרו״ח שלי"],
-  ["#", "↗", "מכירות ושיווק"],
+  ["/marketing", "↗", "מכירות ושיווק"],
   ["/room-rentals", "◫", "השכרת קליניקה"],
   ["/tasks", "✓", "משימות וניהול"],
+] as const;
+
+const personalNav = [
   ["/lior-tasks", "L", "משימות ליאור"],
 ] as const;
+
+function mobileLabel(label: string) {
+  if (label === "המטופלים שלי") return "מטופלים";
+  if (label === "הרו״ח שלי") return "רו״ח";
+  if (label === "מכירות ושיווק") return "שיווק";
+  if (label === "השכרת קליניקה") return "השכרה";
+  if (label === "משימות וניהול") return "משימות";
+  return label.replace(" טיפולים", "");
+}
 
 export function ClinicShell({ children, active = "ראשי" }: { children: React.ReactNode; active?: string }) {
   return (
@@ -29,6 +41,16 @@ export function ClinicShell({ children, active = "ראשי" }: { children: React
             </Link>
           ))}
         </nav>
+
+        <nav className="clinic-personal-nav" aria-label="משימות אישיות">
+          <span className="clinic-personal-label">אזור אישי</span>
+          {personalNav.map(([href, icon, label]) => (
+            <Link key={label} href={href} className={active === label ? "active" : ""}>
+              <span className="nav-icon">{icon}</span><span>{label}</span>
+            </Link>
+          ))}
+        </nav>
+
         <div className="clinic-user"><strong>ליהי אנגלצ׳ין</strong><small>מטפלת · הקליניקה שלי</small></div>
       </aside>
       <main className="clinic-main">
@@ -43,7 +65,7 @@ export function ClinicShell({ children, active = "ראשי" }: { children: React
       <nav className="clinic-mobile-nav">
         {nav.map(([href, icon, label]) => (
           <Link key={label} href={href} className={active === label ? "active" : ""}>
-            <b>{icon}</b>{label === "המטופלים שלי" ? "מטופלים" : label === "הרו״ח שלי" ? "רו״ח" : label === "מכירות ושיווק" ? "שיווק" : label === "השכרת קליניקה" ? "השכרה" : label === "משימות וניהול" ? "משימות" : label === "משימות ליאור" ? "ליאור" : label.replace(" טיפולים", "")}
+            <b>{icon}</b>{mobileLabel(label)}
           </Link>
         ))}
       </nav>
