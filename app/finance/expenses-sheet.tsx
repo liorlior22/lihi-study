@@ -17,6 +17,8 @@ type ExpenseGroup = {
   rows: ExpenseRow[];
 };
 
+const ACCESS_CODE = "1312";
+
 const initialGroups: ExpenseGroup[] = [
   {
     id: "fixed",
@@ -49,6 +51,11 @@ const formatCurrency = (value: number) =>
 
 export function ExpensesSheet() {
   const [groups, setGroups] = useState(initialGroups);
+  const [showCodeGate, setShowCodeGate] = useState(false);
+  const [unlocked, setUnlocked] = useState(false);
+  const [code, setCode] = useState("");
+  const [codeError, setCodeError] = useState(false);
+  const [newExpense, setNewExpense] = useState({ name: "", amount: "", note: "" });
 
   const total = useMemo(
     () => groups.flatMap((group) => group.rows).reduce((sum, row) => sum + row.amount, 0),
@@ -70,6 +77,38 @@ export function ExpensesSheet() {
         };
       }),
     );
+  }
+
+  function submitCode(event: React.FormEvent) {
+    event.preventDefault();
+    if (code === ACCESS_CODE) {
+      setUnlocked(true);
+      setCodeError(false);
+      setCode("");
+      return;
+    }
+    setCodeError(true);
+  }
+
+  function addVariableExpense(event: React.FormEvent) {
+    event.preventDefault();
+    const name = newExpense.name.trim();
+    const amount = Number(newExpense.amount.replace(/[^0-9.]/g, "")) || 0;
+    if (!name) return;
+
+    const row: ExpenseRow = {
+      id: `manual-${Date.now()}`,
+      name,
+      amount,
+      note: newExpense.note.trim(),
+    };
+
+    setGroups((current) =>
+      current.map((group) =>
+        group.id === "variable" ? { ...group, rows: [...group.rows, row] } : group,
+      ),
+    );
+    setNewExpense({ name: "", amount: "", note: "" });
   }
 
   return (
@@ -98,8 +137,77 @@ export function ExpensesSheet() {
                   <strong>{group.title}</strong>
                   <small>{group.subtitle}</small>
                 </div>
-                <b>{formatCurrency(groupTotal)}</b>
+                <div className={styles.groupTitleActions}>
+                  {group.id === "variable" && !showCodeGate && !unlocked && (
+                    <button type="button" className={styles.addExpenseButton} onClick={() => setShowCodeGate(true)}>
+                      + הוצאה חדשה
+                    </button>
+                  )}
+                  {group.id === "variable" && unlocked && (
+                    <span className={styles.unlockedBadge}>פתוח להוספה</span>
+                  )}
+                  <b>{formatCurrency(groupTotal)}</b>
+                </div>
               </div>
+
+              {group.id === "variable" && showCodeGate && !unlocked && (
+                <form className={styles.codeGate} onSubmit={submitCode}>
+                  <div>
+                    <strong>הוספת הוצאה ידנית</strong>
+                    <small>יש להזין קוד כדי לפתוח אפשרות להוספת הוצאות משתנות.</small>
+                  </div>
+                  <div className={styles.codeGateControls}>
+                    <input
+                      type="password"
+                      inputMode="numeric"
+                      value={code}
+                      onChange={(event) => {
+                        setCode(event.target.value);
+                        setCodeError(false);
+                      }}
+                      placeholder="קוד"
+                      aria-label="קוד להוספת הוצאה"
+                    />
+                    <button type="submit">אישור</button>
+                    <button type="button" className={styles.cancelButton} onClick={() => {
+                      setShowCodeGate(false);
+                      setCode("");
+                      setCodeError(false);
+                    }}>
+                      ביטול
+                    </button>
+                  </div>
+                  {codeError && <p className={styles.codeError}>קוד שגוי</p>}
+                </form>
+              )}
+
+              {group.id === "variable" && unlocked && (
+                <form className={styles.manualExpenseForm} onSubmit={addVariableExpense}>
+                  <input
+                    value={newExpense.name}
+                    onChange={(event) => setNewExpense({ ...newExpense, name: event.target.value })}
+                    placeholder="שם ההוצאה"
+                    aria-label="שם הוצאה חדשה"
+                  />
+                  <div className={styles.manualAmount}>
+                    <span>₪</span>
+                    <input
+                      inputMode="decimal"
+                      value={newExpense.amount}
+                      onChange={(event) => setNewExpense({ ...newExpense, amount: event.target.value })}
+                      placeholder="0"
+                      aria-label="סכום הוצאה חדשה"
+                    />
+                  </div>
+                  <input
+                    value={newExpense.note}
+                    onChange={(event) => setNewExpense({ ...newExpense, note: event.target.value })}
+                    placeholder="הערה (לא חובה)"
+                    aria-label="הערה להוצאה חדשה"
+                  />
+                  <button type="submit" disabled={!newExpense.name.trim()}>הוסף</button>
+                </form>
+              )}
 
               {group.rows.map((row) => (
                 <div className={styles.sheetRow} key={row.id}>
