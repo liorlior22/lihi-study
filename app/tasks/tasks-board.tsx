@@ -38,22 +38,22 @@ const categoryMeta: Record<TaskCategory, { title: string; subtitle: string; emoj
 const categoryOrder: TaskCategory[] = ["marketing", "inventory", "bureaucracy"];
 
 const initialTasks: Task[] = [
-  { id: "marketing-name", category: "marketing", title: "בחירת שם", status: "בוצע", notes: "" },
-  { id: "marketing-logo", category: "marketing", title: "עשיית לוגו", status: "בוצע", notes: "" },
-  { id: "marketing-email", category: "marketing", title: "פתיחת מייל", status: "בוצע", notes: "" },
-  { id: "marketing-whatsapp", category: "marketing", title: "וואטסאפ עסקי", status: "בוצע", notes: "" },
-  { id: "marketing-instagram", category: "marketing", title: "אינסטגרם", status: "בוצע", notes: "" },
-  { id: "marketing-facebook", category: "marketing", title: "פייסבוק", status: "בוצע", notes: "" },
-  { id: "marketing-site", category: "marketing", title: "אתר להפצה", status: "בוצע", notes: "" },
-  { id: "marketing-youtube", category: "marketing", title: "יוטיוב", status: "בוצע", notes: "" },
+  { id: "marketing-name", category: "marketing", title: "בחירת שם", status: "לא בוצע", notes: "" },
+  { id: "marketing-logo", category: "marketing", title: "עשיית לוגו", status: "לא בוצע", notes: "" },
+  { id: "marketing-email", category: "marketing", title: "פתיחת מייל", status: "לא בוצע", notes: "" },
+  { id: "marketing-whatsapp", category: "marketing", title: "וואטסאפ עסקי", status: "לא בוצע", notes: "" },
+  { id: "marketing-instagram", category: "marketing", title: "אינסטגרם", status: "לא בוצע", notes: "" },
+  { id: "marketing-facebook", category: "marketing", title: "פייסבוק", status: "לא בוצע", notes: "" },
+  { id: "marketing-site", category: "marketing", title: "אתר להפצה", status: "לא בוצע", notes: "" },
+  { id: "marketing-youtube", category: "marketing", title: "יוטיוב", status: "לא בוצע", notes: "" },
 
-  { id: "inventory-needles", category: "inventory", title: "הזמנת מחטים", status: "בוצע", notes: "" },
-  { id: "inventory-bed", category: "inventory", title: "הזמנת מיטה", status: "בוצע", notes: "" },
-  { id: "inventory-cups", category: "inventory", title: "הזמנת כוסות רוח", status: "בוצע", notes: "" },
+  { id: "inventory-needles", category: "inventory", title: "הזמנת מחטים", status: "לא בוצע", notes: "" },
+  { id: "inventory-bed", category: "inventory", title: "הזמנת מיטה", status: "לא בוצע", notes: "" },
+  { id: "inventory-cups", category: "inventory", title: "הזמנת כוסות רוח", status: "לא בוצע", notes: "" },
 
-  { id: "bureaucracy-business", category: "bureaucracy", title: "פתיחת עוסק פטור או מורשה", status: "בוצע", notes: "" },
-  { id: "bureaucracy-insurance", category: "bureaucracy", title: "ביטוח", status: "בוצע", notes: "" },
-  { id: "bureaucracy-address", category: "bureaucracy", title: "כתובת דואר", status: "בוצע", notes: "" },
+  { id: "bureaucracy-business", category: "bureaucracy", title: "פתיחת עוסק פטור או מורשה", status: "לא בוצע", notes: "" },
+  { id: "bureaucracy-insurance", category: "bureaucracy", title: "ביטוח", status: "לא בוצע", notes: "" },
+  { id: "bureaucracy-address", category: "bureaucracy", title: "כתובת דואר", status: "לא בוצע", notes: "" },
 ];
 
 export function TasksBoard() {
