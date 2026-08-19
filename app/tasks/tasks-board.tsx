@@ -14,18 +14,24 @@ type Task = {
   notes: string;
 };
 
-const categoryMeta: Record<TaskCategory, { title: string; subtitle: string }> = {
+const categoryMeta: Record<TaskCategory, { title: string; subtitle: string; emoji: string; kicker: string }> = {
   marketing: {
     title: "שיווק",
-    subtitle: "נכסים, ערוצים ותשתיות להבאת מטופלים חדשים",
+    subtitle: "בונים נוכחות, מותג וערוצים שיביאו את המטופלים הראשונים.",
+    emoji: "🚀",
+    kicker: "בונים קהל",
   },
   inventory: {
     title: "מלאי",
-    subtitle: "ציוד וחומרים שצריך להזמין לקליניקה",
+    subtitle: "כל הציוד שצריך כדי שהקליניקה תהיה מוכנה לעבודה בלי הפתעות.",
+    emoji: "📦",
+    kicker: "מתכוננים לפתיחה",
   },
   bureaucracy: {
     title: "בירוקרטיה",
-    subtitle: "כל מה שצריך להסדיר כדי להפעיל את הקליניקה",
+    subtitle: "סוגרים את הדברים שחייבים להיות מסודרים מאחורי הקלעים.",
+    emoji: "🛡️",
+    kicker: "מסדרים את הבסיס",
   },
 };
 
@@ -61,6 +67,7 @@ export function TasksBoard() {
   });
 
   const completedCount = useMemo(() => tasks.filter((task) => task.status === "בוצע").length, [tasks]);
+  const totalProgress = tasks.length ? Math.round((completedCount / tasks.length) * 100) : 0;
 
   function addTask(event: React.FormEvent) {
     event.preventDefault();
@@ -88,9 +95,12 @@ export function TasksBoard() {
   return (
     <div className={styles.board}>
       <div className={styles.boardToolbar}>
-        <div>
-          <strong>{completedCount} מתוך {tasks.length} הושלמו</strong>
-          <span>אפשר לעדכן סטטוס והערות ישירות בכל שורה</span>
+        <div className={styles.overallProgress}>
+          <div>
+            <span className={styles.overallEyebrow}>התקדמות כוללת</span>
+            <strong>{completedCount} מתוך {tasks.length} משימות הושלמו</strong>
+          </div>
+          <b>{totalProgress}%</b>
         </div>
         <button type="button" className={styles.primaryButton} onClick={() => setShowForm((value) => !value)}>
           {showForm ? "ביטול" : "+ משימה חדשה"}
@@ -102,9 +112,9 @@ export function TasksBoard() {
           <label>
             <span>תחום</span>
             <select value={draft.category} onChange={(event) => setDraft({ ...draft, category: event.target.value as TaskCategory })}>
-              <option value="marketing">שיווק</option>
-              <option value="inventory">מלאי</option>
-              <option value="bureaucracy">בירוקרטיה</option>
+              <option value="marketing">🚀 שיווק</option>
+              <option value="inventory">📦 מלאי</option>
+              <option value="bureaucracy">🛡️ בירוקרטיה</option>
             </select>
           </label>
           <label>
@@ -130,17 +140,30 @@ export function TasksBoard() {
         {categoryOrder.map((category) => {
           const categoryTasks = tasks.filter((task) => task.category === category);
           const categoryCompleted = categoryTasks.filter((task) => task.status === "בוצע").length;
+          const categoryProgress = categoryTasks.length ? Math.round((categoryCompleted / categoryTasks.length) * 100) : 0;
           const meta = categoryMeta[category];
 
           return (
-            <section className={styles.categoryPanel} key={category}>
-              <div className={styles.categoryHeader}>
-                <div>
-                  <span>{categoryCompleted}/{categoryTasks.length} בוצעו</span>
-                  <h2>{meta.title}</h2>
-                  <p>{meta.subtitle}</p>
+            <section className={styles.categoryPanel} data-category={category} key={category}>
+              <div className={styles.categoryHero}>
+                <div className={styles.categoryIdentity}>
+                  <div className={styles.categoryEmoji} aria-hidden="true">{meta.emoji}</div>
+                  <div>
+                    <span className={styles.categoryKicker}>{meta.kicker}</span>
+                    <h2>{meta.title}</h2>
+                    <p>{meta.subtitle}</p>
+                  </div>
                 </div>
-                <strong>{categoryTasks.length}</strong>
+
+                <div className={styles.categoryProgressBox}>
+                  <div className={styles.categoryProgressText}>
+                    <span>{categoryCompleted} מתוך {categoryTasks.length}</span>
+                    <strong>{categoryProgress}%</strong>
+                  </div>
+                  <div className={styles.progressTrack} aria-label={`${meta.title}: ${categoryProgress}% הושלם`}>
+                    <span style={{ width: `${categoryProgress}%` }} />
+                  </div>
+                </div>
               </div>
 
               <div className={styles.tableWrap}>
