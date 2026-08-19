@@ -8,9 +8,9 @@ export default function CalendarPage() {
       <section className={styles.page}>
         <header className={styles.pageHeader}>
           <div>
-            <span>תורים וזמינות</span>
+            <span>Google Calendar + קביעת תורים</span>
             <h1>יומן טיפולים</h1>
-            <p>מנהלים את השבוע, שעות העבודה, חסימות וקישור קביעת התורים ממקום אחד.</p>
+            <p>Google Calendar נשאר היומן שבו מנהלים את היום בפועל. כאן מחברים אותו לקליניקה, מגדירים שעות פעילות ומנהלים את קישור קביעת התורים.</p>
           </div>
         </header>
         <CalendarManager />
