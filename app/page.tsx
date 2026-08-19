@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ClinicShell } from "./clinic-shell";
+import { GoogleConnectButton } from "./google-connect-button";
 
 export default function Home() {
   return (
@@ -11,7 +12,10 @@ export default function Home() {
           <p>המקום שלך לנהל טיפולים, מטופלים ותורים בצורה שקטה, מסודרת ונעימה.</p>
           <div className="clinic-home-actions">
             <Link href="/patients" className="clinic-primary-link">המטופלים שלי</Link>
-            <button type="button" className="clinic-secondary-action">יומן טיפולים</button>
+            <Link href="/calendar" className="clinic-secondary-action">יומן טיפולים</Link>
+          </div>
+          <div style={{ marginTop: 18, maxWidth: 620 }}>
+            <GoogleConnectButton />
           </div>
         </div>
 
