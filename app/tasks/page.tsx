@@ -8,9 +8,9 @@ export default function TasksPage() {
       <section className={styles.page}>
         <header className={styles.header}>
           <div>
-            <span>ניהול שוטף</span>
+            <span>מרכז ההקמה והניהול</span>
             <h1>משימות וניהול</h1>
-            <p>טבלת משימות פשוטה עם סטטוס והערות חופשיות.</p>
+            <p>כל מה שצריך כדי שהקליניקה תהיה מוכנה, מסודרת ונראית מקצועית — מחולק לתחומים עם התקדמות ברורה.</p>
           </div>
         </header>
         <TasksBoard />
