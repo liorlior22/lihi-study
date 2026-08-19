@@ -38,22 +38,22 @@ const categoryMeta: Record<TaskCategory, { title: string; subtitle: string; emoj
 const categoryOrder: TaskCategory[] = ["marketing", "inventory", "bureaucracy"];
 
 const initialTasks: Task[] = [
-  { id: "marketing-name", category: "marketing", title: "בחירת שם", status: "לא בוצע", notes: "" },
-  { id: "marketing-logo", category: "marketing", title: "עשיית לוגו", status: "לא בוצע", notes: "" },
-  { id: "marketing-email", category: "marketing", title: "פתיחת מייל", status: "לא בוצע", notes: "" },
-  { id: "marketing-whatsapp", category: "marketing", title: "וואטסאפ עסקי", status: "לא בוצע", notes: "" },
-  { id: "marketing-instagram", category: "marketing", title: "אינסטגרם", status: "לא בוצע", notes: "" },
-  { id: "marketing-facebook", category: "marketing", title: "פייסבוק", status: "לא בוצע", notes: "" },
-  { id: "marketing-site", category: "marketing", title: "אתר להפצה", status: "לא בוצע", notes: "" },
-  { id: "marketing-youtube", category: "marketing", title: "יוטיוב", status: "לא בוצע", notes: "" },
+  { id: "marketing-name", category: "marketing", title: "בחירת שם", status: "בוצע", notes: "" },
+  { id: "marketing-logo", category: "marketing", title: "עשיית לוגו", status: "בוצע", notes: "" },
+  { id: "marketing-email", category: "marketing", title: "פתיחת מייל", status: "בוצע", notes: "" },
+  { id: "marketing-whatsapp", category: "marketing", title: "וואטסאפ עסקי", status: "בוצע", notes: "" },
+  { id: "marketing-instagram", category: "marketing", title: "אינסטגרם", status: "בוצע", notes: "" },
+  { id: "marketing-facebook", category: "marketing", title: "פייסבוק", status: "בוצע", notes: "" },
+  { id: "marketing-site", category: "marketing", title: "אתר להפצה", status: "בוצע", notes: "" },
+  { id: "marketing-youtube", category: "marketing", title: "יוטיוב", status: "בוצע", notes: "" },
 
-  { id: "inventory-needles", category: "inventory", title: "הזמנת מחטים", status: "לא בוצע", notes: "" },
-  { id: "inventory-bed", category: "inventory", title: "הזמנת מיטה", status: "לא בוצע", notes: "" },
-  { id: "inventory-cups", category: "inventory", title: "הזמנת כוסות רוח", status: "לא בוצע", notes: "" },
+  { id: "inventory-needles", category: "inventory", title: "הזמנת מחטים", status: "בוצע", notes: "" },
+  { id: "inventory-bed", category: "inventory", title: "הזמנת מיטה", status: "בוצע", notes: "" },
+  { id: "inventory-cups", category: "inventory", title: "הזמנת כוסות רוח", status: "בוצע", notes: "" },
 
-  { id: "bureaucracy-business", category: "bureaucracy", title: "פתיחת עוסק פטור או מורשה", status: "לא בוצע", notes: "" },
-  { id: "bureaucracy-insurance", category: "bureaucracy", title: "ביטוח", status: "לא בוצע", notes: "" },
-  { id: "bureaucracy-address", category: "bureaucracy", title: "כתובת דואר", status: "לא בוצע", notes: "" },
+  { id: "bureaucracy-business", category: "bureaucracy", title: "פתיחת עוסק פטור או מורשה", status: "בוצע", notes: "" },
+  { id: "bureaucracy-insurance", category: "bureaucracy", title: "ביטוח", status: "בוצע", notes: "" },
+  { id: "bureaucracy-address", category: "bureaucracy", title: "כתובת דואר", status: "בוצע", notes: "" },
 ];
 
 export function TasksBoard() {
@@ -68,6 +68,7 @@ export function TasksBoard() {
 
   const completedCount = useMemo(() => tasks.filter((task) => task.status === "בוצע").length, [tasks]);
   const totalProgress = tasks.length ? Math.round((completedCount / tasks.length) * 100) : 0;
+  const isAllDone = tasks.length > 0 && completedCount === tasks.length;
 
   function addTask(event: React.FormEvent) {
     event.preventDefault();
@@ -94,21 +95,33 @@ export function TasksBoard() {
 
   return (
     <div className={styles.board}>
-      <div className={styles.boardToolbar}>
-        <div className={styles.overallProgress}>
+      <section className={styles.overviewCard}>
+        <div className={styles.overviewCopy}>
+          <span className={styles.overviewIcon}>✓</span>
           <div>
-            <span className={styles.overallEyebrow}>התקדמות כוללת</span>
-            <strong>{completedCount} מתוך {tasks.length} משימות הושלמו</strong>
+            <span className={styles.overallEyebrow}>מצב הקמה</span>
+            <h2>{isAllDone ? "הכול מוכן" : "מתקדמים לפתיחה"}</h2>
+            <p>{completedCount} מתוך {tasks.length} משימות הושלמו בשלושת תחומי ההקמה.</p>
           </div>
-          <b>{totalProgress}%</b>
         </div>
-        <button type="button" className={styles.primaryButton} onClick={() => setShowForm((value) => !value)}>
-          {showForm ? "ביטול" : "+ משימה חדשה"}
-        </button>
-      </div>
+
+        <div className={styles.overviewActions}>
+          <div className={styles.overallScore}>
+            <strong>{totalProgress}%</strong>
+            <span>התקדמות כוללת</span>
+          </div>
+          <button type="button" className={styles.primaryButton} onClick={() => setShowForm((value) => !value)}>
+            {showForm ? "סגור" : "+ משימה חדשה"}
+          </button>
+        </div>
+      </section>
 
       {showForm && (
         <form className={styles.addForm} onSubmit={addTask}>
+          <div className={styles.formHeading}>
+            <strong>משימה חדשה</strong>
+            <span>הוסיפי משימה לאחד מתחומי ההקמה</span>
+          </div>
           <label>
             <span>תחום</span>
             <select value={draft.category} onChange={(event) => setDraft({ ...draft, category: event.target.value as TaskCategory })}>
@@ -157,12 +170,13 @@ export function TasksBoard() {
 
                 <div className={styles.categoryProgressBox}>
                   <div className={styles.categoryProgressText}>
-                    <span>{categoryCompleted} מתוך {categoryTasks.length}</span>
+                    <span>{categoryCompleted} מתוך {categoryTasks.length} הושלמו</span>
                     <strong>{categoryProgress}%</strong>
                   </div>
                   <div className={styles.progressTrack} aria-label={`${meta.title}: ${categoryProgress}% הושלם`}>
                     <span style={{ width: `${categoryProgress}%` }} />
                   </div>
+                  {categoryProgress === 100 && <span className={styles.completeBadge}>✓ התחום הושלם</span>}
                 </div>
               </div>
 
@@ -174,8 +188,11 @@ export function TasksBoard() {
                 </div>
 
                 {categoryTasks.map((task) => (
-                  <div className={styles.tableRow} key={task.id}>
-                    <strong className={task.status === "בוצע" ? styles.doneTitle : ""}>{task.title}</strong>
+                  <div className={styles.tableRow} data-done={task.status === "בוצע"} key={task.id}>
+                    <div className={styles.taskTitleCell}>
+                      <span className={styles.taskCheck}>{task.status === "בוצע" ? "✓" : "○"}</span>
+                      <strong>{task.title}</strong>
+                    </div>
                     <div className={styles.statusCell}>
                       <select
                         value={task.status}
