@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
+import { GoogleConnectButton } from "../google-connect-button";
 import styles from "./calendar.module.css";
 
 type DayKey = "sun" | "mon" | "tue" | "wed" | "thu" | "fri" | "sat";
 type DayAvailability = { enabled: boolean; from: string; to: string };
 type Availability = Record<DayKey, DayAvailability>;
-type Block = { id: string; day: DayKey; time: string; label: string };
 
 const dayLabels: Record<DayKey, string> = {
   sun: "ראשון",
@@ -21,7 +21,6 @@ const dayLabels: Record<DayKey, string> = {
 
 const dayOrder: DayKey[] = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 const CALENDAR_SETTINGS_KEY = "lihi-clinic-calendar-settings-v1";
-const CALENDAR_BLOCKS_KEY = "lihi-clinic-calendar-blocks-v1";
 
 const defaultAvailability: Availability = {
   sun: { enabled: true, from: "09:00", to: "18:00" },
@@ -33,52 +32,16 @@ const defaultAvailability: Availability = {
   sat: { enabled: false, from: "09:00", to: "14:00" },
 };
 
-const demoEvents: Record<DayKey, Array<{ time: string; title: string; kind: "appointment" | "busy" }>> = {
-  sun: [{ time: "10:00", title: "מיכאל לוי", kind: "appointment" }],
-  mon: [{ time: "13:00", title: "אירוע חיצוני", kind: "busy" }],
-  tue: [{ time: "11:00", title: "ליאור כהן", kind: "appointment" }],
-  wed: [{ time: "16:00", title: "חסום", kind: "busy" }],
-  thu: [],
-  fri: [],
-  sat: [],
-};
-
-function getCurrentWeek() {
-  const now = new Date();
-  const sunday = new Date(now);
-  sunday.setDate(now.getDate() - now.getDay());
-  return dayOrder.map((key, index) => {
-    const date = new Date(sunday);
-    date.setDate(sunday.getDate() + index);
-    return { key, date };
-  });
-}
-
-function formatDay(date: Date) {
-  return new Intl.DateTimeFormat("he-IL", { day: "2-digit", month: "2-digit" }).format(date);
-}
-
 export function CalendarManager() {
   const [availability, setAvailability] = useState<Availability>(defaultAvailability);
-  const [blocks, setBlocks] = useState<Block[]>([
-    { id: "demo-block", day: "wed", time: "16:00", label: "חסום אישית" },
-  ]);
   const [showAvailability, setShowAvailability] = useState(false);
-  const [showBlockForm, setShowBlockForm] = useState(false);
-  const [blockDraft, setBlockDraft] = useState({ day: "sun" as DayKey, time: "12:00", label: "חסום" });
   const [copyState, setCopyState] = useState("העתק קישור");
-
-  const week = useMemo(getCurrentWeek, []);
 
   useEffect(() => {
     try {
-      const savedAvailability = window.localStorage.getItem(CALENDAR_SETTINGS_KEY);
-      const savedBlocks = window.localStorage.getItem(CALENDAR_BLOCKS_KEY);
-      if (savedAvailability) setAvailability({ ...defaultAvailability, ...JSON.parse(savedAvailability) });
-      if (savedBlocks) setBlocks(JSON.parse(savedBlocks));
-    } catch {
-      // Prototype fallback: keep the default schedule.
-    }
+      const saved = window.localStorage.getItem(CALENDAR_SETTINGS_KEY);
+      if (saved) setAvailability({ ...defaultAvailability, ...JSON.parse(saved) });
+    } catch {}
   }, []);
 
   useEffect(() => {
@@ -87,26 +50,8 @@ export function CalendarManager() {
     } catch {}
   }, [availability]);
 
-  useEffect(() => {
-    try {
-      window.localStorage.setItem(CALENDAR_BLOCKS_KEY, JSON.stringify(blocks));
-    } catch {}
-  }, [blocks]);
-
   function updateAvailability(day: DayKey, patch: Partial<DayAvailability>) {
-    setAvailability((current) => ({
-      ...current,
-      [day]: { ...current[day], ...patch },
-    }));
-  }
-
-  function addBlock(event: React.FormEvent) {
-    event.preventDefault();
-    setBlocks((current) => [
-      ...current,
-      { id: `block-${Date.now()}`, day: blockDraft.day, time: blockDraft.time, label: blockDraft.label.trim() || "חסום" },
-    ]);
-    setShowBlockForm(false);
+    setAvailability((current) => ({ ...current, [day]: { ...current[day], ...patch } }));
   }
 
   async function copyBookingLink() {
@@ -122,57 +67,70 @@ export function CalendarManager() {
 
   return (
     <div className={styles.manager}>
-      <section className={styles.summaryGrid}>
-        <article className={`${styles.summaryCard} ${styles.googleCard}`}>
-          <div className={styles.summaryIcon}>G</div>
+      <section className={styles.googleHero}>
+        <div className={styles.googleHeroCopy}>
+          <span className={styles.eyebrow}>היומן המרכזי</span>
+          <h2>Google Calendar הוא מקור האמת</h2>
+          <p>ליהי מנהלת את התורים, החסימות והאירועים האישיים ב־Google Calendar. המערכת שלנו קוראת רק מה שצריך כדי לדעת מתי פנוי ומתי תפוס.</p>
+        </div>
+        <a className={styles.openGoogleButton} href="https://calendar.google.com/calendar/u/0/r" target="_blank" rel="noreferrer">
+          פתח Google Calendar ↗
+        </a>
+      </section>
+
+      <GoogleConnectButton />
+
+      <section className={styles.workflowGrid}>
+        <article>
+          <span>01</span>
+          <strong>ליהי מנהלת ביומן</strong>
+          <p>טיפול, פגישה פרטית, חופש או כל חסימה אחרת נשארים בתוך Google Calendar.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <strong>המערכת בודקת זמינות</strong>
+          <p>ללקוח נציג רק שעות שבטווח העבודה ושאינן תפוסות ביומן.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <strong>המטופל קובע לבד</strong>
+          <p>הזמנה חדשה תיצור תור ביומן ותסגור את השעה אוטומטית לאחרים.</p>
+        </article>
+      </section>
+
+      <section className={styles.controlGrid}>
+        <article className={styles.controlCard}>
           <div>
-            <span>סנכרון יומן</span>
-            <h2>Google Calendar</h2>
-            <p>היומן המרכזי שיעבוד גם באייפון, אנדרואיד ומחשב.</p>
+            <span>כללי קביעת תורים</span>
+            <h2>שעות פעילות</h2>
+            <p>Google אומר לנו מתי תפוס. כאן מגדירים מתי בכלל מותר להציע שעות ללקוחות.</p>
           </div>
-          <div className={styles.summaryActions}>
-            <span className={styles.pendingBadge}>לא מחובר</span>
-            <button type="button" disabled>חיבור Google · בשלב הבא</button>
-          </div>
+          <button type="button" className={styles.secondaryButton} onClick={() => setShowAvailability((value) => !value)}>
+            {showAvailability ? "סגור הגדרות" : "הגדרת שעות פעילות"}
+          </button>
         </article>
 
-        <article className={styles.summaryCard}>
-          <div className={styles.summaryIcon}>↗</div>
+        <article className={styles.controlCard}>
           <div>
-            <span>קביעת תורים</span>
-            <h2>הקישור למטופלים</h2>
-            <p>הלקוח רואה רק שעות פנויות. שעות תפוסות ושמות מטופלים לא נחשפים.</p>
+            <span>מסך למטופלים</span>
+            <h2>קישור לקביעת תור</h2>
+            <p>אפשר לשלוח בוואטסאפ, באתר או באינסטגרם. המטופל לא רואה שמות או פרטים מהיומן.</p>
           </div>
-          <div className={styles.linkActions}>
+          <div className={styles.bookingActions}>
             <Link href="/booking" target="_blank">פתח מסך לקוח</Link>
             <button type="button" onClick={copyBookingLink}>{copyState}</button>
           </div>
         </article>
       </section>
 
-      <section className={styles.toolbar}>
-        <div>
-          <span>השבוע הנוכחי</span>
-          <strong>ניהול תורים וזמינות</strong>
-        </div>
-        <div className={styles.toolbarActions}>
-          <button type="button" className={styles.secondaryButton} onClick={() => setShowAvailability((value) => !value)}>
-            {showAvailability ? "סגור שעות פעילות" : "⚙ שעות פעילות"}
-          </button>
-          <button type="button" className={styles.primaryButton} onClick={() => setShowBlockForm((value) => !value)}>
-            {showBlockForm ? "ביטול" : "+ חסימת שעה"}
-          </button>
-        </div>
-      </section>
-
       {showAvailability && (
         <section className={styles.settingsPanel}>
           <div className={styles.settingsHeading}>
             <div>
-              <span>זמינות קבועה</span>
-              <h2>שעות פעילות</h2>
+              <span>זמינות שבועית</span>
+              <h2>מתי אפשר להזמין טיפול?</h2>
             </div>
-            <p>רק בתוך הטווחים האלה יופיעו למטופל שעות שניתן להזמין.</p>
+            <p>אירועים שקיימים ב־Google Calendar יחסמו את עצמם אוטומטית אחרי החיבור.</p>
           </div>
           <div className={styles.availabilityList}>
             {dayOrder.map((day) => (
@@ -207,77 +165,16 @@ export function CalendarManager() {
         </section>
       )}
 
-      {showBlockForm && (
-        <form className={styles.blockForm} onSubmit={addBlock}>
-          <div>
-            <span>חסימה ידנית</span>
-            <strong>סמן זמן שלא ניתן להזמין</strong>
-          </div>
-          <label>
-            <span>יום</span>
-            <select value={blockDraft.day} onChange={(event) => setBlockDraft({ ...blockDraft, day: event.target.value as DayKey })}>
-              {dayOrder.map((day) => <option value={day} key={day}>{dayLabels[day]}</option>)}
-            </select>
-          </label>
-          <label>
-            <span>שעה</span>
-            <input type="time" value={blockDraft.time} onChange={(event) => setBlockDraft({ ...blockDraft, time: event.target.value })} />
-          </label>
-          <label>
-            <span>הערה פנימית</span>
-            <input value={blockDraft.label} onChange={(event) => setBlockDraft({ ...blockDraft, label: event.target.value })} placeholder="למשל: סידורים" />
-          </label>
-          <button type="submit" className={styles.primaryButton}>שמור חסימה</button>
-        </form>
-      )}
-
-      <section className={styles.weekPanel}>
-        <div className={styles.weekHeader}>
-          <div>
-            <span>תצוגה פנימית למטפלת</span>
-            <h2>השבוע שלי</h2>
-          </div>
-          <div className={styles.legend}>
-            <span><i className={styles.legendAppointment} /> טיפול</span>
-            <span><i className={styles.legendBusy} /> חסום / תפוס</span>
-            <span><i className={styles.legendFree} /> פנוי להזמנה</span>
-          </div>
-        </div>
-
-        <div className={styles.weekGrid}>
-          {week.map(({ key, date }) => {
-            const dayEvents = [...demoEvents[key], ...blocks.filter((block) => block.day === key).map((block) => ({ time: block.time, title: block.label, kind: "busy" as const }))];
-            return (
-              <article className={styles.dayColumn} key={key} data-disabled={!availability[key].enabled}>
-                <header>
-                  <span>{dayLabels[key]}</span>
-                  <strong>{formatDay(date)}</strong>
-                  <small>{availability[key].enabled ? `${availability[key].from}–${availability[key].to}` : "לא פעיל"}</small>
-                </header>
-                <div className={styles.dayBody}>
-                  {availability[key].enabled ? (
-                    <>
-                      {dayEvents.sort((a, b) => a.time.localeCompare(b.time)).map((item, index) => (
-                        <div className={item.kind === "appointment" ? styles.appointmentEvent : styles.busyEvent} key={`${item.time}-${index}`}>
-                          <b>{item.time}</b>
-                          <span>{item.title}</span>
-                          {item.kind === "busy" && <small>בצד הלקוח יוצג רק „תפוס”</small>}
-                        </div>
-                      ))}
-                      <div className={styles.freeHint}>יש שעות פנויות נוספות להזמנה</div>
-                    </>
-                  ) : (
-                    <div className={styles.closedDay}>אין קבלת מטופלים</div>
-                  )}
-                </div>
-              </article>
-            );
-          })}
+      <section className={styles.privacyCard}>
+        <div className={styles.privacyIcon}>◉</div>
+        <div>
+          <strong>פרטיות מובנית</strong>
+          <p>במסך הציבורי לא נציג אף פעם שם מטופל, כותרת אירוע או סיבת חסימה. מבחינת הלקוח שעה שאינה זמינה היא פשוט „תפוס”.</p>
         </div>
       </section>
 
       <div className={styles.prototypeNote}>
-        <strong>שלב V1:</strong> שעות הפעילות והחסימות נשמרות כרגע בדפדפן. החיבור הבא הוא Google Calendar + שמירה בשרת, ואז תורים וחסימות יסונכרנו מכל מכשיר ובזמן אמת.
+        <strong>השלב הבא אחרי חיבור Google:</strong> קריאת Free/Busy בזמן אמת ויצירת תור אוטומטית ביומן. שעות הפעילות נשמרות כרגע בדפדפן עד שנחבר את מסד הנתונים של הקליניקה.
       </div>
     </div>
   );
