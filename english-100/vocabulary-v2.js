@@ -8,7 +8,7 @@ const save=()=>localStorage.setItem('english100-vocab',JSON.stringify(state));
 const $=id=>document.getElementById(id);
 
 function translatedWords(){return WORDS.filter(w=>Array.isArray(w.answers)&&w.answers.length)}
-function updateBankSummary(status='V2.1 · 200 translated entries per letter',loading=false){
+function updateBankSummary(status='V3 · 200 translated entries per letter',loading=false){
   const alphabet=$('alphabet');if(!alphabet)return;
   let summary=$('vocabBankSummary');
   if(!summary){summary=document.createElement('div');summary.id='vocabBankSummary';summary.style.cssText='display:flex;justify-content:center;gap:42px;margin-top:22px;padding-top:18px;border-top:1px solid #e6e8ee;text-align:center;position:relative';alphabet.insertAdjacentElement('afterend',summary)}
@@ -27,7 +27,7 @@ function check(skip=false){if(locked||!queue.length)return;const w=queue[idx],in
 function updateCounts(){$('masteredCount').textContent=Object.values(state).filter(x=>x.correct>=3).length}
 
 async function init(){
-  updateBankSummary('V2.1 · Loading the 5,200 translated entries…',true);
+  updateBankSummary('V3 · Loading the 5,200 translated entries…',true);
   try{
     if(typeof window.loadV2Bank!=='function') throw new Error('bank loader missing');
     WORDS=await window.loadV2Bank();
@@ -36,10 +36,10 @@ async function init(){
     const counts={};WORDS.forEach(w=>counts[w.word[0]]=(counts[w.word[0]]||0)+1);
     const valid=WORDS.length===5200&&'abcdefghijklmnopqrstuvwxyz'.split('').every(letter=>counts[letter]===200);
     if(!valid) throw new Error(`validation failed: ${WORDS.length} total`);
-    updateBankSummary('V2.1 · 200 translated entries per letter');
+    updateBankSummary('V3 · 200 translated entries per letter');
   }catch(error){
-    console.error('[English 100 V2.1]',error);
-    WORDS=[];renderLetters();updateCounts();updateBankSummary(`V2.1 load failed · ${error.message}`);
+    console.error('[English 100 V3]',error);
+    WORDS=[];renderLetters();updateCounts();updateBankSummary(`V3 load failed · ${error.message}`);
   }
 }
 
