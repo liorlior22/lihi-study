@@ -1,5 +1,5 @@
 window.loadV2Bank=async function(){
-  const response=await fetch('vocab-bank.json?v=7',{cache:'no-store'});
+  const response=await fetch('vocab-bank.json?v=10',{cache:'no-store'});
   if(!response.ok) throw new Error(`vocab-bank.json HTTP ${response.status}`);
   const data=await response.json();
   const source=Array.isArray(data)?data:data.words;
