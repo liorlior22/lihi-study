@@ -21,6 +21,7 @@ if(additions) vm.runInContext(additions,context,{filename:'v6-additions.js'});
       for(const answer of answers) if(!current.answers.includes(answer)) current.answers.push(answer);
     }
   }
+  if(!merged.has('carrot')) merged.set('carrot',{word:'carrot',answers:['גזר']});
   const bank=[...merged.values()].sort((a,b)=>a.word.localeCompare(b,'en'));
   fs.writeFileSync('english-100/vocab-bank.json',JSON.stringify({version:7,count:bank.length,words:bank},null,2)+'\n');
   console.log(`vocab-bank.json written: ${bank.length} words`);
