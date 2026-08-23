@@ -42,8 +42,19 @@ function parseWiktionaryHebrew(text){
   return map;
 }
 
+function getVisibleLetterTotals(){
+  const buttons=[...document.querySelectorAll('#alphabet .letter-btn')];
+  let ready=0,bank=0;
+  for(const button of buttons){
+    const readyText=button.querySelector('span')?.textContent||'0';
+    const bankText=button.querySelector('small')?.textContent||'0';
+    ready+=parseInt(readyText.replace(/\D/g,''),10)||0;
+    bank+=parseInt(bankText.replace(/\D/g,''),10)||0;
+  }
+  return {ready,bank,letters:buttons.length};
+}
+
 function updateBankSummary(){
-  if(!Array.isArray(WORDS)) return;
   const alphabet=document.getElementById('alphabet');
   if(!alphabet) return;
   let summary=document.getElementById('vocabBankSummary');
@@ -53,9 +64,9 @@ function updateBankSummary(){
     summary.style.cssText='display:flex;justify-content:center;gap:42px;margin-top:22px;padding-top:18px;border-top:1px solid #e6e8ee;text-align:center';
     alphabet.insertAdjacentElement('afterend',summary);
   }
-  const ready=WORDS.filter(w=>Array.isArray(w.answers)&&w.answers.length).length;
-  const bank=WORDS.length;
-  summary.innerHTML=`<div><div style="font-size:12px;font-weight:800;letter-spacing:.08em;color:#667085;text-transform:uppercase">Ready</div><div style="font-size:30px;font-weight:900;margin-top:3px">${ready.toLocaleString()}</div></div><div><div style="font-size:12px;font-weight:800;letter-spacing:.08em;color:#667085;text-transform:uppercase">Bank</div><div style="font-size:30px;font-weight:900;margin-top:3px">${bank.toLocaleString()}</div></div>`;
+  const totals=getVisibleLetterTotals();
+  summary.innerHTML=`<div><div style="font-size:12px;font-weight:800;letter-spacing:.08em;color:#667085;text-transform:uppercase">Ready</div><div style="font-size:30px;font-weight:900;margin-top:3px">${totals.ready.toLocaleString()}</div></div><div><div style="font-size:12px;font-weight:800;letter-spacing:.08em;color:#667085;text-transform:uppercase">Bank</div><div style="font-size:30px;font-weight:900;margin-top:3px">${totals.bank.toLocaleString()}</div></div>`;
+  localStorage.setItem('english100.visibleLetterTotals',JSON.stringify(totals));
 }
 
 async function enrichVocabularyTranslations(){
