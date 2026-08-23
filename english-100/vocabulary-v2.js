@@ -8,7 +8,7 @@ const save=()=>localStorage.setItem('english100-vocab',JSON.stringify(state));
 const $=id=>document.getElementById(id);
 
 function translatedWords(){return WORDS.filter(w=>Array.isArray(w.answers)&&w.answers.length)}
-function updateBankSummary(status='V6 · expanded local vocabulary bank'){
+function updateBankSummary(status='V7 · vocab-bank.json'){
   const alphabet=$('alphabet');if(!alphabet)return;
   let summary=$('vocabBankSummary');
   if(!summary){summary=document.createElement('div');summary.id='vocabBankSummary';summary.style.cssText='display:flex;justify-content:center;gap:42px;margin-top:22px;padding-top:18px;border-top:1px solid #e6e8ee;text-align:center;position:relative';alphabet.insertAdjacentElement('afterend',summary)}
@@ -28,14 +28,13 @@ async function init(){
   try{
     if(typeof window.loadV2Bank!=='function') throw new Error('bank loader missing');
     WORDS=await window.loadV2Bank();
-    const counts={};WORDS.forEach(w=>counts[w.word[0]]=(counts[w.word[0]]||0)+1);
-    const valid=WORDS.length>=260&&'abcdefghijklmnopqrstuvwxyz'.split('').every(letter=>(counts[letter]||0)>=10);
+    const valid=Array.isArray(WORDS)&&WORDS.length>0&&WORDS.every(item=>item&&item.word&&Array.isArray(item.answers)&&item.answers.length);
     if(!valid) throw new Error(`validation failed: ${WORDS.length} total`);
     localStorage.setItem('english100.wordBankSize',String(WORDS.length));
-    renderLetters();updateCounts();updateBankSummary(`V6 · ${WORDS.length.toLocaleString()} translated entries`);
+    renderLetters();updateCounts();updateBankSummary(`V7 · ${WORDS.length.toLocaleString()} translated entries · vocab-bank.json`);
   }catch(error){
-    console.error('[English 100 V6]',error);
-    WORDS=[];renderLetters();updateCounts();updateBankSummary(`V6 load failed · ${error.message}`);
+    console.error('[English 100 V7]',error);
+    WORDS=[];renderLetters();updateCounts();updateBankSummary(`V7 load failed · ${error.message}`);
   }
 }
 
