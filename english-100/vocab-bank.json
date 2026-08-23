@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "count": 328,
+  "count": 329,
   "words": [
     {
       "word": "able",
@@ -2060,6 +2060,12 @@
       "word": "waitress",
       "answers": [
         "מלצרית"
+      ]
+    },
+    {
+      "word": "carrot",
+      "answers": [
+        "גזר"
       ]
     }
   ]
