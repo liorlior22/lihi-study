@@ -1,45 +1,105 @@
-const V2_DB='https://raw.githubusercontent.com/roeybiran/Milonchik/main/Milonchik/Resources/milon.db';
-const V2_FREQ='https://raw.githubusercontent.com/david47k/top-english-wordlists/master/top_english_words_lower_50000.txt';
-const V2_SQL='https://cdn.jsdelivr.net/npm/sql.js@1.11.0/dist/';
-const V2_KEY='english100-v2-5200-terms';
+const V2_DICT_SOURCES=[
+  'https://cdn.jsdelivr.net/gh/open-dict-data/wikidict-en@master/data/he-en_wiki.txt',
+  'https://raw.githubusercontent.com/open-dict-data/wikidict-en/master/data/he-en_wiki.txt'
+];
+const V2_FREQ_SOURCES=[
+  'https://cdn.jsdelivr.net/gh/david47k/top-english-wordlists@master/top_english_words_lower_50000.txt',
+  'https://raw.githubusercontent.com/david47k/top-english-wordlists/master/top_english_words_lower_50000.txt'
+];
+const V2_KEY='english100-v2-5200-text-1';
 
-function v2Hebrew(text){return (text||'').replace(/[\u0591-\u05C7]/g,'').replace(/<[^>]*>/g,'').replace(/\s+/g,' ').trim()}
-function v2Add(map,word,values){word=(word||'').trim().toLowerCase().replace(/\s+/g,' ');if(!/^[a-z][a-z '\-]*$/.test(word))return;const current=map.get(word)||[];for(const value of values){const answer=v2Hebrew(value);if(answer&&/[\u05D0-\u05EA]/.test(answer)&&!current.includes(answer))current.push(answer)}if(current.length)map.set(word,current.slice(0,8))}
+function v2CleanHebrew(value){
+  return (value||'')
+    .replace(/[\u0591-\u05C7]/g,'')
+    .replace(/\s+/g,' ')
+    .trim();
+}
+
+async function v2FetchText(sources,label){
+  const errors=[];
+  for(const url of sources){
+    const controller=new AbortController();
+    const timer=setTimeout(()=>controller.abort(),30000);
+    try{
+      const response=await fetch(url,{cache:'force-cache',signal:controller.signal});
+      if(!response.ok) throw new Error(`HTTP ${response.status}`);
+      const text=await response.text();
+      if(text.length<10000) throw new Error('response too small');
+      return text;
+    }catch(error){
+      errors.push(`${url}: ${error.message}`);
+    }finally{
+      clearTimeout(timer);
+    }
+  }
+  throw new Error(`${label} failed: ${errors.join(' | ')}`);
+}
+
+function v2ParseDictionary(text){
+  const map=new Map();
+  for(const rawLine of text.split(/\r?\n/)){
+    if(!rawLine) continue;
+    const tab=rawLine.indexOf('\t');
+    if(tab<1) continue;
+    const hebrew=v2CleanHebrew(rawLine.slice(0,tab));
+    const english=rawLine.slice(tab+1).trim().toLowerCase();
+    if(!hebrew||!/[\u05D0-\u05EA]/.test(hebrew)||!/^[a-z]+$/.test(english)) continue;
+    const answers=map.get(english)||[];
+    if(!answers.includes(hebrew)) answers.push(hebrew);
+    map.set(english,answers.slice(0,8));
+  }
+  return map;
+}
+
+function v2ValidateBank(bank){
+  if(!Array.isArray(bank)||bank.length!==5200) return false;
+  const counts={};
+  for(const item of bank){
+    if(!item||!/^[a-z]+$/.test(item.word)||!Array.isArray(item.answers)||!item.answers.length) return false;
+    counts[item.word[0]]=(counts[item.word[0]]||0)+1;
+  }
+  return 'abcdefghijklmnopqrstuvwxyz'.split('').every(letter=>counts[letter]===200);
+}
 
 async function makeV2Bank(){
-  const [SQL,dbResult,freqResult]=await Promise.all([
-    initSqlJs({locateFile:file=>V2_SQL+file}),
-    fetch(V2_DB,{cache:'force-cache'}),
-    fetch(V2_FREQ,{cache:'force-cache'})
+  const [dictText,freqText]=await Promise.all([
+    v2FetchText(V2_DICT_SOURCES,'Hebrew dictionary'),
+    v2FetchText(V2_FREQ_SOURCES,'frequency list')
   ]);
-  if(!dbResult.ok||!freqResult.ok)throw new Error('V2 dictionary download failed');
-  const db=new SQL.Database(new Uint8Array(await dbResult.arrayBuffer()));
-  const rows=db.exec("SELECT translated_word, translations, inflection_value FROM definitions WHERE translated_lang='eng'");
-  const map=new Map();
-  if(rows.length){for(const row of rows[0].values){const word=row[0],answers=String(row[1]||'').split('\t');v2Add(map,word,answers);for(const form of String(row[2]||'').split('\t'))v2Add(map,form,answers)}}
-  db.close();
-  const frequency=(await freqResult.text()).split(/\r?\n/).map(x=>x.trim().toLowerCase()).filter(x=>/^[a-z]+$/.test(x));
-  const rank=new Map();frequency.forEach((word,index)=>{if(!rank.has(word))rank.set(word,index)});
-  const all=[...map.keys()],final=[];
+
+  const map=v2ParseDictionary(dictText);
+  const frequency=freqText
+    .split(/\r?\n/)
+    .map(x=>x.trim().toLowerCase())
+    .filter(x=>/^[a-z]+$/.test(x));
+  const rank=new Map();
+  frequency.forEach((word,index)=>{if(!rank.has(word)) rank.set(word,index)});
+
+  const byLetter={};
+  for(const letter of 'abcdefghijklmnopqrstuvwxyz') byLetter[letter]=[];
+  for(const word of map.keys()) byLetter[word[0]]?.push(word);
+
+  const final=[];
   for(const letter of 'abcdefghijklmnopqrstuvwxyz'){
-    const candidates=all.filter(word=>word[0]===letter).sort((a,b)=>{
-      const aRank=rank.has(a)?rank.get(a):(/^[a-z]+$/.test(a)?10000000:20000000);
-      const bRank=rank.has(b)?rank.get(b):(/^[a-z]+$/.test(b)?10000000:20000000);
-      return aRank-bRank||a.localeCompare(b,'en');
-    });
-    if(candidates.length<200)throw new Error(`${letter.toUpperCase()} has only ${candidates.length} translated entries`);
+    const candidates=byLetter[letter]
+      .sort((a,b)=>(rank.get(a)??9999999)-(rank.get(b)??9999999)||a.localeCompare(b,'en'));
+    if(candidates.length<200) throw new Error(`${letter.toUpperCase()} has only ${candidates.length} translated single words`);
     const chosen=candidates.slice(0,200).sort((a,b)=>a.localeCompare(b,'en'));
-    chosen.forEach(word=>final.push({word,answers:map.get(word)}));
+    for(const word of chosen) final.push({word,answers:map.get(word)});
   }
-  if(final.length!==5200)throw new Error(`V2 total is ${final.length}`);
+
+  if(!v2ValidateBank(final)) throw new Error(`V2 validation failed (${final.length})`);
   localStorage.setItem(V2_KEY,JSON.stringify(final));
+  localStorage.setItem('english100-v2-source','Wikidata CC0 he-en · 200 words per letter');
   return final;
 }
 
 window.loadV2Bank=async function(){
   try{
     const saved=JSON.parse(localStorage.getItem(V2_KEY)||'null');
-    if(Array.isArray(saved)&&saved.length===5200){const count={};saved.forEach(item=>count[item.word[0]]=(count[item.word[0]]||0)+1);if('abcdefghijklmnopqrstuvwxyz'.split('').every(letter=>count[letter]===200))return saved}
-  }catch(error){localStorage.removeItem(V2_KEY)}
+    if(v2ValidateBank(saved)) return saved;
+  }catch(error){
+    localStorage.removeItem(V2_KEY);
+  }
   return makeV2Bank();
 };
