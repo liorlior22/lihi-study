@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>English 100</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="logo">E</span><span>English 100</span></a>
+      <div class="level-mini"><span>Level</span><strong id="miniLevel">0/100</strong></div>
+    </header>
+
+    <main>
+      <section class="hero-grid">
+        <div class="panel hero-copy">
+          <span class="eyebrow">YOUR PERSONAL ENGLISH PATH</span>
+          <h1>Learn English your way.</h1>
+          <p>Vocabulary, grammar, reading, writing, listening, speaking and games — all in one place.</p>
+          <a class="primary" href="vocabulary.html">Start with Vocabulary →</a>
+        </div>
+        <div class="panel score-card">
+          <div class="score-row"><div><span class="muted">English level</span><div class="big-score"><span id="levelScore">0</span><small>/100</small></div></div><span class="pill">Starting point</span></div>
+          <div class="progress"><div class="progress-bar" id="levelBar"></div></div>
+          <p class="muted small">Your score will grow as you master words and complete lessons.</p>
+        </div>
+      </section>
+
+      <div class="section-title"><div><span class="kicker">PRACTICE</span><h2>Choose a skill</h2></div><span class="muted">One step at a time</span></div>
+      <section class="cards">
+        <a class="skill-card featured" href="vocabulary.html"><span class="skill-icon">🧠</span><h3>Vocabulary</h3><p>A–Z, mixed practice, mistakes, smart review and level checks.</p><div class="card-bottom"><span id="vocabProgress">0 words mastered</span><strong>Open →</strong></div></a>
+        <div class="skill-card"><span class="skill-icon">🧱</span><h3>Grammar</h3><p>From the basics to advanced grammar through short lessons and drills.</p><div class="card-bottom"><span>Coming next</span><strong>→</strong></div></div>
+        <div class="skill-card"><span class="skill-icon">📖</span><h3>Reading</h3><p>Stories and articles adapted to age, level and interests.</p><div class="card-bottom"><span>Planned</span><strong>→</strong></div></div>
+        <div class="skill-card"><span class="skill-icon">✍️</span><h3>Writing</h3><p>Write freely, get corrections and understand every mistake.</p><div class="card-bottom"><span>Planned</span><strong>→</strong></div></div>
+        <div class="skill-card"><span class="skill-icon">🎧</span><h3>Listening</h3><p>Train comprehension with real conversations and different accents.</p><div class="card-bottom"><span>Planned</span><strong>→</strong></div></div>
+        <div class="skill-card"><span class="skill-icon">🗣️</span><h3>Speaking</h3><p>Speak with AI in real-life situations and build confidence.</p><div class="card-bottom"><span>Planned</span><strong>→</strong></div></div>
+        <div class="skill-card"><span class="skill-icon">🎮</span><h3>Games</h3><p>Challenges and memory games that adapt to age and level.</p><div class="card-bottom"><span>Planned</span><strong>→</strong></div></div>
+        <div class="skill-card"><span class="skill-icon">❌</span><h3>My Mistakes</h3><p>Everything you got wrong across the platform, ready for review.</p><div class="card-bottom"><span id="mistakeCount">0 mistakes</span><strong>→</strong></div></div>
+        <div class="skill-card"><span class="skill-icon">📈</span><h3>Progress</h3><p>Your overall 0–100 score and progress in every English skill.</p><div class="card-bottom"><span>Track growth</span><strong>→</strong></div></div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
