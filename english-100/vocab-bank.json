@@ -1,0 +1,2066 @@
+{
+  "version": 7,
+  "count": 328,
+  "words": [
+    {
+      "word": "able",
+      "answers": [
+        "מסוגל",
+        "יכול"
+      ]
+    },
+    {
+      "word": "about",
+      "answers": [
+        "על",
+        "בערך"
+      ]
+    },
+    {
+      "word": "above",
+      "answers": [
+        "מעל"
+      ]
+    },
+    {
+      "word": "accept",
+      "answers": [
+        "לקבל",
+        "להסכים"
+      ]
+    },
+    {
+      "word": "accident",
+      "answers": [
+        "תאונה"
+      ]
+    },
+    {
+      "word": "action",
+      "answers": [
+        "פעולה"
+      ]
+    },
+    {
+      "word": "active",
+      "answers": [
+        "פעיל"
+      ]
+    },
+    {
+      "word": "add",
+      "answers": [
+        "להוסיף"
+      ]
+    },
+    {
+      "word": "advice",
+      "answers": [
+        "עצה"
+      ]
+    },
+    {
+      "word": "afraid",
+      "answers": [
+        "מפחד",
+        "חושש"
+      ]
+    },
+    {
+      "word": "baby",
+      "answers": [
+        "תינוק"
+      ]
+    },
+    {
+      "word": "back",
+      "answers": [
+        "גב",
+        "חזרה"
+      ]
+    },
+    {
+      "word": "bad",
+      "answers": [
+        "רע"
+      ]
+    },
+    {
+      "word": "bag",
+      "answers": [
+        "תיק"
+      ]
+    },
+    {
+      "word": "bank",
+      "answers": [
+        "בנק"
+      ]
+    },
+    {
+      "word": "beach",
+      "answers": [
+        "חוף"
+      ]
+    },
+    {
+      "word": "beautiful",
+      "answers": [
+        "יפה"
+      ]
+    },
+    {
+      "word": "because",
+      "answers": [
+        "כי",
+        "בגלל"
+      ]
+    },
+    {
+      "word": "become",
+      "answers": [
+        "להפוך ל"
+      ]
+    },
+    {
+      "word": "before",
+      "answers": [
+        "לפני"
+      ]
+    },
+    {
+      "word": "call",
+      "answers": [
+        "להתקשר",
+        "לקרוא"
+      ]
+    },
+    {
+      "word": "car",
+      "answers": [
+        "מכונית",
+        "רכב"
+      ]
+    },
+    {
+      "word": "care",
+      "answers": [
+        "אכפתיות",
+        "לטפל"
+      ]
+    },
+    {
+      "word": "carry",
+      "answers": [
+        "לשאת",
+        "לסחוב"
+      ]
+    },
+    {
+      "word": "cat",
+      "answers": [
+        "חתול"
+      ]
+    },
+    {
+      "word": "change",
+      "answers": [
+        "שינוי",
+        "לשנות"
+      ]
+    },
+    {
+      "word": "child",
+      "answers": [
+        "ילד",
+        "ילדה"
+      ]
+    },
+    {
+      "word": "city",
+      "answers": [
+        "עיר"
+      ]
+    },
+    {
+      "word": "clean",
+      "answers": [
+        "נקי",
+        "לנקות"
+      ]
+    },
+    {
+      "word": "close",
+      "answers": [
+        "לסגור",
+        "קרוב"
+      ]
+    },
+    {
+      "word": "dance",
+      "answers": [
+        "לרקוד",
+        "ריקוד"
+      ]
+    },
+    {
+      "word": "danger",
+      "answers": [
+        "סכנה"
+      ]
+    },
+    {
+      "word": "dark",
+      "answers": [
+        "חשוך",
+        "כהה"
+      ]
+    },
+    {
+      "word": "daughter",
+      "answers": [
+        "בת"
+      ]
+    },
+    {
+      "word": "day",
+      "answers": [
+        "יום"
+      ]
+    },
+    {
+      "word": "decide",
+      "answers": [
+        "להחליט"
+      ]
+    },
+    {
+      "word": "different",
+      "answers": [
+        "שונה"
+      ]
+    },
+    {
+      "word": "dog",
+      "answers": [
+        "כלב"
+      ]
+    },
+    {
+      "word": "door",
+      "answers": [
+        "דלת"
+      ]
+    },
+    {
+      "word": "down",
+      "answers": [
+        "למטה"
+      ]
+    },
+    {
+      "word": "early",
+      "answers": [
+        "מוקדם"
+      ]
+    },
+    {
+      "word": "easy",
+      "answers": [
+        "קל"
+      ]
+    },
+    {
+      "word": "eat",
+      "answers": [
+        "לאכול"
+      ]
+    },
+    {
+      "word": "education",
+      "answers": [
+        "חינוך",
+        "השכלה"
+      ]
+    },
+    {
+      "word": "effect",
+      "answers": [
+        "השפעה",
+        "אפקט"
+      ]
+    },
+    {
+      "word": "end",
+      "answers": [
+        "סוף",
+        "לסיים"
+      ]
+    },
+    {
+      "word": "enjoy",
+      "answers": [
+        "ליהנות"
+      ]
+    },
+    {
+      "word": "enough",
+      "answers": [
+        "מספיק"
+      ]
+    },
+    {
+      "word": "even",
+      "answers": [
+        "אפילו"
+      ]
+    },
+    {
+      "word": "every",
+      "answers": [
+        "כל"
+      ]
+    },
+    {
+      "word": "face",
+      "answers": [
+        "פנים"
+      ]
+    },
+    {
+      "word": "fact",
+      "answers": [
+        "עובדה"
+      ]
+    },
+    {
+      "word": "family",
+      "answers": [
+        "משפחה"
+      ]
+    },
+    {
+      "word": "far",
+      "answers": [
+        "רחוק"
+      ]
+    },
+    {
+      "word": "father",
+      "answers": [
+        "אבא",
+        "אב"
+      ]
+    },
+    {
+      "word": "feel",
+      "answers": [
+        "להרגיש"
+      ]
+    },
+    {
+      "word": "find",
+      "answers": [
+        "למצוא"
+      ]
+    },
+    {
+      "word": "first",
+      "answers": [
+        "ראשון"
+      ]
+    },
+    {
+      "word": "food",
+      "answers": [
+        "אוכל",
+        "מזון"
+      ]
+    },
+    {
+      "word": "friend",
+      "answers": [
+        "חבר",
+        "חברה"
+      ]
+    },
+    {
+      "word": "game",
+      "answers": [
+        "משחק"
+      ]
+    },
+    {
+      "word": "garden",
+      "answers": [
+        "גינה",
+        "גן"
+      ]
+    },
+    {
+      "word": "get",
+      "answers": [
+        "לקבל",
+        "להשיג"
+      ]
+    },
+    {
+      "word": "girl",
+      "answers": [
+        "ילדה",
+        "נערה"
+      ]
+    },
+    {
+      "word": "give",
+      "answers": [
+        "לתת"
+      ]
+    },
+    {
+      "word": "go",
+      "answers": [
+        "ללכת",
+        "לנסוע"
+      ]
+    },
+    {
+      "word": "good",
+      "answers": [
+        "טוב"
+      ]
+    },
+    {
+      "word": "great",
+      "answers": [
+        "נהדר",
+        "גדול"
+      ]
+    },
+    {
+      "word": "green",
+      "answers": [
+        "ירוק"
+      ]
+    },
+    {
+      "word": "group",
+      "answers": [
+        "קבוצה"
+      ]
+    },
+    {
+      "word": "hair",
+      "answers": [
+        "שיער"
+      ]
+    },
+    {
+      "word": "hand",
+      "answers": [
+        "יד"
+      ]
+    },
+    {
+      "word": "happen",
+      "answers": [
+        "לקרות"
+      ]
+    },
+    {
+      "word": "happy",
+      "answers": [
+        "שמח"
+      ]
+    },
+    {
+      "word": "have",
+      "answers": [
+        "יש",
+        "להחזיק"
+      ]
+    },
+    {
+      "word": "head",
+      "answers": [
+        "ראש"
+      ]
+    },
+    {
+      "word": "help",
+      "answers": [
+        "לעזור",
+        "עזרה"
+      ]
+    },
+    {
+      "word": "high",
+      "answers": [
+        "גבוה"
+      ]
+    },
+    {
+      "word": "home",
+      "answers": [
+        "בית"
+      ]
+    },
+    {
+      "word": "house",
+      "answers": [
+        "בית"
+      ]
+    },
+    {
+      "word": "idea",
+      "answers": [
+        "רעיון"
+      ]
+    },
+    {
+      "word": "if",
+      "answers": [
+        "אם"
+      ]
+    },
+    {
+      "word": "important",
+      "answers": [
+        "חשוב"
+      ]
+    },
+    {
+      "word": "improve",
+      "answers": [
+        "לשפר"
+      ]
+    },
+    {
+      "word": "in",
+      "answers": [
+        "בתוך",
+        "ב"
+      ]
+    },
+    {
+      "word": "include",
+      "answers": [
+        "לכלול"
+      ]
+    },
+    {
+      "word": "information",
+      "answers": [
+        "מידע"
+      ]
+    },
+    {
+      "word": "interest",
+      "answers": [
+        "עניין",
+        "ריבית"
+      ]
+    },
+    {
+      "word": "into",
+      "answers": [
+        "לתוך"
+      ]
+    },
+    {
+      "word": "issue",
+      "answers": [
+        "נושא",
+        "בעיה"
+      ]
+    },
+    {
+      "word": "job",
+      "answers": [
+        "עבודה",
+        "משרה"
+      ]
+    },
+    {
+      "word": "join",
+      "answers": [
+        "להצטרף"
+      ]
+    },
+    {
+      "word": "joke",
+      "answers": [
+        "בדיחה"
+      ]
+    },
+    {
+      "word": "journey",
+      "answers": [
+        "מסע",
+        "נסיעה"
+      ]
+    },
+    {
+      "word": "joy",
+      "answers": [
+        "שמחה"
+      ]
+    },
+    {
+      "word": "judge",
+      "answers": [
+        "שופט",
+        "לשפוט"
+      ]
+    },
+    {
+      "word": "jump",
+      "answers": [
+        "לקפוץ"
+      ]
+    },
+    {
+      "word": "junior",
+      "answers": [
+        "זוטר",
+        "צעיר"
+      ]
+    },
+    {
+      "word": "just",
+      "answers": [
+        "רק",
+        "צודק"
+      ]
+    },
+    {
+      "word": "justice",
+      "answers": [
+        "צדק"
+      ]
+    },
+    {
+      "word": "keep",
+      "answers": [
+        "לשמור"
+      ]
+    },
+    {
+      "word": "key",
+      "answers": [
+        "מפתח"
+      ]
+    },
+    {
+      "word": "kick",
+      "answers": [
+        "לבעוט",
+        "בעיטה"
+      ]
+    },
+    {
+      "word": "kid",
+      "answers": [
+        "ילד"
+      ]
+    },
+    {
+      "word": "kind",
+      "answers": [
+        "סוג",
+        "אדיב"
+      ]
+    },
+    {
+      "word": "king",
+      "answers": [
+        "מלך"
+      ]
+    },
+    {
+      "word": "kitchen",
+      "answers": [
+        "מטבח"
+      ]
+    },
+    {
+      "word": "know",
+      "answers": [
+        "לדעת",
+        "להכיר"
+      ]
+    },
+    {
+      "word": "knowledge",
+      "answers": [
+        "ידע"
+      ]
+    },
+    {
+      "word": "known",
+      "answers": [
+        "ידוע",
+        "מוכר"
+      ]
+    },
+    {
+      "word": "land",
+      "answers": [
+        "אדמה",
+        "ארץ"
+      ]
+    },
+    {
+      "word": "large",
+      "answers": [
+        "גדול"
+      ]
+    },
+    {
+      "word": "last",
+      "answers": [
+        "אחרון"
+      ]
+    },
+    {
+      "word": "late",
+      "answers": [
+        "מאוחר"
+      ]
+    },
+    {
+      "word": "learn",
+      "answers": [
+        "ללמוד"
+      ]
+    },
+    {
+      "word": "leave",
+      "answers": [
+        "לעזוב",
+        "להשאיר"
+      ]
+    },
+    {
+      "word": "life",
+      "answers": [
+        "חיים"
+      ]
+    },
+    {
+      "word": "light",
+      "answers": [
+        "אור",
+        "קל"
+      ]
+    },
+    {
+      "word": "little",
+      "answers": [
+        "קטן",
+        "מעט"
+      ]
+    },
+    {
+      "word": "love",
+      "answers": [
+        "אהבה",
+        "לאהוב"
+      ]
+    },
+    {
+      "word": "make",
+      "answers": [
+        "לעשות",
+        "ליצור"
+      ]
+    },
+    {
+      "word": "man",
+      "answers": [
+        "גבר",
+        "איש"
+      ]
+    },
+    {
+      "word": "many",
+      "answers": [
+        "רבים",
+        "הרבה"
+      ]
+    },
+    {
+      "word": "market",
+      "answers": [
+        "שוק"
+      ]
+    },
+    {
+      "word": "mean",
+      "answers": [
+        "להתכוון",
+        "ממוצע"
+      ]
+    },
+    {
+      "word": "meet",
+      "answers": [
+        "לפגוש"
+      ]
+    },
+    {
+      "word": "money",
+      "answers": [
+        "כסף"
+      ]
+    },
+    {
+      "word": "month",
+      "answers": [
+        "חודש"
+      ]
+    },
+    {
+      "word": "more",
+      "answers": [
+        "יותר"
+      ]
+    },
+    {
+      "word": "mother",
+      "answers": [
+        "אמא",
+        "אם"
+      ]
+    },
+    {
+      "word": "name",
+      "answers": [
+        "שם"
+      ]
+    },
+    {
+      "word": "near",
+      "answers": [
+        "קרוב",
+        "ליד"
+      ]
+    },
+    {
+      "word": "need",
+      "answers": [
+        "צריך",
+        "צורך"
+      ]
+    },
+    {
+      "word": "never",
+      "answers": [
+        "אף פעם"
+      ]
+    },
+    {
+      "word": "new",
+      "answers": [
+        "חדש"
+      ]
+    },
+    {
+      "word": "night",
+      "answers": [
+        "לילה"
+      ]
+    },
+    {
+      "word": "no",
+      "answers": [
+        "לא"
+      ]
+    },
+    {
+      "word": "not",
+      "answers": [
+        "לא"
+      ]
+    },
+    {
+      "word": "number",
+      "answers": [
+        "מספר"
+      ]
+    },
+    {
+      "word": "nurse",
+      "answers": [
+        "אחות",
+        "אח רפואי"
+      ]
+    },
+    {
+      "word": "offer",
+      "answers": [
+        "להציע",
+        "הצעה"
+      ]
+    },
+    {
+      "word": "often",
+      "answers": [
+        "לעיתים קרובות"
+      ]
+    },
+    {
+      "word": "old",
+      "answers": [
+        "ישן",
+        "מבוגר"
+      ]
+    },
+    {
+      "word": "on",
+      "answers": [
+        "על"
+      ]
+    },
+    {
+      "word": "once",
+      "answers": [
+        "פעם אחת"
+      ]
+    },
+    {
+      "word": "one",
+      "answers": [
+        "אחד"
+      ]
+    },
+    {
+      "word": "only",
+      "answers": [
+        "רק"
+      ]
+    },
+    {
+      "word": "open",
+      "answers": [
+        "פתוח",
+        "לפתוח"
+      ]
+    },
+    {
+      "word": "other",
+      "answers": [
+        "אחר"
+      ]
+    },
+    {
+      "word": "over",
+      "answers": [
+        "מעל"
+      ]
+    },
+    {
+      "word": "page",
+      "answers": [
+        "עמוד",
+        "דף"
+      ]
+    },
+    {
+      "word": "paper",
+      "answers": [
+        "נייר"
+      ]
+    },
+    {
+      "word": "parent",
+      "answers": [
+        "הורה"
+      ]
+    },
+    {
+      "word": "part",
+      "answers": [
+        "חלק"
+      ]
+    },
+    {
+      "word": "people",
+      "answers": [
+        "אנשים"
+      ]
+    },
+    {
+      "word": "place",
+      "answers": [
+        "מקום"
+      ]
+    },
+    {
+      "word": "play",
+      "answers": [
+        "לשחק",
+        "מחזה"
+      ]
+    },
+    {
+      "word": "point",
+      "answers": [
+        "נקודה"
+      ]
+    },
+    {
+      "word": "problem",
+      "answers": [
+        "בעיה"
+      ]
+    },
+    {
+      "word": "public",
+      "answers": [
+        "ציבורי",
+        "ציבור"
+      ]
+    },
+    {
+      "word": "quality",
+      "answers": [
+        "איכות"
+      ]
+    },
+    {
+      "word": "quarter",
+      "answers": [
+        "רבע"
+      ]
+    },
+    {
+      "word": "queen",
+      "answers": [
+        "מלכה"
+      ]
+    },
+    {
+      "word": "question",
+      "answers": [
+        "שאלה"
+      ]
+    },
+    {
+      "word": "quick",
+      "answers": [
+        "מהיר"
+      ]
+    },
+    {
+      "word": "quiet",
+      "answers": [
+        "שקט"
+      ]
+    },
+    {
+      "word": "quit",
+      "answers": [
+        "לעזוב",
+        "להפסיק"
+      ]
+    },
+    {
+      "word": "quite",
+      "answers": [
+        "די",
+        "למדי"
+      ]
+    },
+    {
+      "word": "quiz",
+      "answers": [
+        "חידון"
+      ]
+    },
+    {
+      "word": "quote",
+      "answers": [
+        "ציטוט",
+        "לצטט"
+      ]
+    },
+    {
+      "word": "rain",
+      "answers": [
+        "גשם"
+      ]
+    },
+    {
+      "word": "read",
+      "answers": [
+        "לקרוא"
+      ]
+    },
+    {
+      "word": "ready",
+      "answers": [
+        "מוכן"
+      ]
+    },
+    {
+      "word": "real",
+      "answers": [
+        "אמיתי"
+      ]
+    },
+    {
+      "word": "remember",
+      "answers": [
+        "לזכור"
+      ]
+    },
+    {
+      "word": "right",
+      "answers": [
+        "נכון",
+        "ימין"
+      ]
+    },
+    {
+      "word": "road",
+      "answers": [
+        "דרך",
+        "כביש"
+      ]
+    },
+    {
+      "word": "room",
+      "answers": [
+        "חדר"
+      ]
+    },
+    {
+      "word": "rule",
+      "answers": [
+        "כלל",
+        "לשלוט"
+      ]
+    },
+    {
+      "word": "run",
+      "answers": [
+        "לרוץ"
+      ]
+    },
+    {
+      "word": "same",
+      "answers": [
+        "אותו",
+        "זהה"
+      ]
+    },
+    {
+      "word": "say",
+      "answers": [
+        "לומר",
+        "להגיד"
+      ]
+    },
+    {
+      "word": "school",
+      "answers": [
+        "בית ספר"
+      ]
+    },
+    {
+      "word": "see",
+      "answers": [
+        "לראות"
+      ]
+    },
+    {
+      "word": "she",
+      "answers": [
+        "היא"
+      ]
+    },
+    {
+      "word": "show",
+      "answers": [
+        "להראות",
+        "מופע"
+      ]
+    },
+    {
+      "word": "small",
+      "answers": [
+        "קטן"
+      ]
+    },
+    {
+      "word": "start",
+      "answers": [
+        "להתחיל",
+        "התחלה"
+      ]
+    },
+    {
+      "word": "stop",
+      "answers": [
+        "לעצור",
+        "תחנה"
+      ]
+    },
+    {
+      "word": "story",
+      "answers": [
+        "סיפור"
+      ]
+    },
+    {
+      "word": "take",
+      "answers": [
+        "לקחת"
+      ]
+    },
+    {
+      "word": "talk",
+      "answers": [
+        "לדבר",
+        "שיחה"
+      ]
+    },
+    {
+      "word": "tell",
+      "answers": [
+        "לספר",
+        "להגיד"
+      ]
+    },
+    {
+      "word": "than",
+      "answers": [
+        "מאשר"
+      ]
+    },
+    {
+      "word": "thank",
+      "answers": [
+        "להודות"
+      ]
+    },
+    {
+      "word": "that",
+      "answers": [
+        "זה",
+        "ש"
+      ]
+    },
+    {
+      "word": "think",
+      "answers": [
+        "לחשוב"
+      ]
+    },
+    {
+      "word": "time",
+      "answers": [
+        "זמן",
+        "פעם"
+      ]
+    },
+    {
+      "word": "today",
+      "answers": [
+        "היום"
+      ]
+    },
+    {
+      "word": "together",
+      "answers": [
+        "יחד"
+      ]
+    },
+    {
+      "word": "under",
+      "answers": [
+        "מתחת"
+      ]
+    },
+    {
+      "word": "understand",
+      "answers": [
+        "להבין"
+      ]
+    },
+    {
+      "word": "unit",
+      "answers": [
+        "יחידה"
+      ]
+    },
+    {
+      "word": "until",
+      "answers": [
+        "עד"
+      ]
+    },
+    {
+      "word": "up",
+      "answers": [
+        "למעלה"
+      ]
+    },
+    {
+      "word": "upon",
+      "answers": [
+        "על"
+      ]
+    },
+    {
+      "word": "us",
+      "answers": [
+        "אותנו",
+        "לנו"
+      ]
+    },
+    {
+      "word": "use",
+      "answers": [
+        "להשתמש",
+        "שימוש"
+      ]
+    },
+    {
+      "word": "useful",
+      "answers": [
+        "שימושי"
+      ]
+    },
+    {
+      "word": "usually",
+      "answers": [
+        "בדרך כלל"
+      ]
+    },
+    {
+      "word": "vacation",
+      "answers": [
+        "חופשה"
+      ]
+    },
+    {
+      "word": "value",
+      "answers": [
+        "ערך"
+      ]
+    },
+    {
+      "word": "very",
+      "answers": [
+        "מאוד"
+      ]
+    },
+    {
+      "word": "video",
+      "answers": [
+        "וידאו",
+        "סרטון"
+      ]
+    },
+    {
+      "word": "view",
+      "answers": [
+        "נוף",
+        "תצוגה"
+      ]
+    },
+    {
+      "word": "village",
+      "answers": [
+        "כפר"
+      ]
+    },
+    {
+      "word": "visit",
+      "answers": [
+        "לבקר",
+        "ביקור"
+      ]
+    },
+    {
+      "word": "voice",
+      "answers": [
+        "קול"
+      ]
+    },
+    {
+      "word": "vote",
+      "answers": [
+        "להצביע",
+        "הצבעה"
+      ]
+    },
+    {
+      "word": "vulnerable",
+      "answers": [
+        "פגיע"
+      ]
+    },
+    {
+      "word": "wait",
+      "answers": [
+        "לחכות"
+      ]
+    },
+    {
+      "word": "walk",
+      "answers": [
+        "ללכת",
+        "הליכה"
+      ]
+    },
+    {
+      "word": "wall",
+      "answers": [
+        "קיר"
+      ]
+    },
+    {
+      "word": "want",
+      "answers": [
+        "לרצות"
+      ]
+    },
+    {
+      "word": "war",
+      "answers": [
+        "מלחמה"
+      ]
+    },
+    {
+      "word": "watch",
+      "answers": [
+        "לצפות",
+        "שעון"
+      ]
+    },
+    {
+      "word": "water",
+      "answers": [
+        "מים"
+      ]
+    },
+    {
+      "word": "way",
+      "answers": [
+        "דרך"
+      ]
+    },
+    {
+      "word": "week",
+      "answers": [
+        "שבוע"
+      ]
+    },
+    {
+      "word": "work",
+      "answers": [
+        "לעבוד",
+        "עבודה"
+      ]
+    },
+    {
+      "word": "xanthic",
+      "answers": [
+        "צהבהב"
+      ]
+    },
+    {
+      "word": "xenon",
+      "answers": [
+        "קסנון"
+      ]
+    },
+    {
+      "word": "xenophobia",
+      "answers": [
+        "שנאת זרים"
+      ]
+    },
+    {
+      "word": "xeric",
+      "answers": [
+        "צחיח"
+      ]
+    },
+    {
+      "word": "xerox",
+      "answers": [
+        "צילום מסמכים",
+        "לצלם"
+      ]
+    },
+    {
+      "word": "xiphoid",
+      "answers": [
+        "דמוי חרב"
+      ]
+    },
+    {
+      "word": "xylem",
+      "answers": [
+        "עצה"
+      ]
+    },
+    {
+      "word": "xylitol",
+      "answers": [
+        "קסיליטול"
+      ]
+    },
+    {
+      "word": "xylophone",
+      "answers": [
+        "קסילופון"
+      ]
+    },
+    {
+      "word": "xylophonist",
+      "answers": [
+        "נגן קסילופון"
+      ]
+    },
+    {
+      "word": "yard",
+      "answers": [
+        "חצר"
+      ]
+    },
+    {
+      "word": "yeah",
+      "answers": [
+        "כן"
+      ]
+    },
+    {
+      "word": "year",
+      "answers": [
+        "שנה"
+      ]
+    },
+    {
+      "word": "yellow",
+      "answers": [
+        "צהוב"
+      ]
+    },
+    {
+      "word": "yes",
+      "answers": [
+        "כן"
+      ]
+    },
+    {
+      "word": "yesterday",
+      "answers": [
+        "אתמול"
+      ]
+    },
+    {
+      "word": "yet",
+      "answers": [
+        "עדיין"
+      ]
+    },
+    {
+      "word": "young",
+      "answers": [
+        "צעיר"
+      ]
+    },
+    {
+      "word": "your",
+      "answers": [
+        "שלך"
+      ]
+    },
+    {
+      "word": "yourself",
+      "answers": [
+        "עצמך"
+      ]
+    },
+    {
+      "word": "zebra",
+      "answers": [
+        "זברה"
+      ]
+    },
+    {
+      "word": "zero",
+      "answers": [
+        "אפס"
+      ]
+    },
+    {
+      "word": "zest",
+      "answers": [
+        "התלהבות"
+      ]
+    },
+    {
+      "word": "zigzag",
+      "answers": [
+        "זיגזג"
+      ]
+    },
+    {
+      "word": "zinc",
+      "answers": [
+        "אבץ"
+      ]
+    },
+    {
+      "word": "zip",
+      "answers": [
+        "רוכסן",
+        "לסגור ברוכסן"
+      ]
+    },
+    {
+      "word": "zone",
+      "answers": [
+        "אזור"
+      ]
+    },
+    {
+      "word": "zoo",
+      "answers": [
+        "גן חיות"
+      ]
+    },
+    {
+      "word": "zoom",
+      "answers": [
+        "זום",
+        "להתקרב"
+      ]
+    },
+    {
+      "word": "zucchini",
+      "answers": [
+        "קישוא"
+      ]
+    },
+    {
+      "word": "abbreviate",
+      "answers": [
+        "לקצר"
+      ]
+    },
+    {
+      "word": "abdomen",
+      "answers": [
+        "בטן"
+      ]
+    },
+    {
+      "word": "ability",
+      "answers": [
+        "יכולת"
+      ]
+    },
+    {
+      "word": "abnormal",
+      "answers": [
+        "לא נורמלי"
+      ]
+    },
+    {
+      "word": "abolish",
+      "answers": [
+        "לבטל"
+      ]
+    },
+    {
+      "word": "absolute",
+      "answers": [
+        "מוחלט",
+        "מושלם"
+      ]
+    },
+    {
+      "word": "absolutely",
+      "answers": [
+        "באופן מוחלט"
+      ]
+    },
+    {
+      "word": "absorb",
+      "answers": [
+        "לקלוט",
+        "לספוג",
+        "להתעמק"
+      ]
+    },
+    {
+      "word": "absorbent",
+      "answers": [
+        "בעל כושר ספיגה"
+      ]
+    },
+    {
+      "word": "acceptable",
+      "answers": [
+        "מקובל"
+      ]
+    },
+    {
+      "word": "account",
+      "answers": [
+        "חשבון"
+      ]
+    },
+    {
+      "word": "admit",
+      "answers": [
+        "להכניס"
+      ]
+    },
+    {
+      "word": "admittance",
+      "answers": [
+        "הכנסה"
+      ]
+    },
+    {
+      "word": "ambiguity",
+      "answers": [
+        "דו משמעות"
+      ]
+    },
+    {
+      "word": "appeal",
+      "answers": [
+        "לבקש"
+      ]
+    },
+    {
+      "word": "approval",
+      "answers": [
+        "אישור"
+      ]
+    },
+    {
+      "word": "argument",
+      "answers": [
+        "טיעון"
+      ]
+    },
+    {
+      "word": "arouse",
+      "answers": [
+        "לעורר"
+      ]
+    },
+    {
+      "word": "beef",
+      "answers": [
+        "בשר בקר"
+      ]
+    },
+    {
+      "word": "bill",
+      "answers": [
+        "חשבון"
+      ]
+    },
+    {
+      "word": "check",
+      "answers": [
+        "חשבון"
+      ]
+    },
+    {
+      "word": "chicken",
+      "answers": [
+        "בשר עוף"
+      ]
+    },
+    {
+      "word": "community",
+      "answers": [
+        "קהילה"
+      ]
+    },
+    {
+      "word": "compassion",
+      "answers": [
+        "רחמים"
+      ]
+    },
+    {
+      "word": "compatible",
+      "answers": [
+        "תואם"
+      ]
+    },
+    {
+      "word": "compel",
+      "answers": [
+        "לכפות"
+      ]
+    },
+    {
+      "word": "competent",
+      "answers": [
+        "כשיר"
+      ]
+    },
+    {
+      "word": "competition",
+      "answers": [
+        "תחרות"
+      ]
+    },
+    {
+      "word": "complete",
+      "answers": [
+        "להשלים"
+      ]
+    },
+    {
+      "word": "complex",
+      "answers": [
+        "מורכב"
+      ]
+    },
+    {
+      "word": "comprehend",
+      "answers": [
+        "להבין"
+      ]
+    },
+    {
+      "word": "compromise",
+      "answers": [
+        "פשרה",
+        "להשלים"
+      ]
+    },
+    {
+      "word": "concentration",
+      "answers": [
+        "התרכזות"
+      ]
+    },
+    {
+      "word": "concept",
+      "answers": [
+        "רעיון"
+      ]
+    },
+    {
+      "word": "concern",
+      "answers": [
+        "דאגה"
+      ]
+    },
+    {
+      "word": "conclude",
+      "answers": [
+        "להסיק"
+      ]
+    },
+    {
+      "word": "concrete",
+      "answers": [
+        "בטון"
+      ]
+    },
+    {
+      "word": "condition",
+      "answers": [
+        "מצב"
+      ]
+    },
+    {
+      "word": "conduct",
+      "answers": [
+        "להוביל",
+        "התנהגות"
+      ]
+    },
+    {
+      "word": "conference",
+      "answers": [
+        "כנס"
+      ]
+    },
+    {
+      "word": "confess",
+      "answers": [
+        "להודות"
+      ]
+    },
+    {
+      "word": "confident",
+      "answers": [
+        "בטוח"
+      ]
+    },
+    {
+      "word": "conflict",
+      "answers": [
+        "התנגדות"
+      ]
+    },
+    {
+      "word": "confuse",
+      "answers": [
+        "לבלבל"
+      ]
+    },
+    {
+      "word": "conquer",
+      "answers": [
+        "לכבוש"
+      ]
+    },
+    {
+      "word": "consent",
+      "answers": [
+        "הסכמה"
+      ]
+    },
+    {
+      "word": "consequence",
+      "answers": [
+        "השלכה"
+      ]
+    },
+    {
+      "word": "conserve",
+      "answers": [
+        "לשמור"
+      ]
+    },
+    {
+      "word": "consider",
+      "answers": [
+        "לשקול"
+      ]
+    },
+    {
+      "word": "consistent",
+      "answers": [
+        "עקבי"
+      ]
+    },
+    {
+      "word": "consumer",
+      "answers": [
+        "צרכן"
+      ]
+    },
+    {
+      "word": "contemporary",
+      "answers": [
+        "עכשווי"
+      ]
+    },
+    {
+      "word": "contribution",
+      "answers": [
+        "תרומה"
+      ]
+    },
+    {
+      "word": "convenient",
+      "answers": [
+        "נוח"
+      ]
+    },
+    {
+      "word": "conversation",
+      "answers": [
+        "שיחה"
+      ]
+    },
+    {
+      "word": "cooperate",
+      "answers": [
+        "לשתף פעולה"
+      ]
+    },
+    {
+      "word": "cutlery",
+      "answers": [
+        "סכו״ם"
+      ]
+    },
+    {
+      "word": "dessert",
+      "answers": [
+        "קינוח"
+      ]
+    },
+    {
+      "word": "main course",
+      "answers": [
+        "מנה עיקרית"
+      ]
+    },
+    {
+      "word": "menu",
+      "answers": [
+        "תפריט"
+      ]
+    },
+    {
+      "word": "napkin",
+      "answers": [
+        "מפית"
+      ]
+    },
+    {
+      "word": "pitcher",
+      "answers": [
+        "קנקן"
+      ]
+    },
+    {
+      "word": "pork",
+      "answers": [
+        "בשר חזיר"
+      ]
+    },
+    {
+      "word": "side dish",
+      "answers": [
+        "תוספת"
+      ]
+    },
+    {
+      "word": "starter",
+      "answers": [
+        "מנת פתיחה"
+      ]
+    },
+    {
+      "word": "topping",
+      "answers": [
+        "תוספת"
+      ]
+    },
+    {
+      "word": "waiter",
+      "answers": [
+        "מלצר"
+      ]
+    },
+    {
+      "word": "waitress",
+      "answers": [
+        "מלצרית"
+      ]
+    }
+  ]
+}
