@@ -42,7 +42,24 @@ function parseWiktionaryHebrew(text){
   return map;
 }
 
+function updateBankSummary(){
+  if(!Array.isArray(WORDS)) return;
+  const alphabet=document.getElementById('alphabet');
+  if(!alphabet) return;
+  let summary=document.getElementById('vocabBankSummary');
+  if(!summary){
+    summary=document.createElement('div');
+    summary.id='vocabBankSummary';
+    summary.style.cssText='display:flex;justify-content:center;gap:42px;margin-top:22px;padding-top:18px;border-top:1px solid #e6e8ee;text-align:center';
+    alphabet.insertAdjacentElement('afterend',summary);
+  }
+  const ready=WORDS.filter(w=>Array.isArray(w.answers)&&w.answers.length).length;
+  const bank=WORDS.length;
+  summary.innerHTML=`<div><div style="font-size:12px;font-weight:800;letter-spacing:.08em;color:#667085;text-transform:uppercase">Ready</div><div style="font-size:30px;font-weight:900;margin-top:3px">${ready.toLocaleString()}</div></div><div><div style="font-size:12px;font-weight:800;letter-spacing:.08em;color:#667085;text-transform:uppercase">Bank</div><div style="font-size:30px;font-weight:900;margin-top:3px">${bank.toLocaleString()}</div></div>`;
+}
+
 async function enrichVocabularyTranslations(){
+  updateBankSummary();
   try{
     const response=await fetch(EN_HE_WIKTIONARY_URL,{cache:'no-store'});
     if(!response.ok) throw new Error('translation source unavailable');
@@ -59,8 +76,10 @@ async function enrichVocabularyTranslations(){
     }
     localStorage.setItem('english100.translationCoverage',JSON.stringify({translated,total:WORDS.length,source:'Wiktionary EN→HE'}));
     renderLetters();
+    updateBankSummary();
     console.info(`[English 100] translations ready: ${translated}/${WORDS.length}`);
   }catch(error){
+    updateBankSummary();
     console.warn('[English 100] translation enrichment failed',error);
   }
 }
