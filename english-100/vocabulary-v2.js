@@ -8,12 +8,14 @@ const save=()=>localStorage.setItem('english100-vocab',JSON.stringify(state));
 const $=id=>document.getElementById(id);
 
 function translatedWords(){return WORDS.filter(w=>Array.isArray(w.answers)&&w.answers.length)}
-function updateBankSummary(status='V2 · 200 translated words per letter'){
+function updateBankSummary(status='V2.1 · 200 translated entries per letter',loading=false){
   const alphabet=$('alphabet');if(!alphabet)return;
   let summary=$('vocabBankSummary');
   if(!summary){summary=document.createElement('div');summary.id='vocabBankSummary';summary.style.cssText='display:flex;justify-content:center;gap:42px;margin-top:22px;padding-top:18px;border-top:1px solid #e6e8ee;text-align:center;position:relative';alphabet.insertAdjacentElement('afterend',summary)}
   const ready=translatedWords().length,bank=WORDS.length;
-  summary.innerHTML=`<div><div style="font-size:12px;font-weight:800;letter-spacing:.08em;color:#667085;text-transform:uppercase">Ready</div><div style="font-size:30px;font-weight:900;margin-top:3px">${ready.toLocaleString()}</div></div><div><div style="font-size:12px;font-weight:800;letter-spacing:.08em;color:#667085;text-transform:uppercase">Bank</div><div style="font-size:30px;font-weight:900;margin-top:3px">${bank.toLocaleString()}</div></div><div style="position:absolute;top:100%;margin-top:8px;font-size:11px;color:#667085">${status}</div>`;
+  const readyText=loading?'…':ready.toLocaleString();
+  const bankText=loading?'…':bank.toLocaleString();
+  summary.innerHTML=`<div><div style="font-size:12px;font-weight:800;letter-spacing:.08em;color:#667085;text-transform:uppercase">Ready</div><div style="font-size:30px;font-weight:900;margin-top:3px">${readyText}</div></div><div><div style="font-size:12px;font-weight:800;letter-spacing:.08em;color:#667085;text-transform:uppercase">Bank</div><div style="font-size:30px;font-weight:900;margin-top:3px">${bankText}</div></div><div style="position:absolute;top:100%;margin-top:8px;font-size:11px;color:#667085;max-width:760px">${status}</div>`;
 }
 function renderLetters(){const el=$('alphabet');el.innerHTML='';'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(l=>{const all=WORDS.filter(w=>w.word[0]===l.toLowerCase()),ready=all.filter(w=>w.answers.length);const b=document.createElement('button');b.className='letter-btn';b.innerHTML=`<strong>${l}</strong><span>${ready.length} ready</span><small>${all.length} bank</small>`;b.disabled=!ready.length;b.onclick=()=>start(ready,`Letter ${l}`);el.appendChild(b)});updateBankSummary()}
 function setLocked(value){locked=value;$('answerInput').disabled=value;$('checkAnswer').disabled=value;$('dontKnow').disabled=value}
@@ -25,16 +27,19 @@ function check(skip=false){if(locked||!queue.length)return;const w=queue[idx],in
 function updateCounts(){$('masteredCount').textContent=Object.values(state).filter(x=>x.correct>=3).length}
 
 async function init(){
-  updateBankSummary('V2 · Loading 5,200 translated words…');
+  updateBankSummary('V2.1 · Loading the 5,200 translated entries…',true);
   try{
+    if(typeof window.loadV2Bank!=='function') throw new Error('bank loader missing');
     WORDS=await window.loadV2Bank();
     localStorage.setItem('english100.wordBankSize',String(WORDS.length));
     renderLetters();updateCounts();
-    const valid=WORDS.length===5200&&'abcdefghijklmnopqrstuvwxyz'.split('').every(letter=>WORDS.filter(w=>w.word[0]===letter).length===200);
-    updateBankSummary(valid?'V2 · 200 translated words per letter':'V2 validation failed');
+    const counts={};WORDS.forEach(w=>counts[w.word[0]]=(counts[w.word[0]]||0)+1);
+    const valid=WORDS.length===5200&&'abcdefghijklmnopqrstuvwxyz'.split('').every(letter=>counts[letter]===200);
+    if(!valid) throw new Error(`validation failed: ${WORDS.length} total`);
+    updateBankSummary('V2.1 · 200 translated entries per letter');
   }catch(error){
-    console.error('[English 100 V2]',error);
-    WORDS=[];renderLetters();updateCounts();updateBankSummary(`V2 load failed · ${error.message}`);
+    console.error('[English 100 V2.1]',error);
+    WORDS=[];renderLetters();updateCounts();updateBankSummary(`V2.1 load failed · ${error.message}`);
   }
 }
 
