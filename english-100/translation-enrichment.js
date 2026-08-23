@@ -1,4 +1,7 @@
-const EN_HE_WIKTIONARY_URL='https://raw.githubusercontent.com/open-dsl-dict/wiktionary-dict/master/src/en-he-enwiktionary.txt';
+const EN_HE_WIKTIONARY_SOURCES=[
+  'https://cdn.jsdelivr.net/gh/open-dsl-dict/wiktionary-dict@master/src/en-he-enwiktionary.txt',
+  'https://raw.githubusercontent.com/open-dsl-dict/wiktionary-dict/master/src/en-he-enwiktionary.txt'
+];
 
 function stripTranslationMeta(value){
   return (value||'')
@@ -54,27 +57,47 @@ function getVisibleLetterTotals(){
   return {ready,bank,letters:buttons.length};
 }
 
-function updateBankSummary(){
+function updateBankSummary(status=''){
   const alphabet=document.getElementById('alphabet');
   if(!alphabet) return;
   let summary=document.getElementById('vocabBankSummary');
   if(!summary){
     summary=document.createElement('div');
     summary.id='vocabBankSummary';
-    summary.style.cssText='display:flex;justify-content:center;gap:42px;margin-top:22px;padding-top:18px;border-top:1px solid #e6e8ee;text-align:center';
+    summary.style.cssText='display:flex;justify-content:center;gap:42px;margin-top:22px;padding-top:18px;border-top:1px solid #e6e8ee;text-align:center;position:relative';
     alphabet.insertAdjacentElement('afterend',summary);
   }
   const totals=getVisibleLetterTotals();
-  summary.innerHTML=`<div><div style="font-size:12px;font-weight:800;letter-spacing:.08em;color:#667085;text-transform:uppercase">Ready</div><div style="font-size:30px;font-weight:900;margin-top:3px">${totals.ready.toLocaleString()}</div></div><div><div style="font-size:12px;font-weight:800;letter-spacing:.08em;color:#667085;text-transform:uppercase">Bank</div><div style="font-size:30px;font-weight:900;margin-top:3px">${totals.bank.toLocaleString()}</div></div>`;
+  summary.innerHTML=`<div><div style="font-size:12px;font-weight:800;letter-spacing:.08em;color:#667085;text-transform:uppercase">Ready</div><div style="font-size:30px;font-weight:900;margin-top:3px">${totals.ready.toLocaleString()}</div></div><div><div style="font-size:12px;font-weight:800;letter-spacing:.08em;color:#667085;text-transform:uppercase">Bank</div><div style="font-size:30px;font-weight:900;margin-top:3px">${totals.bank.toLocaleString()}</div></div>${status?`<div style="position:absolute;top:100%;margin-top:8px;font-size:11px;color:#667085">${status}</div>`:''}`;
   localStorage.setItem('english100.visibleLetterTotals',JSON.stringify(totals));
 }
 
+async function fetchTranslationText(){
+  const errors=[];
+  for(const url of EN_HE_WIKTIONARY_SOURCES){
+    const controller=new AbortController();
+    const timer=setTimeout(()=>controller.abort(),15000);
+    try{
+      const response=await fetch(url,{cache:'no-store',mode:'cors',signal:controller.signal});
+      if(!response.ok) throw new Error(`HTTP ${response.status}`);
+      const text=await response.text();
+      if(text.length<100000) throw new Error('dictionary response too small');
+      return {text,url};
+    }catch(error){
+      errors.push(`${url}: ${error.message}`);
+    }finally{
+      clearTimeout(timer);
+    }
+  }
+  throw new Error(errors.join(' | '));
+}
+
 async function enrichVocabularyTranslations(){
-  updateBankSummary();
+  updateBankSummary('Loading Hebrew translations…');
   try{
-    const response=await fetch(EN_HE_WIKTIONARY_URL,{cache:'no-store'});
-    if(!response.ok) throw new Error('translation source unavailable');
-    const dict=parseWiktionaryHebrew(await response.text());
+    const {text,url}=await fetchTranslationText();
+    const dict=parseWiktionaryHebrew(text);
+    if(dict.size<1000) throw new Error(`parsed only ${dict.size} dictionary entries`);
     let translated=0;
     for(const item of WORDS){
       const extra=dict.get(item.word)||[];
@@ -85,17 +108,19 @@ async function enrichVocabularyTranslations(){
       item.answers=merged.slice(0,8);
       if(item.answers.length) translated++;
     }
-    localStorage.setItem('english100.translationCoverage',JSON.stringify({translated,total:WORDS.length,source:'Wiktionary EN→HE'}));
+    localStorage.setItem('english100.translationCoverage',JSON.stringify({translated,total:WORDS.length,source:url,dictionaryEntries:dict.size,loadedAt:new Date().toISOString()}));
     renderLetters();
-    updateBankSummary();
-    console.info(`[English 100] translations ready: ${translated}/${WORDS.length}`);
+    updateBankSummary(`Translations loaded · ${translated.toLocaleString()} ready`);
+    console.info(`[English 100] translations ready: ${translated}/${WORDS.length} from ${url}`);
   }catch(error){
-    updateBankSummary();
-    console.warn('[English 100] translation enrichment failed',error);
+    localStorage.setItem('english100.translationError',String(error?.message||error));
+    updateBankSummary('Translation source failed — refresh to retry');
+    console.error('[English 100] translation enrichment failed',error);
   }
 }
 
 (async()=>{
-  for(let i=0;i<100&&(!Array.isArray(WORDS)||!WORDS.length);i++) await new Promise(r=>setTimeout(r,50));
+  for(let i=0;i<200&&(!Array.isArray(WORDS)||!WORDS.length);i++) await new Promise(r=>setTimeout(r,50));
   if(Array.isArray(WORDS)&&WORDS.length) enrichVocabularyTranslations();
+  else updateBankSummary('Word bank did not finish loading');
 })();
