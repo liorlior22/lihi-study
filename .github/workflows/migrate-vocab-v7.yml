@@ -1,0 +1,31 @@
+name: Migrate Vocabulary V7
+
+on:
+  push:
+    branches: [english-100-prototype]
+    paths:
+      - 'scripts/migrate-vocab-bank.js'
+      - '.github/workflows/migrate-vocab-v7.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: english-100-prototype
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/migrate-vocab-bank.js
+      - name: Commit generated bank
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add english-100/vocab-bank.json
+          git diff --cached --quiet || git commit -m "V7: generate central vocabulary bank"
+          git push origin HEAD:english-100-prototype
