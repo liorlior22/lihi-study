@@ -6,7 +6,8 @@ const V2_FREQ_SOURCES=[
   'https://cdn.jsdelivr.net/gh/david47k/top-english-wordlists@master/top_english_words_lower_50000.txt',
   'https://raw.githubusercontent.com/david47k/top-english-wordlists/master/top_english_words_lower_50000.txt'
 ];
-const V2_KEY='english100-v2-5200-text-1';
+const V2_KEY='english100-v2-5200-text-2';
+const V2_TERM=/^[a-z][a-z '\-]*$/;
 
 function v2CleanHebrew(value){
   return (value||'')
@@ -42,8 +43,8 @@ function v2ParseDictionary(text){
     const tab=rawLine.indexOf('\t');
     if(tab<1) continue;
     const hebrew=v2CleanHebrew(rawLine.slice(0,tab));
-    const english=rawLine.slice(tab+1).trim().toLowerCase();
-    if(!hebrew||!/[\u05D0-\u05EA]/.test(hebrew)||!/^[a-z]+$/.test(english)) continue;
+    const english=rawLine.slice(tab+1).trim().toLowerCase().replace(/\s+/g,' ');
+    if(!hebrew||!/[\u05D0-\u05EA]/.test(hebrew)||!V2_TERM.test(english)) continue;
     const answers=map.get(english)||[];
     if(!answers.includes(hebrew)) answers.push(hebrew);
     map.set(english,answers.slice(0,8));
@@ -55,7 +56,7 @@ function v2ValidateBank(bank){
   if(!Array.isArray(bank)||bank.length!==5200) return false;
   const counts={};
   for(const item of bank){
-    if(!item||!/^[a-z]+$/.test(item.word)||!Array.isArray(item.answers)||!item.answers.length) return false;
+    if(!item||!V2_TERM.test(item.word)||!Array.isArray(item.answers)||!item.answers.length) return false;
     counts[item.word[0]]=(counts[item.word[0]]||0)+1;
   }
   return 'abcdefghijklmnopqrstuvwxyz'.split('').every(letter=>counts[letter]===200);
@@ -81,16 +82,19 @@ async function makeV2Bank(){
 
   const final=[];
   for(const letter of 'abcdefghijklmnopqrstuvwxyz'){
-    const candidates=byLetter[letter]
-      .sort((a,b)=>(rank.get(a)??9999999)-(rank.get(b)??9999999)||a.localeCompare(b,'en'));
-    if(candidates.length<200) throw new Error(`${letter.toUpperCase()} has only ${candidates.length} translated single words`);
+    const candidates=byLetter[letter].sort((a,b)=>{
+      const aRank=rank.has(a)?rank.get(a):(/^[a-z]+$/.test(a)?10000000:20000000);
+      const bRank=rank.has(b)?rank.get(b):(/^[a-z]+$/.test(b)?10000000:20000000);
+      return aRank-bRank||a.localeCompare(b,'en');
+    });
+    if(candidates.length<200) throw new Error(`${letter.toUpperCase()} has only ${candidates.length} translated entries`);
     const chosen=candidates.slice(0,200).sort((a,b)=>a.localeCompare(b,'en'));
     for(const word of chosen) final.push({word,answers:map.get(word)});
   }
 
   if(!v2ValidateBank(final)) throw new Error(`V2 validation failed (${final.length})`);
   localStorage.setItem(V2_KEY,JSON.stringify(final));
-  localStorage.setItem('english100-v2-source','Wikidata CC0 he-en · 200 words per letter');
+  localStorage.setItem('english100-v2-source','Wikidata CC0 he-en · 200 translated entries per letter');
   return final;
 }
 
