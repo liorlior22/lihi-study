@@ -1,12 +1,42 @@
 {
-  "version": 7,
-  "count": 329,
+  "version": 8,
+  "count": 330,
   "words": [
+    {
+      "word": "abbreviate",
+      "answers": [
+        "לקצר"
+      ]
+    },
+    {
+      "word": "abdomen",
+      "answers": [
+        "בטן"
+      ]
+    },
+    {
+      "word": "ability",
+      "answers": [
+        "יכולת"
+      ]
+    },
     {
       "word": "able",
       "answers": [
         "מסוגל",
         "יכול"
+      ]
+    },
+    {
+      "word": "abnormal",
+      "answers": [
+        "לא נורמלי"
+      ]
+    },
+    {
+      "word": "abolish",
+      "answers": [
+        "לבטל"
       ]
     },
     {
@@ -23,6 +53,33 @@
       ]
     },
     {
+      "word": "absolute",
+      "answers": [
+        "מוחלט",
+        "מושלם"
+      ]
+    },
+    {
+      "word": "absolutely",
+      "answers": [
+        "באופן מוחלט"
+      ]
+    },
+    {
+      "word": "absorb",
+      "answers": [
+        "לקלוט",
+        "לספוג",
+        "להתעמק"
+      ]
+    },
+    {
+      "word": "absorbent",
+      "answers": [
+        "בעל כושר ספיגה"
+      ]
+    },
+    {
       "word": "accept",
       "answers": [
         "לקבל",
@@ -30,9 +87,21 @@
       ]
     },
     {
+      "word": "acceptable",
+      "answers": [
+        "מקובל"
+      ]
+    },
+    {
       "word": "accident",
       "answers": [
         "תאונה"
+      ]
+    },
+    {
+      "word": "account",
+      "answers": [
+        "חשבון"
       ]
     },
     {
@@ -54,6 +123,18 @@
       ]
     },
     {
+      "word": "admit",
+      "answers": [
+        "להכניס"
+      ]
+    },
+    {
+      "word": "admittance",
+      "answers": [
+        "הכנסה"
+      ]
+    },
+    {
       "word": "advice",
       "answers": [
         "עצה"
@@ -64,6 +145,36 @@
       "answers": [
         "מפחד",
         "חושש"
+      ]
+    },
+    {
+      "word": "ambiguity",
+      "answers": [
+        "דו משמעות"
+      ]
+    },
+    {
+      "word": "appeal",
+      "answers": [
+        "לבקש"
+      ]
+    },
+    {
+      "word": "approval",
+      "answers": [
+        "אישור"
+      ]
+    },
+    {
+      "word": "argument",
+      "answers": [
+        "טיעון"
+      ]
+    },
+    {
+      "word": "arouse",
+      "answers": [
+        "לעורר"
       ]
     },
     {
@@ -123,9 +234,21 @@
       ]
     },
     {
+      "word": "beef",
+      "answers": [
+        "בשר בקר"
+      ]
+    },
+    {
       "word": "before",
       "answers": [
         "לפני"
+      ]
+    },
+    {
+      "word": "bill",
+      "answers": [
+        "חשבון"
       ]
     },
     {
@@ -150,6 +273,12 @@
       ]
     },
     {
+      "word": "carrot",
+      "answers": [
+        "גזר"
+      ]
+    },
+    {
       "word": "carry",
       "answers": [
         "לשאת",
@@ -167,6 +296,18 @@
       "answers": [
         "שינוי",
         "לשנות"
+      ]
+    },
+    {
+      "word": "check",
+      "answers": [
+        "חשבון"
+      ]
+    },
+    {
+      "word": "chicken",
+      "answers": [
+        "בשר עוף"
       ]
     },
     {
@@ -194,6 +335,218 @@
       "answers": [
         "לסגור",
         "קרוב"
+      ]
+    },
+    {
+      "word": "community",
+      "answers": [
+        "קהילה"
+      ]
+    },
+    {
+      "word": "compassion",
+      "answers": [
+        "רחמים"
+      ]
+    },
+    {
+      "word": "compatible",
+      "answers": [
+        "תואם"
+      ]
+    },
+    {
+      "word": "compel",
+      "answers": [
+        "לכפות"
+      ]
+    },
+    {
+      "word": "competent",
+      "answers": [
+        "כשיר"
+      ]
+    },
+    {
+      "word": "competition",
+      "answers": [
+        "תחרות"
+      ]
+    },
+    {
+      "word": "complete",
+      "answers": [
+        "להשלים"
+      ]
+    },
+    {
+      "word": "complex",
+      "answers": [
+        "מורכב"
+      ]
+    },
+    {
+      "word": "comprehend",
+      "answers": [
+        "להבין"
+      ]
+    },
+    {
+      "word": "compromise",
+      "answers": [
+        "פשרה",
+        "להשלים"
+      ]
+    },
+    {
+      "word": "concentration",
+      "answers": [
+        "התרכזות"
+      ]
+    },
+    {
+      "word": "concept",
+      "answers": [
+        "רעיון"
+      ]
+    },
+    {
+      "word": "concern",
+      "answers": [
+        "דאגה"
+      ]
+    },
+    {
+      "word": "conclude",
+      "answers": [
+        "להסיק"
+      ]
+    },
+    {
+      "word": "concrete",
+      "answers": [
+        "בטון"
+      ]
+    },
+    {
+      "word": "condition",
+      "answers": [
+        "מצב"
+      ]
+    },
+    {
+      "word": "conduct",
+      "answers": [
+        "להוביל",
+        "התנהגות"
+      ]
+    },
+    {
+      "word": "conference",
+      "answers": [
+        "כנס"
+      ]
+    },
+    {
+      "word": "confess",
+      "answers": [
+        "להודות"
+      ]
+    },
+    {
+      "word": "confident",
+      "answers": [
+        "בטוח"
+      ]
+    },
+    {
+      "word": "conflict",
+      "answers": [
+        "התנגדות"
+      ]
+    },
+    {
+      "word": "confuse",
+      "answers": [
+        "לבלבל"
+      ]
+    },
+    {
+      "word": "conquer",
+      "answers": [
+        "לכבוש"
+      ]
+    },
+    {
+      "word": "consent",
+      "answers": [
+        "הסכמה"
+      ]
+    },
+    {
+      "word": "consequence",
+      "answers": [
+        "השלכה"
+      ]
+    },
+    {
+      "word": "conserve",
+      "answers": [
+        "לשמור"
+      ]
+    },
+    {
+      "word": "consider",
+      "answers": [
+        "לשקול"
+      ]
+    },
+    {
+      "word": "consistent",
+      "answers": [
+        "עקבי"
+      ]
+    },
+    {
+      "word": "consumer",
+      "answers": [
+        "צרכן"
+      ]
+    },
+    {
+      "word": "contemporary",
+      "answers": [
+        "עכשווי"
+      ]
+    },
+    {
+      "word": "contribution",
+      "answers": [
+        "תרומה"
+      ]
+    },
+    {
+      "word": "convenient",
+      "answers": [
+        "נוח"
+      ]
+    },
+    {
+      "word": "conversation",
+      "answers": [
+        "שיחה"
+      ]
+    },
+    {
+      "word": "cooperate",
+      "answers": [
+        "לשתף פעולה"
+      ]
+    },
+    {
+      "word": "cutlery",
+      "answers": [
+        "סכו״ם"
       ]
     },
     {
@@ -232,6 +585,12 @@
       "word": "decide",
       "answers": [
         "להחליט"
+      ]
+    },
+    {
+      "word": "dessert",
+      "answers": [
+        "קינוח"
       ]
     },
     {
@@ -769,6 +1128,12 @@
       ]
     },
     {
+      "word": "main course",
+      "answers": [
+        "מנה עיקרית"
+      ]
+    },
+    {
       "word": "make",
       "answers": [
         "לעשות",
@@ -809,6 +1174,12 @@
       ]
     },
     {
+      "word": "menu",
+      "answers": [
+        "תפריט"
+      ]
+    },
+    {
       "word": "money",
       "answers": [
         "כסף"
@@ -837,6 +1208,12 @@
       "word": "name",
       "answers": [
         "שם"
+      ]
+    },
+    {
+      "word": "napkin",
+      "answers": [
+        "מפית"
       ]
     },
     {
@@ -991,6 +1368,18 @@
       ]
     },
     {
+      "word": "piano",
+      "answers": [
+        "פסנתר"
+      ]
+    },
+    {
+      "word": "pitcher",
+      "answers": [
+        "קנקן"
+      ]
+    },
+    {
       "word": "place",
       "answers": [
         "מקום"
@@ -1007,6 +1396,12 @@
       "word": "point",
       "answers": [
         "נקודה"
+      ]
+    },
+    {
+      "word": "pork",
+      "answers": [
+        "בשר חזיר"
       ]
     },
     {
@@ -1188,6 +1583,12 @@
       ]
     },
     {
+      "word": "side dish",
+      "answers": [
+        "תוספת"
+      ]
+    },
+    {
       "word": "small",
       "answers": [
         "קטן"
@@ -1198,6 +1599,12 @@
       "answers": [
         "להתחיל",
         "התחלה"
+      ]
+    },
+    {
+      "word": "starter",
+      "answers": [
+        "מנת פתיחה"
       ]
     },
     {
@@ -1275,6 +1682,12 @@
       "word": "together",
       "answers": [
         "יחד"
+      ]
+    },
+    {
+      "word": "topping",
+      "answers": [
+        "תוספת"
       ]
     },
     {
@@ -1407,6 +1820,18 @@
       "word": "wait",
       "answers": [
         "לחכות"
+      ]
+    },
+    {
+      "word": "waiter",
+      "answers": [
+        "מלצר"
+      ]
+    },
+    {
+      "word": "waitress",
+      "answers": [
+        "מלצרית"
       ]
     },
     {
@@ -1647,425 +2072,6 @@
       "word": "zucchini",
       "answers": [
         "קישוא"
-      ]
-    },
-    {
-      "word": "abbreviate",
-      "answers": [
-        "לקצר"
-      ]
-    },
-    {
-      "word": "abdomen",
-      "answers": [
-        "בטן"
-      ]
-    },
-    {
-      "word": "ability",
-      "answers": [
-        "יכולת"
-      ]
-    },
-    {
-      "word": "abnormal",
-      "answers": [
-        "לא נורמלי"
-      ]
-    },
-    {
-      "word": "abolish",
-      "answers": [
-        "לבטל"
-      ]
-    },
-    {
-      "word": "absolute",
-      "answers": [
-        "מוחלט",
-        "מושלם"
-      ]
-    },
-    {
-      "word": "absolutely",
-      "answers": [
-        "באופן מוחלט"
-      ]
-    },
-    {
-      "word": "absorb",
-      "answers": [
-        "לקלוט",
-        "לספוג",
-        "להתעמק"
-      ]
-    },
-    {
-      "word": "absorbent",
-      "answers": [
-        "בעל כושר ספיגה"
-      ]
-    },
-    {
-      "word": "acceptable",
-      "answers": [
-        "מקובל"
-      ]
-    },
-    {
-      "word": "account",
-      "answers": [
-        "חשבון"
-      ]
-    },
-    {
-      "word": "admit",
-      "answers": [
-        "להכניס"
-      ]
-    },
-    {
-      "word": "admittance",
-      "answers": [
-        "הכנסה"
-      ]
-    },
-    {
-      "word": "ambiguity",
-      "answers": [
-        "דו משמעות"
-      ]
-    },
-    {
-      "word": "appeal",
-      "answers": [
-        "לבקש"
-      ]
-    },
-    {
-      "word": "approval",
-      "answers": [
-        "אישור"
-      ]
-    },
-    {
-      "word": "argument",
-      "answers": [
-        "טיעון"
-      ]
-    },
-    {
-      "word": "arouse",
-      "answers": [
-        "לעורר"
-      ]
-    },
-    {
-      "word": "beef",
-      "answers": [
-        "בשר בקר"
-      ]
-    },
-    {
-      "word": "bill",
-      "answers": [
-        "חשבון"
-      ]
-    },
-    {
-      "word": "check",
-      "answers": [
-        "חשבון"
-      ]
-    },
-    {
-      "word": "chicken",
-      "answers": [
-        "בשר עוף"
-      ]
-    },
-    {
-      "word": "community",
-      "answers": [
-        "קהילה"
-      ]
-    },
-    {
-      "word": "compassion",
-      "answers": [
-        "רחמים"
-      ]
-    },
-    {
-      "word": "compatible",
-      "answers": [
-        "תואם"
-      ]
-    },
-    {
-      "word": "compel",
-      "answers": [
-        "לכפות"
-      ]
-    },
-    {
-      "word": "competent",
-      "answers": [
-        "כשיר"
-      ]
-    },
-    {
-      "word": "competition",
-      "answers": [
-        "תחרות"
-      ]
-    },
-    {
-      "word": "complete",
-      "answers": [
-        "להשלים"
-      ]
-    },
-    {
-      "word": "complex",
-      "answers": [
-        "מורכב"
-      ]
-    },
-    {
-      "word": "comprehend",
-      "answers": [
-        "להבין"
-      ]
-    },
-    {
-      "word": "compromise",
-      "answers": [
-        "פשרה",
-        "להשלים"
-      ]
-    },
-    {
-      "word": "concentration",
-      "answers": [
-        "התרכזות"
-      ]
-    },
-    {
-      "word": "concept",
-      "answers": [
-        "רעיון"
-      ]
-    },
-    {
-      "word": "concern",
-      "answers": [
-        "דאגה"
-      ]
-    },
-    {
-      "word": "conclude",
-      "answers": [
-        "להסיק"
-      ]
-    },
-    {
-      "word": "concrete",
-      "answers": [
-        "בטון"
-      ]
-    },
-    {
-      "word": "condition",
-      "answers": [
-        "מצב"
-      ]
-    },
-    {
-      "word": "conduct",
-      "answers": [
-        "להוביל",
-        "התנהגות"
-      ]
-    },
-    {
-      "word": "conference",
-      "answers": [
-        "כנס"
-      ]
-    },
-    {
-      "word": "confess",
-      "answers": [
-        "להודות"
-      ]
-    },
-    {
-      "word": "confident",
-      "answers": [
-        "בטוח"
-      ]
-    },
-    {
-      "word": "conflict",
-      "answers": [
-        "התנגדות"
-      ]
-    },
-    {
-      "word": "confuse",
-      "answers": [
-        "לבלבל"
-      ]
-    },
-    {
-      "word": "conquer",
-      "answers": [
-        "לכבוש"
-      ]
-    },
-    {
-      "word": "consent",
-      "answers": [
-        "הסכמה"
-      ]
-    },
-    {
-      "word": "consequence",
-      "answers": [
-        "השלכה"
-      ]
-    },
-    {
-      "word": "conserve",
-      "answers": [
-        "לשמור"
-      ]
-    },
-    {
-      "word": "consider",
-      "answers": [
-        "לשקול"
-      ]
-    },
-    {
-      "word": "consistent",
-      "answers": [
-        "עקבי"
-      ]
-    },
-    {
-      "word": "consumer",
-      "answers": [
-        "צרכן"
-      ]
-    },
-    {
-      "word": "contemporary",
-      "answers": [
-        "עכשווי"
-      ]
-    },
-    {
-      "word": "contribution",
-      "answers": [
-        "תרומה"
-      ]
-    },
-    {
-      "word": "convenient",
-      "answers": [
-        "נוח"
-      ]
-    },
-    {
-      "word": "conversation",
-      "answers": [
-        "שיחה"
-      ]
-    },
-    {
-      "word": "cooperate",
-      "answers": [
-        "לשתף פעולה"
-      ]
-    },
-    {
-      "word": "cutlery",
-      "answers": [
-        "סכו״ם"
-      ]
-    },
-    {
-      "word": "dessert",
-      "answers": [
-        "קינוח"
-      ]
-    },
-    {
-      "word": "main course",
-      "answers": [
-        "מנה עיקרית"
-      ]
-    },
-    {
-      "word": "menu",
-      "answers": [
-        "תפריט"
-      ]
-    },
-    {
-      "word": "napkin",
-      "answers": [
-        "מפית"
-      ]
-    },
-    {
-      "word": "pitcher",
-      "answers": [
-        "קנקן"
-      ]
-    },
-    {
-      "word": "pork",
-      "answers": [
-        "בשר חזיר"
-      ]
-    },
-    {
-      "word": "side dish",
-      "answers": [
-        "תוספת"
-      ]
-    },
-    {
-      "word": "starter",
-      "answers": [
-        "מנת פתיחה"
-      ]
-    },
-    {
-      "word": "topping",
-      "answers": [
-        "תוספת"
-      ]
-    },
-    {
-      "word": "waiter",
-      "answers": [
-        "מלצר"
-      ]
-    },
-    {
-      "word": "waitress",
-      "answers": [
-        "מלצרית"
-      ]
-    },
-    {
-      "word": "carrot",
-      "answers": [
-        "גזר"
       ]
     }
   ]
