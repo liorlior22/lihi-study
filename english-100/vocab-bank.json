@@ -1,6 +1,6 @@
 {
-  "version": 8,
-  "count": 330,
+  "version": 9,
+  "count": 559,
   "words": [
     {
       "word": "abbreviate",
@@ -566,7 +566,8 @@
       "word": "dark",
       "answers": [
         "חשוך",
-        "כהה"
+        "כהה",
+        "אפל"
       ]
     },
     {
@@ -767,7 +768,8 @@
       "word": "girl",
       "answers": [
         "ילדה",
-        "נערה"
+        "נערה",
+        "בת"
       ]
     },
     {
@@ -930,7 +932,8 @@
       "word": "issue",
       "answers": [
         "נושא",
-        "בעיה"
+        "בעיה",
+        "סוגייה"
       ]
     },
     {
@@ -1020,7 +1023,8 @@
     {
       "word": "kid",
       "answers": [
-        "ילד"
+        "ילד",
+        "ילד/ה"
       ]
     },
     {
@@ -1046,7 +1050,8 @@
       "word": "know",
       "answers": [
         "לדעת",
-        "להכיר"
+        "להכיר",
+        "יודע"
       ]
     },
     {
@@ -1072,7 +1077,8 @@
     {
       "word": "large",
       "answers": [
-        "גדול"
+        "גדול",
+        "רחב"
       ]
     },
     {
@@ -1201,7 +1207,8 @@
       "word": "mother",
       "answers": [
         "אמא",
-        "אם"
+        "אם",
+        "אימא"
       ]
     },
     {
@@ -1308,7 +1315,8 @@
     {
       "word": "one",
       "answers": [
-        "אחד"
+        "אחד",
+        "אחת"
       ]
     },
     {
@@ -1470,7 +1478,8 @@
     {
       "word": "quiz",
       "answers": [
-        "חידון"
+        "חידון",
+        "בוחן"
       ]
     },
     {
@@ -1521,7 +1530,8 @@
       "word": "road",
       "answers": [
         "דרך",
-        "כביש"
+        "כביש",
+        "רחוב"
       ]
     },
     {
@@ -1540,7 +1550,8 @@
     {
       "word": "run",
       "answers": [
-        "לרוץ"
+        "לרוץ",
+        "ריצה"
       ]
     },
     {
@@ -1730,7 +1741,8 @@
       "word": "us",
       "answers": [
         "אותנו",
-        "לנו"
+        "לנו",
+        "אנחנו"
       ]
     },
     {
@@ -1781,7 +1793,8 @@
       "word": "view",
       "answers": [
         "נוף",
-        "תצוגה"
+        "תצוגה",
+        "לצפות"
       ]
     },
     {
@@ -1863,7 +1876,8 @@
       "word": "watch",
       "answers": [
         "לצפות",
-        "שעון"
+        "שעון",
+        "שעון יד"
       ]
     },
     {
@@ -1906,7 +1920,8 @@
     {
       "word": "xenophobia",
       "answers": [
-        "שנאת זרים"
+        "שנאת זרים",
+        "פוביה מזרים"
       ]
     },
     {
@@ -2065,13 +2080,1402 @@
       "word": "zoom",
       "answers": [
         "זום",
-        "להתקרב"
+        "להתקרב",
+        "תקריב"
       ]
     },
     {
       "word": "zucchini",
       "answers": [
         "קישוא"
+      ]
+    },
+    {
+      "word": "apple",
+      "answers": [
+        "תפוח"
+      ]
+    },
+    {
+      "word": "ant",
+      "answers": [
+        "נמלה"
+      ]
+    },
+    {
+      "word": "air",
+      "answers": [
+        "אוויר"
+      ]
+    },
+    {
+      "word": "arm",
+      "answers": [
+        "זרוע"
+      ]
+    },
+    {
+      "word": "arrow",
+      "answers": [
+        "חץ"
+      ]
+    },
+    {
+      "word": "ask",
+      "answers": [
+        "לשאול"
+      ]
+    },
+    {
+      "word": "aunt",
+      "answers": [
+        "דודה"
+      ]
+    },
+    {
+      "word": "after",
+      "answers": [
+        "אחרי"
+      ]
+    },
+    {
+      "word": "animal",
+      "answers": [
+        "בעל חיים"
+      ]
+    },
+    {
+      "word": "angry",
+      "answers": [
+        "כועס"
+      ]
+    },
+    {
+      "word": "answer",
+      "answers": [
+        "תשובה"
+      ]
+    },
+    {
+      "word": "always",
+      "answers": [
+        "תמיד"
+      ]
+    },
+    {
+      "word": "around",
+      "answers": [
+        "מסביב"
+      ]
+    },
+    {
+      "word": "alive",
+      "answers": [
+        "חי"
+      ]
+    },
+    {
+      "word": "ball",
+      "answers": [
+        "כדור"
+      ]
+    },
+    {
+      "word": "bring",
+      "answers": [
+        "להביא"
+      ]
+    },
+    {
+      "word": "bed",
+      "answers": [
+        "מיטה"
+      ]
+    },
+    {
+      "word": "bee",
+      "answers": [
+        "דבורה"
+      ]
+    },
+    {
+      "word": "bird",
+      "answers": [
+        "ציפור"
+      ]
+    },
+    {
+      "word": "boat",
+      "answers": [
+        "סירה"
+      ]
+    },
+    {
+      "word": "boy",
+      "answers": [
+        "בן"
+      ]
+    },
+    {
+      "word": "box",
+      "answers": [
+        "קופסה"
+      ]
+    },
+    {
+      "word": "bread",
+      "answers": [
+        "לחם"
+      ]
+    },
+    {
+      "word": "blue",
+      "answers": [
+        "כחול"
+      ]
+    },
+    {
+      "word": "book",
+      "answers": [
+        "ספר"
+      ]
+    },
+    {
+      "word": "big",
+      "answers": [
+        "גדול"
+      ]
+    },
+    {
+      "word": "cup",
+      "answers": [
+        "כוס"
+      ]
+    },
+    {
+      "word": "cake",
+      "answers": [
+        "עוגה"
+      ]
+    },
+    {
+      "word": "career",
+      "answers": [
+        "קריירה"
+      ]
+    },
+    {
+      "word": "coat",
+      "answers": [
+        "מעיל"
+      ]
+    },
+    {
+      "word": "cow",
+      "answers": [
+        "פרה"
+      ]
+    },
+    {
+      "word": "coin",
+      "answers": [
+        "מטבע"
+      ]
+    },
+    {
+      "word": "chair",
+      "answers": [
+        "כיסא"
+      ]
+    },
+    {
+      "word": "clock",
+      "answers": [
+        "שעון"
+      ]
+    },
+    {
+      "word": "cloud",
+      "answers": [
+        "ענן"
+      ]
+    },
+    {
+      "word": "card",
+      "answers": [
+        "קלף"
+      ]
+    },
+    {
+      "word": "cry",
+      "answers": [
+        "לבכות"
+      ]
+    },
+    {
+      "word": "dad",
+      "answers": [
+        "אבא"
+      ]
+    },
+    {
+      "word": "duck",
+      "answers": [
+        "ברווז",
+        "להתכופף"
+      ]
+    },
+    {
+      "word": "doll",
+      "answers": [
+        "בובה"
+      ]
+    },
+    {
+      "word": "drum",
+      "answers": [
+        "תוף"
+      ]
+    },
+    {
+      "word": "dress",
+      "answers": [
+        "שמלה"
+      ]
+    },
+    {
+      "word": "desk",
+      "answers": [
+        "שולחן עבודה",
+        "שולחן כתיבה"
+      ]
+    },
+    {
+      "word": "deal",
+      "answers": [
+        "עסקה"
+      ]
+    },
+    {
+      "word": "drive",
+      "answers": [
+        "לנהוג"
+      ]
+    },
+    {
+      "word": "dream",
+      "answers": [
+        "חלום",
+        "לחלום"
+      ]
+    },
+    {
+      "word": "drink",
+      "answers": [
+        "משקה",
+        "שתייה",
+        "לשתות"
+      ]
+    },
+    {
+      "word": "egg",
+      "answers": [
+        "ביצה"
+      ]
+    },
+    {
+      "word": "ear",
+      "answers": [
+        "אוזן"
+      ]
+    },
+    {
+      "word": "eye",
+      "answers": [
+        "עין"
+      ]
+    },
+    {
+      "word": "earth",
+      "answers": [
+        "כדור הארץ"
+      ]
+    },
+    {
+      "word": "edge",
+      "answers": [
+        "קצה"
+      ]
+    },
+    {
+      "word": "eight",
+      "answers": [
+        "שמונה"
+      ]
+    },
+    {
+      "word": "elephant",
+      "answers": [
+        "פיל"
+      ]
+    },
+    {
+      "word": "empty",
+      "answers": [
+        "ריק"
+      ]
+    },
+    {
+      "word": "enter",
+      "answers": [
+        "להיכנס"
+      ]
+    },
+    {
+      "word": "evening",
+      "answers": [
+        "ערב"
+      ]
+    },
+    {
+      "word": "fish",
+      "answers": [
+        "דג"
+      ]
+    },
+    {
+      "word": "frog",
+      "answers": [
+        "צפרדע"
+      ]
+    },
+    {
+      "word": "fire",
+      "answers": [
+        "אש"
+      ]
+    },
+    {
+      "word": "fruit",
+      "answers": [
+        "פרי"
+      ]
+    },
+    {
+      "word": "foot",
+      "answers": [
+        "כף רגל"
+      ]
+    },
+    {
+      "word": "fly",
+      "answers": [
+        "לעוף",
+        "זבוב"
+      ]
+    },
+    {
+      "word": "fun",
+      "answers": [
+        "כיף"
+      ]
+    },
+    {
+      "word": "five",
+      "answers": [
+        "חמש"
+      ]
+    },
+    {
+      "word": "floor",
+      "answers": [
+        "רצפה"
+      ]
+    },
+    {
+      "word": "fast",
+      "answers": [
+        "מהר"
+      ]
+    },
+    {
+      "word": "gift",
+      "answers": [
+        "מתנה"
+      ]
+    },
+    {
+      "word": "gate",
+      "answers": [
+        "שער"
+      ]
+    },
+    {
+      "word": "grass",
+      "answers": [
+        "דשא"
+      ]
+    },
+    {
+      "word": "glass",
+      "answers": [
+        "זכוכית"
+      ]
+    },
+    {
+      "word": "gold",
+      "answers": [
+        "זהב"
+      ]
+    },
+    {
+      "word": "grow",
+      "answers": [
+        "לגדול",
+        "לגדל"
+      ]
+    },
+    {
+      "word": "ground",
+      "answers": [
+        "אדמה"
+      ]
+    },
+    {
+      "word": "hat",
+      "answers": [
+        "כובע"
+      ]
+    },
+    {
+      "word": "horse",
+      "answers": [
+        "סוס"
+      ]
+    },
+    {
+      "word": "hill",
+      "answers": [
+        "גבעה"
+      ]
+    },
+    {
+      "word": "heart",
+      "answers": [
+        "לב"
+      ]
+    },
+    {
+      "word": "heat",
+      "answers": [
+        "חום"
+      ]
+    },
+    {
+      "word": "hope",
+      "answers": [
+        "תקווה"
+      ]
+    },
+    {
+      "word": "hard",
+      "answers": [
+        "קשה"
+      ]
+    },
+    {
+      "word": "ice",
+      "answers": [
+        "קרח"
+      ]
+    },
+    {
+      "word": "ink",
+      "answers": [
+        "דיו"
+      ]
+    },
+    {
+      "word": "iron",
+      "answers": [
+        "ברזל"
+      ]
+    },
+    {
+      "word": "island",
+      "answers": [
+        "אי"
+      ]
+    },
+    {
+      "word": "item",
+      "answers": [
+        "פריט"
+      ]
+    },
+    {
+      "word": "image",
+      "answers": [
+        "תמונה"
+      ]
+    },
+    {
+      "word": "inside",
+      "answers": [
+        "בפנים"
+      ]
+    },
+    {
+      "word": "invite",
+      "answers": [
+        "להזמין"
+      ]
+    },
+    {
+      "word": "instant",
+      "answers": [
+        "מיידי"
+      ]
+    },
+    {
+      "word": "jam",
+      "answers": [
+        "ריבה"
+      ]
+    },
+    {
+      "word": "jellyfish",
+      "answers": [
+        "מדוזה"
+      ]
+    },
+    {
+      "word": "jar",
+      "answers": [
+        "צנצנת"
+      ]
+    },
+    {
+      "word": "juice",
+      "answers": [
+        "מיץ"
+      ]
+    },
+    {
+      "word": "jacket",
+      "answers": [
+        "ז'קט"
+      ]
+    },
+    {
+      "word": "jungle",
+      "answers": [
+        "ג'ונגל"
+      ]
+    },
+    {
+      "word": "jewel",
+      "answers": [
+        "תכשיט"
+      ]
+    },
+    {
+      "word": "joint",
+      "answers": [
+        "משותף",
+        "מפרק"
+      ]
+    },
+    {
+      "word": "kite",
+      "answers": [
+        "עפיפון"
+      ]
+    },
+    {
+      "word": "kit",
+      "answers": [
+        "ערכה"
+      ]
+    },
+    {
+      "word": "knock",
+      "answers": [
+        "לנקוש"
+      ]
+    },
+    {
+      "word": "knee",
+      "answers": [
+        "ברך"
+      ]
+    },
+    {
+      "word": "knife",
+      "answers": [
+        "סכין"
+      ]
+    },
+    {
+      "word": "kettle",
+      "answers": [
+        "קומקום"
+      ]
+    },
+    {
+      "word": "kidney",
+      "answers": [
+        "כליה"
+      ]
+    },
+    {
+      "word": "kingdom",
+      "answers": [
+        "ממלכה"
+      ]
+    },
+    {
+      "word": "lion",
+      "answers": [
+        "אריה"
+      ]
+    },
+    {
+      "word": "lamp",
+      "answers": [
+        "מנורה"
+      ]
+    },
+    {
+      "word": "lake",
+      "answers": [
+        "אגם"
+      ]
+    },
+    {
+      "word": "leaf",
+      "answers": [
+        "עלה"
+      ]
+    },
+    {
+      "word": "leg",
+      "answers": [
+        "רגל"
+      ]
+    },
+    {
+      "word": "lock",
+      "answers": [
+        "מנעול"
+      ]
+    },
+    {
+      "word": "laugh",
+      "answers": [
+        "לצחוק"
+      ]
+    },
+    {
+      "word": "long",
+      "answers": [
+        "ארוך"
+      ]
+    },
+    {
+      "word": "left",
+      "answers": [
+        "שמאל"
+      ]
+    },
+    {
+      "word": "list",
+      "answers": [
+        "רשימה"
+      ]
+    },
+    {
+      "word": "look",
+      "answers": [
+        "להסתכל"
+      ]
+    },
+    {
+      "word": "map",
+      "answers": [
+        "מפה"
+      ]
+    },
+    {
+      "word": "moon",
+      "answers": [
+        "ירח"
+      ]
+    },
+    {
+      "word": "mouse",
+      "answers": [
+        "עכבר"
+      ]
+    },
+    {
+      "word": "milk",
+      "answers": [
+        "חלב"
+      ]
+    },
+    {
+      "word": "music",
+      "answers": [
+        "מוזיקה"
+      ]
+    },
+    {
+      "word": "morning",
+      "answers": [
+        "בוקר"
+      ]
+    },
+    {
+      "word": "minute",
+      "answers": [
+        "דקה"
+      ]
+    },
+    {
+      "word": "middle",
+      "answers": [
+        "אמצע"
+      ]
+    },
+    {
+      "word": "move",
+      "answers": [
+        "לזוז"
+      ]
+    },
+    {
+      "word": "much",
+      "answers": [
+        "הרבה"
+      ]
+    },
+    {
+      "word": "nose",
+      "answers": [
+        "אף"
+      ]
+    },
+    {
+      "word": "nail",
+      "answers": [
+        "ציפורן"
+      ]
+    },
+    {
+      "word": "nest",
+      "answers": [
+        "קן"
+      ]
+    },
+    {
+      "word": "net",
+      "answers": [
+        "רשת"
+      ]
+    },
+    {
+      "word": "nine",
+      "answers": [
+        "תשע"
+      ]
+    },
+    {
+      "word": "north",
+      "answers": [
+        "צפון"
+      ]
+    },
+    {
+      "word": "noise",
+      "answers": [
+        "רעש"
+      ]
+    },
+    {
+      "word": "nice",
+      "answers": [
+        "נחמד"
+      ]
+    },
+    {
+      "word": "note",
+      "answers": [
+        "הערה"
+      ]
+    },
+    {
+      "word": "next",
+      "answers": [
+        "הבא"
+      ]
+    },
+    {
+      "word": "owl",
+      "answers": [
+        "ינשוף"
+      ]
+    },
+    {
+      "word": "ocean",
+      "answers": [
+        "אוקיינוס"
+      ]
+    },
+    {
+      "word": "ox",
+      "answers": [
+        "שור"
+      ]
+    },
+    {
+      "word": "orange",
+      "answers": [
+        "תפוז"
+      ]
+    },
+    {
+      "word": "order",
+      "answers": [
+        "הזמנה",
+        "סדר"
+      ]
+    },
+    {
+      "word": "oil",
+      "answers": [
+        "שמן"
+      ]
+    },
+    {
+      "word": "outside",
+      "answers": [
+        "בחוץ"
+      ]
+    },
+    {
+      "word": "oven",
+      "answers": [
+        "תנור"
+      ]
+    },
+    {
+      "word": "object",
+      "answers": [
+        "אובייקט",
+        "להתנגד"
+      ]
+    },
+    {
+      "word": "package",
+      "answers": [
+        "חבילה"
+      ]
+    },
+    {
+      "word": "pen",
+      "answers": [
+        "עט"
+      ]
+    },
+    {
+      "word": "party",
+      "answers": [
+        "מסיבה"
+      ]
+    },
+    {
+      "word": "park",
+      "answers": [
+        "פארק"
+      ]
+    },
+    {
+      "word": "pair",
+      "answers": [
+        "זוג"
+      ]
+    },
+    {
+      "word": "pencil",
+      "answers": [
+        "עיפרון"
+      ]
+    },
+    {
+      "word": "pay",
+      "answers": [
+        "לשלם"
+      ]
+    },
+    {
+      "word": "plant",
+      "answers": [
+        "צמח"
+      ]
+    },
+    {
+      "word": "pool",
+      "answers": [
+        "בריכה"
+      ]
+    },
+    {
+      "word": "price",
+      "answers": [
+        "מחיר"
+      ]
+    },
+    {
+      "word": "picture",
+      "answers": [
+        "תמונה"
+      ]
+    },
+    {
+      "word": "quantity",
+      "answers": [
+        "כמות"
+      ]
+    },
+    {
+      "word": "qualify",
+      "answers": [
+        "להעפיל"
+      ]
+    },
+    {
+      "word": "red",
+      "answers": [
+        "אדום"
+      ]
+    },
+    {
+      "word": "rice",
+      "answers": [
+        "אורז"
+      ]
+    },
+    {
+      "word": "rock",
+      "answers": [
+        "סלע",
+        "אבן"
+      ]
+    },
+    {
+      "word": "ring",
+      "answers": [
+        "טבעת"
+      ]
+    },
+    {
+      "word": "rope",
+      "answers": [
+        "חבל"
+      ]
+    },
+    {
+      "word": "roof",
+      "answers": [
+        "גג"
+      ]
+    },
+    {
+      "word": "reach",
+      "answers": [
+        "להגיע למשהו"
+      ]
+    },
+    {
+      "word": "river",
+      "answers": [
+        "נהר"
+      ]
+    },
+    {
+      "word": "sun",
+      "answers": [
+        "שמש"
+      ]
+    },
+    {
+      "word": "star",
+      "answers": [
+        "כוכב"
+      ]
+    },
+    {
+      "word": "ship",
+      "answers": [
+        "ספינה"
+      ]
+    },
+    {
+      "word": "sea",
+      "answers": [
+        "ים"
+      ]
+    },
+    {
+      "word": "sand",
+      "answers": [
+        "חול"
+      ]
+    },
+    {
+      "word": "sock",
+      "answers": [
+        "גרב"
+      ]
+    },
+    {
+      "word": "shoe",
+      "answers": [
+        "נעל"
+      ]
+    },
+    {
+      "word": "shop",
+      "answers": [
+        "חנות"
+      ]
+    },
+    {
+      "word": "sheep",
+      "answers": [
+        "כבשה"
+      ]
+    },
+    {
+      "word": "sky",
+      "answers": [
+        "שמיים"
+      ]
+    },
+    {
+      "word": "smile",
+      "answers": [
+        "חיוך"
+      ]
+    },
+    {
+      "word": "stone",
+      "answers": [
+        "אבן"
+      ]
+    },
+    {
+      "word": "stick",
+      "answers": [
+        "מקל"
+      ]
+    },
+    {
+      "word": "street",
+      "answers": [
+        "רחוב"
+      ]
+    },
+    {
+      "word": "tree",
+      "answers": [
+        "עץ"
+      ]
+    },
+    {
+      "word": "toy",
+      "answers": [
+        "צעצוע"
+      ]
+    },
+    {
+      "word": "train",
+      "answers": [
+        "רכבת"
+      ]
+    },
+    {
+      "word": "table",
+      "answers": [
+        "שולחן"
+      ]
+    },
+    {
+      "word": "town",
+      "answers": [
+        "עיירה"
+      ]
+    },
+    {
+      "word": "three",
+      "answers": [
+        "שלוש"
+      ]
+    },
+    {
+      "word": "ten",
+      "answers": [
+        "עשר"
+      ]
+    },
+    {
+      "word": "thick",
+      "answers": [
+        "עבה"
+      ]
+    },
+    {
+      "word": "tea",
+      "answers": [
+        "תה"
+      ]
+    },
+    {
+      "word": "tire",
+      "answers": [
+        "צמיג"
+      ]
+    },
+    {
+      "word": "try",
+      "answers": [
+        "לנסות"
+      ]
+    },
+    {
+      "word": "tall",
+      "answers": [
+        "גבוה"
+      ]
+    },
+    {
+      "word": "touch",
+      "answers": [
+        "לגעת"
+      ]
+    },
+    {
+      "word": "umbrella",
+      "answers": [
+        "מטרייה"
+      ]
+    },
+    {
+      "word": "uncle",
+      "answers": [
+        "דוד"
+      ]
+    },
+    {
+      "word": "uniform",
+      "answers": [
+        "מדים"
+      ]
+    },
+    {
+      "word": "urban",
+      "answers": [
+        "עירוני"
+      ]
+    },
+    {
+      "word": "ugly",
+      "answers": [
+        "מכוער"
+      ]
+    },
+    {
+      "word": "unknown",
+      "answers": [
+        "לא ידוע"
+      ]
+    },
+    {
+      "word": "usual",
+      "answers": [
+        "שגרתי"
+      ]
+    },
+    {
+      "word": "unique",
+      "answers": [
+        "ייחודי"
+      ]
+    },
+    {
+      "word": "version",
+      "answers": [
+        "גרסה"
+      ]
+    },
+    {
+      "word": "vast",
+      "answers": [
+        "נרחב"
+      ]
+    },
+    {
+      "word": "vase",
+      "answers": [
+        "כד"
+      ]
+    },
+    {
+      "word": "virtual",
+      "answers": [
+        "וירטואלי"
+      ]
+    },
+    {
+      "word": "valuable",
+      "answers": [
+        "יקר ערך"
+      ]
+    },
+    {
+      "word": "vehicle",
+      "answers": [
+        "כלי רכב"
+      ]
+    },
+    {
+      "word": "victory",
+      "answers": [
+        "ניצחון"
+      ]
+    },
+    {
+      "word": "wind",
+      "answers": [
+        "רוח"
+      ]
+    },
+    {
+      "word": "wood",
+      "answers": [
+        "עץ"
+      ]
+    },
+    {
+      "word": "weak",
+      "answers": [
+        "חלש"
+      ]
+    },
+    {
+      "word": "window",
+      "answers": [
+        "חלון"
+      ]
+    },
+    {
+      "word": "wheel",
+      "answers": [
+        "גלגל"
+      ]
+    },
+    {
+      "word": "warm",
+      "answers": [
+        "חמים"
+      ]
+    },
+    {
+      "word": "wave",
+      "answers": [
+        "גל"
+      ]
+    },
+    {
+      "word": "white",
+      "answers": [
+        "לבן"
+      ]
+    },
+    {
+      "word": "x-ray",
+      "answers": [
+        "צילום רנטגן"
+      ]
+    },
+    {
+      "word": "yell",
+      "answers": [
+        "צעקה",
+        "לצעוק"
+      ]
+    },
+    {
+      "word": "yarn",
+      "answers": [
+        "חוט"
+      ]
+    },
+    {
+      "word": "yawn",
+      "answers": [
+        "פיהוק",
+        "לפהק"
+      ]
+    },
+    {
+      "word": "yolk",
+      "answers": [
+        "חלמון ביצה"
+      ]
+    },
+    {
+      "word": "yacht",
+      "answers": [
+        "יאכטה"
+      ]
+    },
+    {
+      "word": "yummy",
+      "answers": [
+        "טעים"
+      ]
+    },
+    {
+      "word": "youth",
+      "answers": [
+        "נוער"
+      ]
+    },
+    {
+      "word": "yoga",
+      "answers": [
+        "יוגה"
+      ]
+    },
+    {
+      "word": "zodiac",
+      "answers": [
+        "גלגל המזלות"
+      ]
+    },
+    {
+      "word": "zenith",
+      "answers": [
+        "פסגה",
+        "שיא"
+      ]
+    },
+    {
+      "word": "zipper",
+      "answers": [
+        "רוכסן"
       ]
     }
   ]
